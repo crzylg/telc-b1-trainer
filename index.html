@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Telc & Goethe B1 Prüfungstrainer – Almanca B1 Sınav Hazırlık Uygulaması (Deutsch-Türkçe)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="B1 Trainer">
+<meta name="theme-color" content="#1a5fb4">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" type="image/png" href="icons/icon-180.png">
+<title>B1 Prüfungstrainer · Telc & Goethe · Deutsch–Türkçe</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="logo">B1</div>
+    <div class="header-text">
+      <h1>B1 Prüfungstrainer</h1>
+      <p>Telc & Goethe · Deutsch – Türkçe</p>
+    </div>
+    <div class="header-progress" id="headerProgress" title="Gesamtfortschritt / Genel ilerleme"></div>
+  </div>
+  <nav class="tabbar" id="tabbar">
+    <button class="tab active" data-view="home">🏠 Start</button>
+    <button class="tab" data-view="pruefung">📋 Prüfung<span class="tab-tr">Sınav</span></button>
+    <button class="tab" data-view="strategien">🎯 Taktik<span class="tab-tr">Taktikler</span></button>
+    <button class="tab" data-view="lesen">📖 Lesen<span class="tab-tr">Okuma</span></button>
+    <button class="tab" data-view="sprachbausteine">🧩 Sprachbausteine<span class="tab-tr">Dil Yapıları</span></button>
+    <button class="tab" data-view="vokabeln">🗂️ Vokabeln<span class="tab-tr">Kelimeler</span></button>
+    <button class="tab" data-view="konnektoren">🔗 Konnektoren<span class="tab-tr">Bağlaçlar</span></button>
+    <button class="tab" data-view="grammatik">📐 Grammatik<span class="tab-tr">Dilbilgisi</span></button>
+    <button class="tab" data-view="skills">✍️ Schreiben & Co.<span class="tab-tr">Yazma vb.</span></button>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- Views are rendered here by js/app.js -->
+  <div id="view" class="view"></div>
+</main>
+
+<footer class="app-footer">
+  <p>B1 Prüfungstrainer · Offline nutzbar / Çevrimdışı kullanılabilir · Fortschritt wird auf dem Gerät gespeichert / İlerleme cihazda saklanır</p>
+</footer>
+
+<script src="data/pruefung.js"></script>
+<script src="data/strategien.js"></script>
+<script src="data/lesen.js"></script>
+<script src="data/sprachbausteine.js"></script>
+<script src="data/vokabeln-1.js"></script>
+<script src="data/vokabeln-2.js"></script>
+<script src="data/konnektoren.js"></script>
+<script src="data/grammatik.js"></script>
+<script src="data/skills.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
