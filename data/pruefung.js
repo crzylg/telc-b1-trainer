@@ -70,6 +70,31 @@ window.PRUEFUNG = {
       ]
     }
   },
+  dtz: {
+    name: "DTZ – Deutsch-Test für Zuwanderer (A2–B1)",
+    summary: {
+      de: "Der DTZ ist die Abschlussprüfung des Integrationskurses (eine telc-Prüfung auf zwei Stufen: A2 oder B1). Für die Einbürgerung und den Abschluss des Integrationskurses reicht der DTZ mit dem Ergebnis B1. Wichtig: Für B1 musst du im mündlichen UND im schriftlichen Teil B1-Niveau erreichen.",
+      tr: "DTZ, uyum kursunun bitirme sınavıdır (iki seviyeli bir telc sınavı: A2 veya B1). Vatandaşlık ve uyum kursu bitirmesi için B1 sonuçlu DTZ yeterlidir. Önemli: B1 için hem sözlü HEM yazılı bölümde B1 seviyesine ulaşmalısın."
+    },
+    parts: [
+      { teil: "Hören Teil 1–4", zeit: "25 Min.", punkte: "20 Items", aufgabe: "Ansagen am Telefon, Radio-Infos, Gespräche, Meinungen – Multiple Choice", tr: "Telefon anonsları, radyo bilgileri, konuşmalar, görüşler – çoktan seçmeli" },
+      { teil: "Lesen Teil 1–5", zeit: "45 Min.", punkte: "25 Items", aufgabe: "Kataloge/Wegweiser, Anzeigen, Infotexte (Presse/Amt), Zuordnungen, Multiple Choice", tr: "Kataloglar/yön levhaları, ilanlar, bilgi metinleri (basın/resmi daire), eşleştirme, çoktan seçmeli" },
+      { teil: "Schreiben", zeit: "30 Min.", punkte: "–", aufgabe: "Halbformelle oder formelle Kurznachricht/E-Mail (z. B. an Schule, Vermieter, Amt)", tr: "Yarı resmi veya resmi kısa mesaj/e-posta (örn. okula, ev sahibine, resmi daireye)" },
+      { teil: "Sprechen (Paarprüfung)", zeit: "≈ 16 Min.", punkte: "–", aufgabe: "Über sich sprechen, über ein Bild/Erfahrungen sprechen, gemeinsam etwas planen", tr: "Kendinden bahsetme, bir resim/deneyimler hakkında konuşma, birlikte plan yapma" }
+    ],
+    hinweise: {
+      de: [
+        "Die Aufgabenformate von Lesen Teil 3 (Anzeigen) und dem gemeinsamen Planen sind fast identisch mit telc B1 – dieses Training hilft dir also auch direkt für den DTZ!",
+        "Beim DTZ-Sprechen gibt es eine Bildbeschreibung – bereite Redemittel wie „Auf dem Bild sehe ich …“, „Im Vordergrund/Hintergrund …“ vor.",
+        "Das Schreiben ist kürzer als bei telc B1: eine halbformelle Nachricht mit meist 3 Leitpunkten."
+      ],
+      tr: [
+        "Lesen Teil 3 (ilanlar) ve birlikte plan yapma bölümlerinin formatları telc B1 ile neredeyse aynı – bu antrenman DTZ için de doğrudan işine yarar!",
+        "DTZ konuşma sınavında resim anlatma vardır – „Auf dem Bild sehe ich …“ (Resimde … görüyorum), „Im Vordergrund/Hintergrund …“ (Ön planda/arka planda …) gibi kalıpları hazırla.",
+        "Yazma bölümü telc B1'den kısadır: genelde 3 maddelik yarı resmi bir mesaj."
+      ]
+    }
+  },
   vergleich: {
     de: "Welche Prüfung passt zu dir? telc B1 wird oft für die Einbürgerung und von Integrationskursen verwendet (der Deutsch-Test für Zuwanderer DTZ ist eine telc-Prüfung auf A2–B1). Goethe B1 ist international sehr bekannt und modular. Für beide gilt: Wer die Aufgabentypen kennt und trainiert, hat einen großen Vorteil!",
     tr: "Hangi sınav sana uygun? telc B1 genellikle vatandaşlık başvurusu ve entegrasyon kursları için kullanılır (Deutsch-Test für Zuwanderer DTZ, A2–B1 seviyesinde bir telc sınavıdır). Goethe B1 uluslararası alanda çok tanınır ve modülerdir. Her ikisi için de geçerli: Soru tiplerini tanıyan ve pratik yapan büyük avantaj sağlar!"

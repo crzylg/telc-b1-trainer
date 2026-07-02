@@ -232,6 +232,7 @@ window.LESEN = {
         de: "Thema: „Sollen Handys an Schulen verboten werden?“ Lesen Sie die Meinungen 1–7. Ist die Person FÜR ein Verbot (Ja) oder DAGEGEN (Nein)?",
         tr: "Konu: „Okullarda cep telefonu yasaklanmalı mı?“ 1–7 arası görüşleri oku. Kişi yasağa TARAFTAR mı (Ja) yoksa KARŞI mı (Nein)?"
       },
+      labels: { yes: "JA – für das Verbot / yasağa taraftar", no: "NEIN – gegen das Verbot / yasağa karşı" },
       statements: [
         { s: "Tim: In der Pause schauen alle nur auf ihr Handy, niemand redet mehr miteinander. Ohne Handys würden die Schüler wieder echte Gespräche führen. Ein Verbot wäre deshalb ein Gewinn für alle.", answer: true, explain: { de: "„Ein Verbot wäre ein Gewinn“ → JA, für das Verbot.", tr: "„Yasak herkes için kazanç olur“ → EVET, yasaktan yana." } },
         { s: "Ayşe: Meine Kinder lernen mit Lern-Apps Vokabeln und Mathe – auch in der Schule. Man sollte das Handy als Werkzeug nutzen, statt es zu verbieten. Verbote lösen keine Probleme.", answer: false, explain: { de: "„statt es zu verbieten“, „Verbote lösen keine Probleme“ → NEIN, gegen das Verbot.", tr: "„yasaklamak yerine“, „yasaklar sorun çözmez“ → HAYIR, yasağa karşı." } },

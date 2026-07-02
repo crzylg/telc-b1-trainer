@@ -338,6 +338,104 @@ select.match-select.wrong { border-color: var(--red); background: var(--red-ligh
 .accordion-body { display: none; padding: 0 16px 16px; }
 .accordion.open .accordion-body { display: block; }
 
+/* ---------- Lernweg (Startseite) ---------- */
+.step-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
+  transition: transform .12s;
+}
+.step-card:active { transform: scale(.98); }
+.step-num {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-card.done .step-num { background: var(--green-light); color: var(--green); }
+.step-body { flex: 1; min-width: 0; }
+.step-title { font-weight: 700; font-size: 1rem; }
+.step-sub { color: var(--ink-soft); font-size: .82rem; }
+.step-progress { font-size: .75rem; color: var(--blue); font-weight: 700; margin-top: 2px; }
+.step-arrow { color: var(--blue); font-size: 1.3rem; flex-shrink: 0; }
+
+.continue-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--green), #1e8a58);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Audio / Hören ---------- */
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 18px;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.audio-btn.playing { background: var(--accent); }
+.audio-btn:disabled { opacity: .5; }
+.speed-toggle { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.speed-toggle button {
+  border: 1.5px solid var(--blue);
+  background: #fff;
+  color: var(--blue);
+  border-radius: 16px;
+  padding: 4px 14px;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.speed-toggle button.on { background: var(--blue); color: #fff; }
+.transcript {
+  display: none;
+  background: #fbfcfe;
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-size: .9rem;
+  margin-top: 8px;
+  font-style: italic;
+}
+.transcript.show { display: block; }
+.tts-warning { background: var(--red-light); color: var(--red); border-radius: 10px; padding: 10px 14px; font-size: .88rem; }
+
 /* ---------- Footer ---------- */
 .app-footer {
   text-align: center;

@@ -204,6 +204,34 @@ window.STRATEGIEN = [
     ]
   },
   {
+    id: "gewohnheiten",
+    emoji: "🌱",
+    title: "Lerngewohnheiten: klein anfangen, dranbleiben",
+    titleTr: "Öğrenme Alışkanlıkları: Küçük Başla, Devam Et",
+    sections: [
+      {
+        h: "Die 1-%-Regel / %1 kuralı",
+        de: "Du musst nicht jeden Tag drei Stunden lernen. Wer jeden Tag nur ein bisschen besser wird, ist nach einigen Monaten enorm weit. 15 Minuten TÄGLICH bringen mehr als 3 Stunden einmal pro Woche – denn das Gehirn braucht Wiederholung. Mach dir das Ziel klein: „Ich lerne heute EIN Vokabelthema“ statt „Ich muss die ganze Prüfung schaffen“.",
+        tr: "Her gün üç saat çalışmak zorunda değilsin. Her gün birazcık daha iyi olan, birkaç ay sonra çok ileride olur. HER GÜN 15 dakika, haftada bir kez 3 saatten daha etkilidir – çünkü beyin tekrara ihtiyaç duyar. Hedefi küçült: „Bugün BİR kelime konusu çalışacağım“ – „Bütün sınavı halletmeliyim“ değil."
+      },
+      {
+        h: "Gewohnheiten koppeln / Alışkanlık zincirleme",
+        de: "Hänge das Lernen an eine feste Gewohnheit, die du schon hast: „NACH dem Frühstückskaffee mache ich 10 Flashcards.“ „IM Bus höre ich 10 Minuten Deutsch.“ So musst du dich nicht jeden Tag neu entscheiden – das Lernen passiert automatisch. Genau dafür ist diese App auf deinem Handy: Sie ist immer dabei.",
+        tr: "Öğrenmeyi zaten var olan sabit bir alışkanlığa bağla: „Sabah kahvemden SONRA 10 kelime kartı yapacağım.“ „Otobüste 10 dakika Almanca dinleyeceğim.“ Böylece her gün yeniden karar vermek zorunda kalmazsın – öğrenme otomatik gerçekleşir. Bu uygulamanın telefonunda olmasının nedeni tam da bu: hep yanında."
+      },
+      {
+        h: "Mach es dir leicht / Kolaylaştır",
+        de: "Entferne Hindernisse: Leg die App auf den Startbildschirm. Bestimme einen festen Lernplatz. Und wenn du gar keine Lust hast, gilt die 2-Minuten-Regel: Fang nur für 2 Minuten an – meistens machst du dann doch weiter. Ein schlechter Lerntag ist okay; wichtig ist nur: NIE zweimal hintereinander aussetzen.",
+        tr: "Engelleri kaldır: Uygulamayı ana ekrana koy. Sabit bir çalışma yeri belirle. Hiç isteğin yoksa 2 dakika kuralı geçerli: Sadece 2 dakikalığına başla – çoğu zaman devam edersin. Kötü bir çalışma günü olabilir; önemli olan tek şey: ASLA üst üste iki kez atlama."
+      },
+      {
+        h: "Fortschritt sichtbar machen / İlerlemeyi görünür kıl",
+        de: "Das Gehirn liebt sichtbare Erfolge. Diese App zählt deine gelernten Wörter und deine besten Übungsergebnisse – schau dir die Zahlen regelmäßig an und feiere kleine Erfolge. Wiederhole Übungen nach einigen Tagen: Wenn dein Ergebnis besser wird, siehst du deinen Fortschritt schwarz auf weiß.",
+        tr: "Beyin görünür başarıları sever. Bu uygulama öğrendiğin kelimeleri ve en iyi alıştırma sonuçlarını sayar – sayılara düzenli bak ve küçük başarıları kutla. Alıştırmaları birkaç gün sonra tekrarla: Sonucun iyileşiyorsa, ilerlemeni siyah üstüne beyaz görürsün."
+      }
+    ]
+  },
+  {
     id: "vorbereitung",
     emoji: "🗓️",
     title: "8-Wochen-Lernplan",

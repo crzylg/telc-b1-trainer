@@ -17,16 +17,21 @@ Uygulama **iPhone ve iPad** dahil her cihazda tarayıcıda çalışır — kurul
 
 ## 📚 İçerik / Inhalt
 
-| Bölüm | İçerik |
-|---|---|
-| 📋 **Prüfung / Sınav** | telc B1 ve Goethe B1 sınavlarının tam yapısı, puanlama, geçme sınırları |
-| 🎯 **Taktik** | Her sınav bölümü için resmi deneme testlerinden çıkarılmış stratejiler ve tuzaklar (okuma ağırlıklı) |
-| 📖 **Lesen / Okuma** | telc formatında interaktif alıştırmalar: Teil 1 (başlık eşleştirme), Teil 2 (çoktan seçmeli), Teil 3 (ilan eşleştirme, „x" seçeneğiyle), Goethe Teil 4 (Ja/Nein) |
-| 🧩 **Sprachbausteine** | Teil 1 (dilbilgisi, a/b/c) ve Teil 2 (kelime bankası, a–o) alıştırmaları |
-| 🗂️ **Vokabeln / Kelimeler** | 16 konu, ~400 B1 kelimesi (Almanca–Türkçe, örnek cümleli), kelime kartları ve quiz |
-| 🔗 **Konnektoren / Bağlaçlar** | Kelime dizilişi kurallarıyla 40+ bağlaç, kategorilere göre, quiz'li |
-| 📐 **Grammatik** | 12 B1 dilbilgisi hedefi: basit açıklama (DE+TR), tablolar, tipik hatalar, mini testler |
-| ✍️ **Schreiben & Co.** | Mektup kalıpları, 3 örnek mektup, dinleme kaynakları, sözlü sınav kalıpları |
+Uygulama **9 adımlı bir öğrenme yolu** (Lernweg) olarak yapılandırılmıştır — sınavı tanımaktan yazma/konuşmaya doğru öğrenme sırasına göre:
+
+| Adım | Bölüm | İçerik |
+|---|---|---|
+| 1 | 📋 **Prüfung / Sınav** | telc B1, Goethe B1 **ve DTZ** sınavlarının tam yapısı, puanlama, geçme sınırları |
+| 2 | 🗂️ **Vokabeln / Kelimeler** | **22 konu, ~550 B1 kelimesi** (Almanca–Türkçe, örnek cümleli), kelime kartları ve quiz — konu kapsamı telc'in resmi „Einfach gut! B1" kelime listesine göre |
+| 3 | 📐 **Grammatik** | 13 B1 dilbilgisi hedefi (lassen dahil): basit açıklama (DE+TR), tablolar, tipik hatalar, mini testler |
+| 4 | 🔗 **Konnektoren / Bağlaçlar** | Kelime dizilişi kurallarıyla 40+ bağlaç, kategorilere göre, quiz'li |
+| 5 | 🧩 **Sprachbausteine** | Teil 1 (dilbilgisi, a/b/c) ve Teil 2 (kelime bankası, a–o) alıştırmaları |
+| 6 | 🎯 **Taktik** | Her sınav bölümü için resmi deneme testlerinden çıkarılmış stratejiler, tuzaklar ve alışkanlık temelli öğrenme ipuçları |
+| 7 | 📖 **Lesen / Okuma** | **11 interaktif alıştırma**: telc Teil 1–3 („x" seçeneğiyle), Goethe Teil 1 (blog), Teil 4 (Ja/Nein), Teil 5 (Hausordnung) |
+| 8 | 🎧 **Hören / Dinleme** | **Sesli alıştırmalar** — cihazın Almanca seslendirmesiyle (TTS): telc Teil 1–3 + DTZ tarzı, hız seçimi (normal/yavaş), kontrol sonrası transkript |
+| 9 | ✍️ **Schreiben & Co.** | Mektup kalıpları, 3 örnek mektup, dinleme kaynakları, sözlü sınav kalıpları |
+
+İlerleme takibi: öğrenilen kelimeler, en iyi alıştırma puanları ve „kaldığın yerden devam et" düğmesi.
 
 Tüm açıklamalar **basit Almanca ve Türkçe** olarak iki dillidir.
 

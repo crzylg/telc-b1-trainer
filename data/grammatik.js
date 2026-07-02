@@ -318,5 +318,32 @@ window.GRAMMATIK = [
       { q: "___ Sie bitte hier!", options: ["Warten", "Wartet", "Warte"], answer: 0, explain: { de: "Sie-Form: „Warten Sie!“", tr: "Sie formu: „Warten Sie!“ (Bekleyin!)" } },
       { q: "Kinder, ___ eure Hausaufgaben!", options: ["macht", "machst", "machen"], answer: 0, explain: { de: "ihr-Form: „Macht!“", tr: "ihr formu: „Macht!“ (Yapın!)" } }
     ]
+  },
+  {
+    id: "lassen",
+    emoji: "🔧",
+    title: "Das Verb „lassen“",
+    titleTr: "„lassen“ Fiili",
+    de: "„lassen“ hat drei wichtige Bedeutungen: 1) ETWAS MACHEN LASSEN (man macht es nicht selbst): „Ich lasse mein Auto reparieren.“ – jemand anderes repariert es. Struktur wie ein Modalverb: lassen + Infinitiv am Ende. 2) ERLAUBEN: „Meine Eltern lassen mich lange schlafen.“ 3) ZURÜCKLASSEN / NICHT MITNEHMEN: „Ich lasse den Schlüssel zu Hause.“ Konjugation: ich lasse, du lässt, er/sie lässt, wir lassen. Perfekt mit doppeltem Infinitiv: „Ich habe die Haare schneiden lassen.“",
+    tr: "„lassen“ fiilinin üç önemli anlamı vardır: 1) BİR ŞEYİ YAPTIRMAK (kendin yapmazsın): „Ich lasse mein Auto reparieren.“ (Arabamı tamir ettiriyorum.) – başkası tamir eder. Yapı modal fiil gibi: lassen + sonda mastar. 2) İZİN VERMEK: „Meine Eltern lassen mich lange schlafen.“ (Ailem geç saate kadar uyumama izin veriyor.) 3) BIRAKMAK: „Ich lasse den Schlüssel zu Hause.“ (Anahtarı evde bırakıyorum.) Çekim: ich lasse, du lässt, er/sie lässt, wir lassen. Perfekt çift mastarla: „Ich habe die Haare schneiden lassen.“ (Saçımı kestirdim.)",
+    table: {
+      head: ["Bedeutung", "Beispiel", "Türkçe"],
+      rows: [
+        ["machen lassen", "Sie lässt ihre Steuererklärung machen.", "Vergi beyannamesini yaptırıyor."],
+        ["machen lassen", "Er lässt den Motor seines Autos reparieren.", "Arabasının motorunu tamir ettiriyor."],
+        ["erlauben", "Lässt du mich mal telefonieren?", "Telefon etmeme izin verir misin?"],
+        ["zurücklassen", "Lass die Tasche im Auto!", "Çantayı arabada bırak!"],
+        ["sich lassen (Passiv-Ersatz)", "Das Problem lässt sich lösen.", "Bu sorun çözülebilir."]
+      ]
+    },
+    fehler: {
+      de: "Typische Fehler: ✗ „Ich lasse reparieren mein Auto“ → ✓ „Ich lasse mein Auto reparieren“ (Infinitiv ans Ende!). ✗ „du lasst“ → ✓ „du lässt“. Verwechsle „lassen“ nicht mit „verlassen“ (= weggehen von): „Er verlässt das Haus um 8 Uhr.“",
+      tr: "Tipik hatalar: ✗ „Ich lasse reparieren mein Auto“ → ✓ „Ich lasse mein Auto reparieren“ (mastar sona!). ✗ „du lasst“ → ✓ „du lässt“. „lassen“ ile „verlassen“ (= terk etmek, ayrılmak) fiilini karıştırma: „Er verlässt das Haus um 8 Uhr.“ (Evden saat 8'de çıkıyor.)"
+    },
+    quiz: [
+      { q: "Meine Haare sind zu lang. Ich ___ sie morgen ___.", options: ["lasse … schneiden", "werde … schneiden lassen werden", "schneide … lassen"], answer: 0, explain: { de: "„Ich lasse sie schneiden“ – jemand anderes schneidet.", tr: "„Kestiriyorum“ – başkası kesiyor." } },
+      { q: "___ du mich bitte ausreden?", options: ["Lässt", "Lasst", "Lassen"], answer: 0, explain: { de: "du-Form: „du lässt“ – hier: erlauben.", tr: "du formu: „du lässt“ – burada: izin vermek." } },
+      { q: "Wir haben die Wohnung ___ .", options: ["putzen lassen", "gelassen putzen", "putzen gelassen"], answer: 0, explain: { de: "Perfekt mit doppeltem Infinitiv: „haben + putzen lassen“.", tr: "Çift mastarlı Perfekt: „haben + putzen lassen“ (temizlettik)." } }
+    ]
   }
 ];

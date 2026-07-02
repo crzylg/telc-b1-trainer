@@ -59,50 +59,79 @@
     tabs.forEach(t => t.classList.toggle("active", t.dataset.view === name));
     window.scrollTo(0, 0);
     view.innerHTML = "";
+    stopSpeech();
+    if (name !== "home") store.set("b1_last", name);
     routes[name]();
   }
   tabs.forEach(t => t.addEventListener("click", () => navigate(t.dataset.view)));
 
-  // ---------- HOME ----------
+  // ---------- HOME: Lernweg ----------
   routes.home = function () {
     const totalWords = window.VOKABELN.reduce((n, t) => n + t.words.length, 0);
     const knownWords = Object.values(known).reduce((n, a) => n + a.length, 0);
-    const exCount = window.LESEN.teil1.length + window.LESEN.teil2.length + window.LESEN.teil3.length + window.LESEN.goethe4.length + window.SPRACHBAUSTEINE.teil1.length + window.SPRACHBAUSTEINE.teil2.length;
     view.appendChild(el(`
       <div class="card">
         <h2>Willkommen! · Hoş geldin!</h2>
-        <p>Dein persönlicher Trainer für die <strong>telc Deutsch B1</strong> und <strong>Goethe-Zertifikat B1</strong> Prüfung – mit Schwerpunkt auf <strong>Lesen &amp; Verstehen</strong>.</p>
-        ${trBox("telc Deutsch B1 ve Goethe-Zertifikat B1 sınavı için kişisel antrenörün – Okuma ve Anlama ağırlıklı. Tüm açıklamalar basit Almanca ve Türkçe.")}
+        <p>Dein Trainer für <strong>telc B1</strong>, <strong>Goethe B1</strong> und <strong>DTZ</strong> – mit Schwerpunkt auf <strong>Lesen &amp; Verstehen</strong>. Folge einfach den Schritten 1–9.</p>
+        ${trBox("telc B1, Goethe B1 ve DTZ sınavları için antrenörün – Okuma ağırlıklı. Sadece 1–9 arası adımları takip et. Her gün 15 dakika yeter!")}
         <div class="stat-row">
           <div class="stat-box"><div class="num">${knownWords}</div><div class="lbl">Wörter gelernt<br>öğrenilen kelime</div></div>
           <div class="stat-box"><div class="num">${totalWords}</div><div class="lbl">Wörter gesamt<br>toplam kelime</div></div>
-          <div class="stat-box"><div class="num">${Object.keys(scores).length}/${exCount + window.KONNEKTOREN.quiz.length > 0 ? exCount + 1 + window.GRAMMATIK.length : exCount}</div><div class="lbl">Übungen gemacht<br>yapılan alıştırma</div></div>
+          <div class="stat-box"><div class="num">${Object.keys(scores).length}</div><div class="lbl">Übungen gemacht<br>yapılan alıştırma</div></div>
         </div>
       </div>`));
-    const grid = el(`<div class="tile-grid"></div>`);
-    const tiles = [
-      ["pruefung", "📋", "Prüfungsaufbau", "Sınav yapısı", "telc & Goethe im Detail"],
-      ["strategien", "🎯", "Taktiken & Tricks", "Taktikler", "Für jeden Prüfungsteil"],
-      ["lesen", "📖", "Lesen trainieren", "Okuma antrenmanı", "Teil 1–3 + Goethe-Stil"],
-      ["sprachbausteine", "🧩", "Sprachbausteine", "Dil yapıları", "Grammatik & Wortschatz"],
-      ["vokabeln", "🗂️", "Vokabeltrainer", "Kelime antrenörü", `${window.VOKABELN.length} Themen, ${totalWords} Wörter`],
-      ["konnektoren", "🔗", "Konnektoren", "Bağlaçlar", "Mit Wortstellung & Quiz"],
-      ["grammatik", "📐", "Grammatik-Lernziele", "Dilbilgisi hedefleri", `${window.GRAMMATIK.length} Themen mit Quiz`],
-      ["skills", "✍️", "Schreiben, Hören, Sprechen", "Yazma, Dinleme, Konuşma", "Musterbriefe & Redemittel"]
+    const last = store.get("b1_last", null);
+    if (last && routes[last]) {
+      const cont = el(`<button class="continue-btn">▶️ Weiterlernen / Kaldığın yerden devam et</button>`);
+      cont.addEventListener("click", () => navigate(last));
+      view.appendChild(cont);
+    }
+    const steps = [
+      ["pruefung", "Die Prüfung kennenlernen", "1. Adım: Sınavı tanı – telc, Goethe & DTZ", null],
+      ["vokabeln", "Wortschatz aufbauen", "2. Adım: Kelime dağarcığını kur – her gün 1 konu", `⭐ ${knownWords}/${totalWords} Wörter`],
+      ["grammatik", "Grammatik verstehen", "3. Adım: Dilbilgisi hedeflerini çalış", stepProgress(window.GRAMMATIK.map(g => "gram-" + g.id))],
+      ["konnektoren", "Konnektoren meistern", "4. Adım: Bağlaçları ve kelime dizilişini öğren", stepProgress(["konnektoren-quiz"])],
+      ["sprachbausteine", "Sprachbausteine trainieren", "5. Adım: Sınav formatında dil yapıları", stepProgress(allIds("sb"))],
+      ["strategien", "Taktiken lernen", "6. Adım: Sınav taktiklerini ve tuzakları öğren", null],
+      ["lesen", "Lesen trainieren (Schwerpunkt!)", "7. Adım: Okuma antrenmanı – en çok puan burada", stepProgress(allIds("lesen"))],
+      ["hoeren", "Hören trainieren (mit Audio)", "8. Adım: Sesli dinleme antrenmanı", stepProgress(allIds("hoeren"))],
+      ["skills", "Schreiben & Sprechen", "9. Adım: Mektup kalıpları ve konuşma", null]
     ];
-    tiles.forEach(([r, emoji, t, tr, sub]) => {
-      const tile = el(`<button class="tile"><span class="tile-emoji">${emoji}</span><span class="tile-title">${t}</span><span class="tile-sub">${tr}</span><span class="tile-meta">${sub}</span></button>`);
-      tile.addEventListener("click", () => navigate(r));
-      grid.appendChild(tile);
+    steps.forEach(([r, title, sub, prog], i) => {
+      const done = prog && prog.done === prog.total && prog.total > 0;
+      const card = el(`<button class="step-card${done ? " done" : ""}">
+        <span class="step-num">${done ? "✓" : i + 1}</span>
+        <span class="step-body">
+          <span class="step-title">${esc(title)}</span><br>
+          <span class="step-sub">🇹🇷 ${esc(sub)}</span>
+          ${prog ? `<span class="step-progress">${typeof prog === "string" ? prog : prog.done + "/" + prog.total + " Übungen ✓"}</span>` : ""}
+        </span>
+        <span class="step-arrow">›</span>
+      </button>`);
+      card.addEventListener("click", () => navigate(r));
+      view.appendChild(card);
     });
-    view.appendChild(grid);
   };
+
+  function allIds(kind) {
+    if (kind === "sb") return window.SPRACHBAUSTEINE.teil1.concat(window.SPRACHBAUSTEINE.teil2).map(e => e.id);
+    if (kind === "lesen") {
+      const L = window.LESEN;
+      return [].concat(L.teil1, L.teil2, L.teil3, L.goethe4, L.goethe5 || []).map(e => e.id);
+    }
+    if (kind === "hoeren") return window.HOEREN.uebungen.map(e => e.id);
+    return [];
+  }
+  function stepProgress(ids) {
+    const done = ids.filter(id => scores[id]).length;
+    return { done, total: ids.length };
+  }
 
   // ---------- PRÜFUNG ----------
   routes.pruefung = function () {
     const P = window.PRUEFUNG;
     view.appendChild(el(`<div class="card"><h2>Die B1-Prüfungen im Überblick</h2><p class="subtitle-tr">B1 sınavlarına genel bakış</p><p>${esc(P.intro.de)}</p>${trBox(P.intro.tr)}</div>`));
-    [P.telc, P.goethe].forEach(exam => {
+    [P.telc, P.goethe, P.dtz].forEach(exam => {
       const rows = exam.parts.map(p => `<tr><td><strong>${esc(p.teil)}</strong></td><td>${esc(p.zeit)}</td><td>${esc(p.punkte)}</td><td>${esc(p.aufgabe)}<div class="explain show">🇹🇷 ${esc(p.tr)}</div></td></tr>`).join("");
       const hints = exam.hinweise.de.map((h, i) => `<li>${esc(h)}<div class="explain show">🇹🇷 ${esc(exam.hinweise.tr[i])}</div></li>`).join("");
       view.appendChild(el(`
@@ -138,7 +167,8 @@
     window.LESEN.teil1.forEach(ex => items.push(["Teil 1", ex, () => renderTeil1(ex)]));
     window.LESEN.teil2.forEach(ex => items.push(["Teil 2", ex, () => renderTeil2(ex)]));
     window.LESEN.teil3.forEach(ex => items.push(["Teil 3", ex, () => renderTeil3(ex)]));
-    window.LESEN.goethe4.forEach(ex => items.push(["Goethe Teil 4", ex, () => renderGoethe4(ex)]));
+    window.LESEN.goethe4.forEach(ex => items.push(["Goethe-Stil", ex, () => renderGoethe4(ex)]));
+    (window.LESEN.goethe5 || []).forEach(ex => items.push(["Goethe Teil 5", ex, () => renderTeil2(ex)]));
     items.forEach(([label, ex, fn]) => {
       const tile = el(`<button class="tile"><span class="tile-emoji">📖</span><span class="tile-title">${esc(label)}</span><span class="tile-sub">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("lesen"); fn(); });
@@ -254,15 +284,17 @@
     card.appendChild(btn);
   }
 
-  // Goethe Teil 4: Ja/Nein
+  // Goethe Teil 1/4: Ja/Nein bzw. Richtig/Falsch
   function renderGoethe4(ex) {
     anleitungCard(ex);
+    if (ex.blocktext) view.appendChild(el(`<div class="card"><div class="exercise-text" style="white-space:pre-line">${esc(ex.blocktext)}</div></div>`));
+    const labels = ex.labels || { yes: "RICHTIG / Doğru", no: "FALSCH / Yanlış" };
     const card = el(`<div class="card"></div>`);
     const groups = [];
     ex.statements.forEach((st, i) => {
       const qEl = el(`<div class="question"><span class="q-label">${i + 1}.</span><div class="exercise-text">${esc(st.s)}</div></div>`);
-      const yes = el(`<label class="option"><input type="radio" name="${ex.id}-s${i}" value="1"><span>JA – für das Verbot / yasağa taraftar</span></label>`);
-      const no = el(`<label class="option"><input type="radio" name="${ex.id}-s${i}" value="0"><span>NEIN – gegen das Verbot / yasağa karşı</span></label>`);
+      const yes = el(`<label class="option"><input type="radio" name="${ex.id}-s${i}" value="1"><span>${esc(labels.yes)}</span></label>`);
+      const no = el(`<label class="option"><input type="radio" name="${ex.id}-s${i}" value="0"><span>${esc(labels.no)}</span></label>`);
       const exp = el(`<div class="explain">💡 ${esc(st.explain.de)}<br>🇹🇷 ${esc(st.explain.tr)}</div>`);
       qEl.appendChild(yes); qEl.appendChild(no); qEl.appendChild(exp);
       groups.push({ yes, no, exp, answer: st.answer });
@@ -499,6 +531,158 @@
     });
     card.appendChild(btn);
     container.appendChild(card);
+  }
+
+  // ---------- TTS (Sprachausgabe) ----------
+  let ttsRate = 1.0;
+  let currentBtn = null;
+  function getGermanVoice() {
+    const voices = window.speechSynthesis ? speechSynthesis.getVoices() : [];
+    return voices.find(v => v.lang === "de-DE") || voices.find(v => v.lang && v.lang.indexOf("de") === 0) || null;
+  }
+  function stopSpeech() {
+    if (window.speechSynthesis) speechSynthesis.cancel();
+    if (currentBtn) { currentBtn.classList.remove("playing"); currentBtn = null; }
+  }
+  function speak(text, btn) {
+    if (!window.speechSynthesis) return;
+    if (currentBtn === btn && speechSynthesis.speaking) { stopSpeech(); return; }
+    stopSpeech();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "de-DE";
+    const v = getGermanVoice();
+    if (v) u.voice = v;
+    u.rate = ttsRate;
+    currentBtn = btn;
+    btn.classList.add("playing");
+    u.onend = u.onerror = function () { btn.classList.remove("playing"); if (currentBtn === btn) currentBtn = null; };
+    speechSynthesis.speak(u);
+  }
+  if (window.speechSynthesis) speechSynthesis.getVoices(); // Stimmen früh laden (Safari/Chrome)
+
+  function speedToggleCard() {
+    const card = el(`<div class="card"><strong>🔊 Geschwindigkeit / Hız:</strong>
+      <div class="speed-toggle">
+        <button data-rate="1" class="${ttsRate === 1 ? "on" : ""}">Normal (Prüfungstempo)</button>
+        <button data-rate="0.8" class="${ttsRate === 0.8 ? "on" : ""}">Langsam / Yavaş</button>
+      </div></div>`);
+    card.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+      ttsRate = parseFloat(b.dataset.rate);
+      card.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b));
+    }));
+    return card;
+  }
+  function playBtn(text, label) {
+    const b = el(`<button class="audio-btn">▶️ ${esc(label || "Anhören / Dinle")}</button>`);
+    b.addEventListener("click", () => speak(text, b));
+    return b;
+  }
+
+  // ---------- HÖREN ----------
+  routes.hoeren = function () {
+    const H = window.HOEREN;
+    view.appendChild(el(`<div class="card"><h2>🎧 Hörverstehen mit Audio</h2><p class="subtitle-tr">Sesli dinleme antrenmanı</p><p>${esc(H.intro.de)}</p>${trBox(H.intro.tr)}</div>`));
+    if (!window.speechSynthesis) {
+      view.appendChild(el(`<div class="card"><div class="tts-warning">⚠️ Dein Browser unterstützt keine Sprachausgabe. Bitte benutze Safari, Chrome oder Edge. / Tarayıcın sesli okumayı desteklemiyor. Lütfen Safari, Chrome veya Edge kullan.</div></div>`));
+      return;
+    }
+    const grid = el(`<div class="tile-grid"></div>`);
+    H.uebungen.forEach(ex => {
+      const tile = el(`<button class="tile"><span class="tile-emoji">🎧</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-sub">${esc(ex.titleTr)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+      tile.addEventListener("click", () => { view.innerHTML = ""; backLink("hoeren"); renderHoeren(ex); });
+      grid.appendChild(tile);
+    });
+    view.appendChild(grid);
+  };
+
+  function renderHoeren(ex) {
+    anleitungCard(ex);
+    view.appendChild(speedToggleCard());
+    const card = el(`<div class="card"></div>`);
+    const groups = [];
+    const transcripts = [];
+
+    if (ex.longAudio) {
+      const audioRow = el(`<div class="btn-row" style="align-items:center"></div>`);
+      audioRow.appendChild(playBtn(ex.longAudio, "Gespräch anhören / Konuşmayı dinle"));
+      card.appendChild(audioRow);
+      const ts = el(`<div class="transcript">📄 ${esc(ex.longAudio)}</div>`);
+      transcripts.push(ts);
+      ex.items.forEach((st, i) => {
+        const qEl = el(`<div class="question"><span class="q-label">${i + 1}. ${esc(st.statement)}</span></div>`);
+        const yes = el(`<label class="option"><input type="radio" name="${ex.id}-s${i}" value="1"><span>RICHTIG (+) / Doğru</span></label>`);
+        const no = el(`<label class="option"><input type="radio" name="${ex.id}-s${i}" value="0"><span>FALSCH (–) / Yanlış</span></label>`);
+        const exp = el(`<div class="explain">💡 ${esc(st.explain.de)}<br>🇹🇷 ${esc(st.explain.tr)}</div>`);
+        qEl.appendChild(yes); qEl.appendChild(no); qEl.appendChild(exp);
+        groups.push({ type: "rf", yes, no, exp, answer: st.answer });
+        card.appendChild(qEl);
+      });
+      card.appendChild(ts);
+    } else if (ex.items) {
+      ex.items.forEach((it, i) => {
+        const qEl = el(`<div class="question"></div>`);
+        qEl.appendChild(el(`<span class="q-label">Text ${i + 1}</span>`));
+        qEl.appendChild(playBtn(it.audio));
+        qEl.appendChild(el(`<p style="margin-top:10px"><strong>${esc(it.statement)}</strong></p>`));
+        const yes = el(`<label class="option"><input type="radio" name="${ex.id}-i${i}" value="1"><span>RICHTIG (+) / Doğru</span></label>`);
+        const no = el(`<label class="option"><input type="radio" name="${ex.id}-i${i}" value="0"><span>FALSCH (–) / Yanlış</span></label>`);
+        const exp = el(`<div class="explain">💡 ${esc(it.explain.de)}<br>🇹🇷 ${esc(it.explain.tr)}</div>`);
+        const ts = el(`<div class="transcript">📄 ${esc(it.audio)}</div>`);
+        transcripts.push(ts);
+        qEl.appendChild(yes); qEl.appendChild(no); qEl.appendChild(exp); qEl.appendChild(ts);
+        groups.push({ type: "rf", yes, no, exp, answer: it.answer });
+        card.appendChild(qEl);
+      });
+    }
+    if (ex.mcItems) {
+      ex.mcItems.forEach((it, i) => {
+        const qEl = el(`<div class="question"></div>`);
+        qEl.appendChild(el(`<span class="q-label">Text ${i + 1}</span>`));
+        qEl.appendChild(playBtn(it.audio));
+        qEl.appendChild(el(`<p style="margin-top:10px"><strong>${esc(it.q)}</strong></p>`));
+        const radios = [];
+        it.options.forEach((opt, oi) => {
+          const o = el(`<label class="option"><input type="radio" name="${ex.id}-m${i}" value="${oi}"><span><strong>${letter(oi)})</strong> ${esc(opt)}</span></label>`);
+          radios.push(o); qEl.appendChild(o);
+        });
+        const exp = el(`<div class="explain">💡 ${esc(it.explain.de)}<br>🇹🇷 ${esc(it.explain.tr)}</div>`);
+        const ts = el(`<div class="transcript">📄 ${esc(it.audio)}</div>`);
+        transcripts.push(ts);
+        qEl.appendChild(exp); qEl.appendChild(ts);
+        groups.push({ type: "mc", radios, exp, answer: it.answer });
+        card.appendChild(qEl);
+      });
+    }
+
+    const btn = el(`<div class="btn-row"><button class="btn green">Prüfen / Kontrol et</button></div>`);
+    btn.querySelector("button").addEventListener("click", () => {
+      stopSpeech();
+      let score = 0;
+      groups.forEach(g => {
+        if (g.type === "rf") {
+          [g.yes, g.no].forEach(o => o.classList.remove("correct", "wrong"));
+          const correctEl = g.answer ? g.yes : g.no;
+          const wrongEl = g.answer ? g.no : g.yes;
+          correctEl.classList.add("correct");
+          if (wrongEl.querySelector("input").checked) wrongEl.classList.add("wrong");
+          if (correctEl.querySelector("input").checked) score++;
+        } else {
+          g.radios.forEach((r, i) => {
+            r.classList.remove("correct", "wrong");
+            const checked = r.querySelector("input").checked;
+            if (i === g.answer) r.classList.add("correct");
+            else if (checked) r.classList.add("wrong");
+            if (checked && i === g.answer) score++;
+          });
+        }
+        g.exp.classList.add("show");
+      });
+      transcripts.forEach(t => t.classList.add("show"));
+      feedback(card, score, groups.length);
+      saveScore(ex.id, score, groups.length);
+    });
+    card.appendChild(btn);
+    view.appendChild(card);
   }
 
   // ---------- KONNEKTOREN ----------
