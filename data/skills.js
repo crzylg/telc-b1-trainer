@@ -45,19 +45,19 @@ window.SKILLS = {
         name: "Musterbrief 1: Beschwerde / Şikayet Mektubu",
         aufgabe: "Sie haben online einen Laptop gekauft. Er ist kaputt angekommen. Schreiben Sie an den Online-Shop: Grund des Schreibens, Problem beschreiben, was Sie schon gemacht haben, was Sie jetzt erwarten.",
         text: "Sehr geehrte Damen und Herren,\n\nich schreibe Ihnen, weil ich am 15. Juni einen Laptop in Ihrem Online-Shop bestellt habe (Rechnungsnummer 4711).\n\nLeider muss ich Ihnen mitteilen, dass das Gerät kaputt angekommen ist: Der Bildschirm zeigt kein Bild, obwohl der Laptop sich einschalten lässt. Deshalb habe ich zuerst versucht, Ihre Hotline anzurufen – leider ohne Erfolg.\n\nIch bitte Sie deshalb, mir so schnell wie möglich ein neues Gerät zu schicken oder mir das Geld zurückzuzahlen. Außerdem möchte ich wissen, ob ich den kaputten Laptop kostenlos zurückschicken kann.\n\nVielen Dank im Voraus für Ihre Mühe. Ich freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nErdal Çelik",
-        tipp: { de: "Beachte: Alle 4 Leitpunkte sind bearbeitet, die Konnektoren (weil, leider, obwohl, deshalb, außerdem) verbinden die Sätze logisch.", tr: "Dikkat: 4 içerik maddesinin tamamı işlendi; bağlaçlar (weil, leider, obwohl, deshalb, außerdem) cümleleri mantıklı bağlıyor." }
+        tipp: { de: "Schau genau hin: Alle 4 Punkte sind da. Die Wörter weil, leider, obwohl, deshalb, außerdem verbinden die Sätze gut.", tr: "Dikkatli bak: 4 madde de var. weil, leider, obwohl, deshalb, außerdem kelimeleri cümleleri güzel bağlıyor." }
       },
       {
         name: "Musterbrief 2: Anfrage / Bilgi İsteme Mektubu",
         aufgabe: "Sie möchten einen Deutschkurs besuchen. Schreiben Sie an die Sprachschule: warum Sie schreiben, Ihre Vorkenntnisse, Fragen zu Zeit und Preis, Bitte um Antwort.",
         text: "Sehr geehrte Damen und Herren,\n\nauf Ihrer Internetseite habe ich gelesen, dass Sie Deutschkurse auf dem Niveau B1 anbieten. Dafür interessiere ich mich sehr.\n\nIch lerne seit einem Jahr Deutsch und habe die A2-Prüfung bestanden. Jetzt möchte ich mich auf die telc-B1-Prüfung vorbereiten, weil ich sie für meine Arbeit brauche.\n\nKönnten Sie mir bitte mitteilen, wann der nächste Kurs beginnt und wie viel er kostet? Außerdem möchte ich wissen, ob es auch Abendkurse gibt, da ich tagsüber arbeite.\n\nIch wäre Ihnen sehr dankbar, wenn Sie mir diese Informationen schicken könnten.\n\nMit freundlichen Grüßen\nErdal Çelik",
-        tipp: { de: "Indirekte Fragen („wann der Kurs beginnt“, „ob es Abendkurse gibt“) wirken höflich und zeigen B1-Grammatik!", tr: "Dolaylı sorular („wann der Kurs beginnt“, „ob es Abendkurse gibt“) kibar durur ve B1 dilbilgisini gösterir!" }
+        tipp: { de: "Diese Fragen sind höflich: „wann der Kurs beginnt“, „ob es Abendkurse gibt“. Sie zeigen gute Grammatik!", tr: "Bu sorular kibardır: „wann der Kurs beginnt“, „ob es Abendkurse gibt“. İyi dilbilgisi gösterirler!" }
       },
       {
         name: "Musterbrief 3: Entschuldigung / Özür Mektubu",
         aufgabe: "Sie können an einem Termin (z. B. Kursabend / Einladung) nicht teilnehmen. Schreiben Sie: Dank für die Einladung, Absage mit Grund, Entschuldigung, Vorschlag für ein anderes Treffen.",
         text: "Liebe Monika,\n\nvielen Dank für deine Einladung zu deiner Geburtstagsfeier am Samstag. Ich habe mich sehr darüber gefreut!\n\nLeider kann ich nicht kommen, weil ich am Wochenende arbeiten muss. Meine Kollegin ist krank geworden, deshalb muss ich ihre Schicht übernehmen. Das tut mir wirklich sehr leid.\n\nIch hoffe, dass du einen wunderschönen Tag hast. Hättest du Lust, nächste Woche zusammen essen zu gehen? Dann bringe ich dein Geschenk mit und du kannst mir alles von der Feier erzählen.\n\nFeier schön und bis bald!\n\nLiebe Grüße\nAyşe",
-        tipp: { de: "Informeller Brief: du-Form, „Liebe …“, „Liebe Grüße“. Trotzdem alle Leitpunkte + Konnektoren!", tr: "Gayri resmi mektup: du formu, „Liebe …“, „Liebe Grüße“. Yine de tüm maddeler + bağlaçlar!" }
+        tipp: { de: "Das ist ein Brief an einen Freund: du-Form, „Liebe …“, „Liebe Grüße“. Aber Achtung: Alle Punkte müssen trotzdem da sein!", tr: "Bu bir arkadaşa mektup: du formu, „Liebe …“, „Liebe Grüße“. Ama dikkat: Yine de tüm maddeler olmalı!" }
       }
     ]
   },
@@ -65,16 +65,28 @@ window.SKILLS = {
     title: "Hören: Training & Ressourcen",
     titleTr: "Dinleme: Antrenman ve Kaynaklar",
     resources: [
-      { name: "telc Übungstest (offiziell, mit Audio)", url: "https://www.telc.net", desc: { de: "Kostenloser Modelltest mit MP3-Dateien – das Original-Format!", tr: "MP3 dosyalı ücretsiz deneme sınavı – orijinal format!" } },
-      { name: "Goethe B1 Modellsatz (interaktiv)", url: "https://bfu.goethe.de/b1_mod/", desc: { de: "Offizieller interaktiver Übungstest des Goethe-Instituts.", tr: "Goethe Enstitüsü'nün resmi interaktif deneme sınavı." } },
-      { name: "DW – Langsam gesprochene Nachrichten", url: "https://learngerman.dw.com", desc: { de: "Tägliche Nachrichten, langsam gesprochen, mit Text zum Mitlesen.", tr: "Günlük haberler, yavaş okunmuş, takip edilebilir metinli." } },
-      { name: "DW – Nicos Weg (B1)", url: "https://learngerman.dw.com/de/nicos-weg/c-36519789", desc: { de: "Kostenloser Videokurs mit Übungen – komplett auf B1.", tr: "Alıştırmalı ücretsiz video kursu – komple B1 seviyesinde." } }
+      { name: "telc Übungstest (offiziell, mit Audio)", url: "https://www.telc.net", desc: { de: "Ein Test mit echten MP3-Dateien. Kostenlos!", tr: "Gerçek MP3 dosyalı bir test. Ücretsiz!" } },
+      { name: "Goethe B1 Modellsatz (interaktiv)", url: "https://bfu.goethe.de/b1_mod/", desc: { de: "Ein Test vom Goethe-Institut. Du klickst direkt am Computer.", tr: "Goethe Enstitüsü'nden bir test. Bilgisayarda direkt tıklarsın." } },
+      { name: "DW – Langsam gesprochene Nachrichten", url: "https://learngerman.dw.com", desc: { de: "Jeden Tag Nachrichten. Sehr langsam gesprochen. Mit Text zum Mitlesen.", tr: "Her gün haberler. Çok yavaş konuşulur. Takip edebileceğin metinle." } },
+      { name: "DW – Nicos Weg (B1)", url: "https://learngerman.dw.com/de/nicos-weg/c-36519789", desc: { de: "Ein Video-Kurs mit Übungen. Kostenlos. Genau für B1.", tr: "Alıştırmalı bir video kursu. Ücretsiz. Tam B1 için." } }
     ],
     tipps: {
-      de: ["Höre JEDEN Tag mindestens 15 Minuten Deutsch – Regelmäßigkeit schlägt Dauer.", "Erst ohne Text hören, dann mit Text kontrollieren, dann noch einmal ohne Text.", "Achte auf Signalwörter: aber, leider, erst, schon, nur – sie ändern oft die Antwort.", "In der Prüfung: erst die Aufgaben lesen, während des Hörens sofort markieren."],
-      tr: ["HER GÜN en az 15 dakika Almanca dinle – düzenlilik süreden önemlidir.", "Önce metinsiz dinle, sonra metinle kontrol et, sonra tekrar metinsiz dinle.", "Sinyal kelimelere dikkat: aber, leider, erst, schon, nur – bunlar cevabı sık sık değiştirir.", "Sınavda: önce soruları oku, dinlerken hemen işaretle."]
+      de: ["Höre JEDEN Tag 15 Minuten Deutsch. Das ist besser als einmal lange.", "Höre zuerst ohne Text. Dann höre mit Text. Dann noch einmal ohne Text.", "Achte auf diese Wörter: aber, leider, erst, schon, nur. Sie ändern oft die Antwort.", "In der Prüfung: Lies zuerst die Aufgaben. Markiere sofort beim Hören."],
+      tr: ["HER GÜN 15 dakika Almanca dinle. Bu, tek seferde uzun dinlemekten daha iyidir.", "Önce metinsiz dinle. Sonra metinle dinle. Sonra tekrar metinsiz dinle.", "Şu kelimelere dikkat et: aber, leider, erst, schon, nur. Bunlar cevabı sık değiştirir.", "Sınavda: Önce soruları oku. Dinlerken hemen işaretle."]
     }
   },
+  aussprache: [
+    "Ich heiße Erdal und komme aus der Türkei.",
+    "Ich lerne seit einem Jahr Deutsch.",
+    "Könnten Sie das bitte wiederholen?",
+    "Meiner Meinung nach ist das eine gute Idee.",
+    "Ich schlage vor, dass wir am Samstag feiern.",
+    "Ich habe die Erfahrung gemacht, dass Sport gesund ist.",
+    "Entschuldigung, wo ist der Bahnhof?",
+    "Ich möchte einen Termin vereinbaren.",
+    "Das ist eine gute Idee, aber ich würde lieber ins Kino gehen.",
+    "Ich freue mich auf deine Antwort."
+  ],
   sprechen: {
     title: "Sprechen: Redemittel für die mündliche Prüfung",
     titleTr: "Konuşma: Sözlü Sınav Kalıpları",

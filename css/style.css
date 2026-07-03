@@ -166,6 +166,27 @@ main { max-width: 1080px; margin: 0 auto; padding: 18px 14px 40px; }
 .tile .tile-sub { color: var(--ink-soft); font-size: .8rem; display: block; }
 .tile .tile-meta { color: var(--blue); font-size: .75rem; font-weight: 600; display: block; margin-top: 6px; }
 
+.tile.start-here {
+  border: 2px solid var(--accent);
+  position: relative;
+  padding-top: 34px;
+}
+.start-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 3px 4px;
+  line-height: 1.25;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.start-badge small { font-weight: 600; opacity: .9; }
+
 /* ---------- Tables ---------- */
 .table-wrap { overflow-x: auto; margin: 10px 0; }
 table { border-collapse: collapse; width: 100%; font-size: .88rem; }
@@ -372,7 +393,8 @@ select.match-select.wrong { border-color: var(--red); background: var(--red-ligh
 .step-body { flex: 1; min-width: 0; }
 .step-title { font-weight: 700; font-size: 1rem; }
 .step-sub { color: var(--ink-soft); font-size: .82rem; }
-.step-progress { font-size: .75rem; color: var(--blue); font-weight: 700; margin-top: 2px; }
+.step-progress { font-size: .75rem; color: var(--blue); font-weight: 700; margin-top: 2px; display: block; }
+.step-start { font-size: .75rem; color: var(--accent); font-weight: 700; margin-top: 2px; display: block; }
 .step-arrow { color: var(--blue); font-size: 1.3rem; flex-shrink: 0; }
 
 .continue-btn {

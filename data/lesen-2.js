@@ -5,8 +5,8 @@ window.LESEN.teil1.push({
   id: "t1-c",
   title: "Übung 3: Überschriften zuordnen",
   anleitung: {
-    de: "Lesen Sie zuerst die 10 Überschriften. Lesen Sie dann die 5 Texte und entscheiden Sie, welche Überschrift (a–j) am besten passt.",
-    tr: "Önce 10 başlığı oku. Sonra 5 metni oku ve hangi başlığın (a–j) en iyi uyduğuna karar ver."
+    de: "Lesen Sie zuerst die 10 Überschriften. Lesen Sie dann die 5 Texte. Welche Überschrift (a–j) passt am besten?",
+    tr: "Önce 10 başlığı oku. Sonra 5 metni oku. Hangi başlık (a–j) en iyi uyuyor?"
   },
   headings: [
     "Immer mehr Menschen kaufen im Internet ein",
@@ -54,8 +54,8 @@ window.LESEN.teil2.push({
   id: "t2-c",
   title: "Übung 3: Zeitungsartikel „Mehrgenerationenhaus“",
   anleitung: {
-    de: "Lesen Sie den Text und die Aufgaben 1–5. Welche Lösung (a, b oder c) ist richtig?",
-    tr: "Metni ve 1–5 arası soruları oku. Hangi cevap (a, b veya c) doğru?"
+    de: "Lesen Sie den Text. Lesen Sie die Fragen 1–5. Welche Antwort (a, b oder c) ist richtig?",
+    tr: "Metni oku. 1–5 arası soruları oku. Hangi cevap (a, b veya c) doğru?"
   },
   text: "<strong>Wohnen wie eine große Familie – das Mehrgenerationenhaus</strong><br><br>Als Rentnerin Helga Baumann (72) vor drei Jahren ihren Mann verlor, wurde ihre Wohnung ihr zu still. „Ich habe manchmal tagelang mit niemandem gesprochen“, erinnert sie sich. Heute lebt sie im Mehrgenerationenhaus „Miteinander“ am Stadtrand – zusammen mit 40 anderen Menschen zwischen einem und 85 Jahren.<br><br>Das Prinzip ist einfach: Jede Familie und jeder Bewohner hat eine eigene Wohnung mit Küche und Bad. Zusätzlich gibt es Gemeinschaftsräume, die alle nutzen können – eine große Küche, einen Garten, eine Werkstatt und ein Spielzimmer. Wer Lust hat, trifft sich dort; wer seine Ruhe möchte, bleibt einfach in seiner Wohnung.<br><br>Von dem Zusammenleben profitieren alle Generationen: Frau Baumann holt zweimal pro Woche die Kinder ihrer Nachbarn von der Kita ab. Dafür hilft ihr der Student aus dem zweiten Stock beim Einkaufen und erklärt ihr geduldig das Tablet. „Ich fühle mich hier gebraucht – das ist das Wichtigste“, sagt sie.<br><br>Probleme gibt es natürlich trotzdem. Über die Sauberkeit in der Gemeinschaftsküche wird regelmäßig diskutiert, und nicht jeder macht bei den gemeinsamen Aufgaben mit. Deshalb treffen sich die Bewohner einmal im Monat und besprechen, was besser laufen soll. Wer einziehen will, muss übrigens Geduld haben: Auf der Warteliste stehen zurzeit über 60 Familien und Einzelpersonen.",
   questions: [
@@ -97,8 +97,8 @@ window.LESEN.teil3.push({
   id: "t3-b",
   title: "Übung 2: Anzeigen zuordnen",
   anleitung: {
-    de: "Lesen Sie die Situationen 1–10 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige. Sie können jede Anzeige nur einmal benutzen. Wenn Sie zu einer Situation keine Anzeige finden, markieren Sie ein „x“.",
-    tr: "1–10 arası durumları ve a–l arası ilanları oku. Her durum için uygun ilanı bul. Her ilanı sadece bir kez kullanabilirsin. Uygun ilan yoksa „x“ işaretle."
+    de: "Lesen Sie die Situationen 1–10. Lesen Sie die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige. Jede Anzeige nur einmal benutzen! Passt keine Anzeige? Dann markieren Sie ein „x“.",
+    tr: "1–10 arası durumları oku. a–l arası ilanları oku. Her duruma uygun ilanı bul. Her ilanı sadece bir kez kullan! Uygun ilan yok mu? O zaman „x“ işaretle."
   },
   ads: [
     "Möbel-Discount Roth: Neue Küchen schon ab 1.999 € inkl. Lieferung und Montage. Beratung Mo–Sa 10–19 Uhr.",
@@ -133,8 +133,8 @@ window.LESEN.goethe4.push({
   id: "g1-blog",
   title: "Goethe-Stil Teil 1: Blog lesen (richtig/falsch)",
   anleitung: {
-    de: "Wie Goethe Lesen Teil 1: Lesen Sie den Blogeintrag. Sind die Aussagen 1–7 richtig (Ja) oder falsch (Nein)?",
-    tr: "Goethe Lesen Teil 1 gibi: Blog yazısını oku. 1–7 arası cümleler doğru mu (Ja) yanlış mı (Nein)?"
+    de: "Das ist wie Goethe Lesen Teil 1. Lesen Sie den Blogeintrag. Sind die Sätze 1–7 richtig (Ja)? Oder falsch (Nein)?",
+    tr: "Bu, Goethe Lesen Teil 1 gibidir. Blog yazısını oku. 1–7 arası cümleler doğru mu (Ja)? Yoksa yanlış mı (Nein)?"
   },
   blocktext: "Mein erstes Jahr in Deutschland – Zeit für eine Bilanz!\n\nHallo ihr Lieben, heute vor genau einem Jahr bin ich in Frankfurt gelandet – mit zwei Koffern und ohne ein Wort Deutsch. Heute schreibe ich diesen Text auf Deutsch. Verrückt, oder?\n\nDie ersten Monate waren ehrlich gesagt hart. Die Sprache klang für mich wie ein Rätsel, und die Behördenbriefe verstehe ich bis heute manchmal nicht (wer tut das schon? 😄). Am schwersten war für mich aber nicht die Sprache, sondern die ersten Monate ohne Freunde.\n\nDas hat sich zum Glück geändert. Im Integrationskurs habe ich Menschen aus der ganzen Welt kennengelernt – meine beste Freundin hier kommt aus Brasilien. Und seit dem Herbst spiele ich im Verein Volleyball. Mein Tipp an alle Neuen: Geht in einen Verein! Dort lernt man Deutsche kennen und übt nebenbei die Sprache.\n\nMit der Arbeit hatte ich Glück: Nach sechs Monaten habe ich eine Stelle als Krankenpflegerin gefunden, in meinem alten Beruf. Meine Kollegen sind super geduldig mit meinem Deutsch. Nächsten Monat mache ich die B1-Prüfung – drückt mir die Daumen! Danach möchte ich direkt mit B2 weitermachen, denn für die Anerkennung meiner Ausbildung brauche ich das.",
   statements: [
@@ -153,8 +153,8 @@ window.LESEN.goethe5 = [{
   id: "g5-hausordnung",
   title: "Goethe-Stil Teil 5: Hausordnung der Sprachschule",
   anleitung: {
-    de: "Wie Goethe Lesen Teil 5: Sie besuchen einen Kurs und lesen die Hausordnung der Sprachschule. Wählen Sie bei jeder Aufgabe die richtige Lösung (a, b oder c).",
-    tr: "Goethe Lesen Teil 5 gibi: Bir kursa gidiyorsun ve dil okulunun iç yönetmeliğini okuyorsun. Her soruda doğru cevabı (a, b veya c) seç."
+    de: "Das ist wie Goethe Lesen Teil 5. Sie machen einen Kurs. Sie lesen die Regeln der Sprachschule. Wählen Sie bei jeder Frage die richtige Antwort (a, b oder c).",
+    tr: "Bu, Goethe Lesen Teil 5 gibidir. Bir kursa gidiyorsun. Dil okulunun kurallarını okuyorsun. Her soruda doğru cevabı (a, b veya c) seç."
   },
   text: "<strong>Hausordnung der Sprachschule Lingua Plus</strong><br><br><strong>1. Unterrichtsräume:</strong> Bitte verlassen Sie die Räume so, wie Sie sie vorfinden möchten. Essen ist in den Unterrichtsräumen nicht erlaubt; Getränke in verschließbaren Flaschen dürfen Sie gern mitbringen. In den Pausen steht Ihnen die Cafeteria im Erdgeschoss zur Verfügung.<br><br><strong>2. Anwesenheit:</strong> Wenn Sie krank sind, informieren Sie bitte vor Unterrichtsbeginn das Sekretariat telefonisch oder per E-Mail. Für das Kurszertifikat müssen Sie an mindestens 80 Prozent der Unterrichtsstunden teilnehmen.<br><br><strong>3. Handys:</strong> Während des Unterrichts sind Handys stummzuschalten. Die Nutzung für Wörterbuch-Apps ist nach Absprache mit der Lehrkraft erlaubt.<br><br><strong>4. Parken:</strong> Die Parkplätze vor dem Gebäude sind für die Mitarbeiterinnen und Mitarbeiter reserviert. Kursteilnehmende parken kostenlos im Parkhaus Nord, wenn sie ihr Ticket im Sekretariat stempeln lassen.<br><br><strong>5. Fundsachen:</strong> Gefundene Gegenstände geben Sie bitte im Sekretariat ab. Dort können Sie verlorene Sachen bis zu drei Monate lang abholen.",
   questions: [

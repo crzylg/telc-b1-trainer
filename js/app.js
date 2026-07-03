@@ -15,6 +15,31 @@
   const view = document.getElementById("view");
   const tabs = document.querySelectorAll(".tab");
 
+  // ---------- Empfohlene Lernreihenfolge / Önerilen çalışma sırası ----------
+  // Das ist wie ein Wegweiser. Der erste Eintrag ist der beste Start für Anfänger.
+  // Bu bir yol tabelası gibidir. İlk sıradaki, yeni başlayanlar için en iyi başlangıçtır.
+  const START_ORDER = {
+    vokabeln: ["pruefungswortschatz", "familie", "einkaufen", "essen", "wohnen", "gesundheit", "arbeit", "bildung", "gefuehle", "verben", "stadt", "reisen", "freizeit", "medien", "wetter", "amt", "nachbarn", "flughafen", "onlineshopping", "unterhaltung", "geschichte", "umwelt"],
+    grammatik: ["perfekt", "praepositionen", "adjektive", "nebensaetze", "relativsaetze", "konjunktiv2", "passiv", "infinitiv", "genitiv", "indirekte-fragen", "futur", "imperativ", "lassen"],
+    lesen: ["t1-a", "t3-a", "t1-b", "t1-c", "t3-b", "t2-a", "t2-b", "t2-c", "g1-blog", "g4-a", "g5-hausordnung"],
+    hoeren: ["h1-ansagen", "h4-dtz", "h3-kurztexte", "h2-gespraech"]
+  };
+  function orderByStart(list, key, groupKey) {
+    const order = START_ORDER[groupKey] || [];
+    return list.map((item, i) => ({ item, i })).sort((a, b) => {
+      const ia = order.indexOf(a.item[key]); const ib = order.indexOf(b.item[key]);
+      const ra = ia === -1 ? 999 + a.i : ia; const rb = ib === -1 ? 999 + b.i : ib;
+      return ra - rb;
+    }).map(x => x.item);
+  }
+  function firstOf(groupKey, list, key) {
+    const id = (START_ORDER[groupKey] || [])[0];
+    return list.find(x => x[key] === id) || list[0];
+  }
+  function startBadge() {
+    return `<span class="start-badge">🚀 Hier starten!<br><small>Buradan başla!</small></span>`;
+  }
+
   // ---------- Helpers ----------
   function el(html) {
     const t = document.createElement("template");
@@ -72,8 +97,8 @@
     view.appendChild(el(`
       <div class="card">
         <h2>Willkommen! · Hoş geldin!</h2>
-        <p>Dein Trainer für <strong>telc B1</strong>, <strong>Goethe B1</strong> und <strong>DTZ</strong> – mit Schwerpunkt auf <strong>Lesen &amp; Verstehen</strong>. Folge einfach den Schritten 1–9.</p>
-        ${trBox("telc B1, Goethe B1 ve DTZ sınavları için antrenörün – Okuma ağırlıklı. Sadece 1–9 arası adımları takip et. Her gün 15 dakika yeter!")}
+        <p>Diese App hilft dir für <strong>telc B1</strong>, <strong>Goethe B1</strong> und <strong>DTZ</strong>. Wichtig ist vor allem <strong>Lesen &amp; Verstehen</strong>. Mach einfach Schritt 1. Dann Schritt 2. Dann Schritt 3. Und so weiter bis 9.</p>
+        ${trBox("Bu uygulama sana telc B1, Goethe B1 ve DTZ için yardımcı olur. En önemlisi Okuma ve Anlama'dır. Önce 1. Adımı yap. Sonra 2. Adımı. Sonra 3. Adımı. Böyle devam et, 9'a kadar. Her gün 15 dakika yeter!")}
         <div class="stat-row">
           <div class="stat-box"><div class="num">${knownWords}</div><div class="lbl">Wörter gelernt<br>öğrenilen kelime</div></div>
           <div class="stat-box"><div class="num">${totalWords}</div><div class="lbl">Wörter gesamt<br>toplam kelime</div></div>
@@ -86,24 +111,30 @@
       cont.addEventListener("click", () => navigate(last));
       view.appendChild(cont);
     }
+    const lesenList = [].concat(window.LESEN.teil1, window.LESEN.teil2, window.LESEN.teil3, window.LESEN.goethe4, window.LESEN.goethe5 || []);
+    const startVok = firstOf("vokabeln", window.VOKABELN, "id");
+    const startGram = firstOf("grammatik", window.GRAMMATIK, "id");
+    const startLesen = firstOf("lesen", lesenList, "id");
+    const startHoeren = firstOf("hoeren", window.HOEREN.uebungen, "id");
     const steps = [
-      ["pruefung", "Die Prüfung kennenlernen", "1. Adım: Sınavı tanı – telc, Goethe & DTZ", null],
-      ["vokabeln", "Wortschatz aufbauen", "2. Adım: Kelime dağarcığını kur – her gün 1 konu", `⭐ ${knownWords}/${totalWords} Wörter`],
-      ["grammatik", "Grammatik verstehen", "3. Adım: Dilbilgisi hedeflerini çalış", stepProgress(window.GRAMMATIK.map(g => "gram-" + g.id))],
-      ["konnektoren", "Konnektoren meistern", "4. Adım: Bağlaçları ve kelime dizilişini öğren", stepProgress(["konnektoren-quiz"])],
-      ["sprachbausteine", "Sprachbausteine trainieren", "5. Adım: Sınav formatında dil yapıları", stepProgress(allIds("sb"))],
-      ["strategien", "Taktiken lernen", "6. Adım: Sınav taktiklerini ve tuzakları öğren", null],
-      ["lesen", "Lesen trainieren (Schwerpunkt!)", "7. Adım: Okuma antrenmanı – en çok puan burada", stepProgress(allIds("lesen"))],
-      ["hoeren", "Hören trainieren (mit Audio)", "8. Adım: Sesli dinleme antrenmanı", stepProgress(allIds("hoeren"))],
-      ["skills", "Schreiben & Sprechen", "9. Adım: Mektup kalıpları ve konuşma", null]
+      ["pruefung", "Die Prüfung kennenlernen", "1. Adım: Sınavı tanı – telc, Goethe & DTZ", null, null],
+      ["vokabeln", "Wortschatz aufbauen", "2. Adım: Kelime dağarcığını kur – her gün 1 konu", `⭐ ${knownWords}/${totalWords} Wörter`, startVok.title],
+      ["grammatik", "Grammatik verstehen", "3. Adım: Dilbilgisi hedeflerini çalış", stepProgress(window.GRAMMATIK.map(g => "gram-" + g.id)), startGram.title],
+      ["konnektoren", "Konnektoren meistern", "4. Adım: Bağlaçları ve kelime dizilişini öğren", stepProgress(["konnektoren-quiz"]), null],
+      ["sprachbausteine", "Sprachbausteine trainieren", "5. Adım: Sınav formatında dil yapıları", stepProgress(allIds("sb")), null],
+      ["strategien", "Taktiken lernen", "6. Adım: Sınav taktiklerini ve tuzakları öğren", null, null],
+      ["lesen", "Lesen trainieren (Schwerpunkt!)", "7. Adım: Okuma antrenmanı – en çok puan burada", stepProgress(allIds("lesen")), startLesen.title],
+      ["hoeren", "Hören trainieren (mit Audio)", "8. Adım: Sesli dinleme antrenmanı", stepProgress(allIds("hoeren")), startHoeren.title],
+      ["skills", "Schreiben & Sprechen", "9. Adım: Mektup kalıpları ve konuşma", null, null]
     ];
-    steps.forEach(([r, title, sub, prog], i) => {
+    steps.forEach(([r, title, sub, prog, startTitle], i) => {
       const done = prog && prog.done === prog.total && prog.total > 0;
       const card = el(`<button class="step-card${done ? " done" : ""}">
         <span class="step-num">${done ? "✓" : i + 1}</span>
         <span class="step-body">
           <span class="step-title">${esc(title)}</span><br>
           <span class="step-sub">🇹🇷 ${esc(sub)}</span>
+          ${startTitle ? `<span class="step-start">🚀 Zuerst / Önce: ${esc(startTitle)}</span>` : ""}
           ${prog ? `<span class="step-progress">${typeof prog === "string" ? prog : prog.done + "/" + prog.total + " Übungen ✓"}</span>` : ""}
         </span>
         <span class="step-arrow">›</span>
@@ -147,7 +178,7 @@
 
   // ---------- STRATEGIEN ----------
   routes.strategien = function () {
-    view.appendChild(el(`<div class="card"><h2>🎯 Taktiken &amp; Strategien</h2><p class="subtitle-tr">Sınav taktikleri – okuma bölümüne özel ağırlık verilmiştir</p><p>Diese Techniken stammen aus der Analyse der offiziellen telc- und Goethe-Übungstests. Die Teile mit <span class="badge orange">FOKUS</span> sind besonders wichtig für die Lesen-Punkte.</p>${trBox("Bu teknikler resmi telc ve Goethe deneme testlerinin analizinden çıkarılmıştır. FOKUS işaretli bölümler okuma puanları için özellikle önemlidir.")}</div>`));
+    view.appendChild(el(`<div class="card"><h2>🎯 Taktiken &amp; Strategien</h2><p class="subtitle-tr">Sınav taktikleri – okuma bölümüne özel ağırlık verilmiştir</p><p>Diese Tipps kommen aus echten telc- und Goethe-Tests. Teile mit <span class="badge orange">FOKUS</span> sind sehr wichtig für Lesen-Punkte.</p>${trBox("Bu ipuçları gerçek telc ve Goethe testlerinden gelir. FOKUS işaretli bölümler okuma puanları için çok önemlidir.")}</div>`));
     window.STRATEGIEN.forEach(s => {
       const acc = el(`<div class="accordion"><button class="accordion-head">${s.emoji} ${esc(s.title)} ${s.focus ? '<span class="badge orange">FOKUS</span>' : ""}<span style="display:block;font-weight:400;font-size:.8rem;color:var(--ink-soft)">${esc(s.titleTr)}</span></button><div class="accordion-body"></div></div>`);
       const body = acc.querySelector(".accordion-body");
@@ -161,7 +192,7 @@
 
   // ---------- LESEN ----------
   routes.lesen = function () {
-    view.appendChild(el(`<div class="card"><h2>📖 Leseverstehen trainieren</h2><p class="subtitle-tr">Okuma-anlama antrenmanı – telc formatında</p><p>Wähle eine Übung. Format und Fallen entsprechen dem offiziellen telc Übungstest. Lies vorher die Taktiken im Bereich „Taktik“!</p>${trBox("Bir alıştırma seç. Format ve tuzaklar resmi telc deneme testine uygundur. Önce „Taktikler“ bölümünü oku!")}</div>`));
+    view.appendChild(el(`<div class="card"><h2>📖 Leseverstehen trainieren</h2><p class="subtitle-tr">Okuma-anlama antrenmanı – telc formatında</p><p>Wähle eine Übung. Sie ist genau wie im echten telc-Test. Tipp: Lies zuerst „Taktik“!</p>${trBox("Bir alıştırma seç. Gerçek telc testi gibidir. İpucu: Önce „Taktik“ bölümünü oku!")}</div>`));
     const grid = el(`<div class="tile-grid"></div>`);
     const items = [];
     window.LESEN.teil1.forEach(ex => items.push(["Teil 1", ex, () => renderTeil1(ex)]));
@@ -169,8 +200,13 @@
     window.LESEN.teil3.forEach(ex => items.push(["Teil 3", ex, () => renderTeil3(ex)]));
     window.LESEN.goethe4.forEach(ex => items.push(["Goethe-Stil", ex, () => renderGoethe4(ex)]));
     (window.LESEN.goethe5 || []).forEach(ex => items.push(["Goethe Teil 5", ex, () => renderTeil2(ex)]));
-    items.forEach(([label, ex, fn]) => {
-      const tile = el(`<button class="tile"><span class="tile-emoji">📖</span><span class="tile-title">${esc(label)}</span><span class="tile-sub">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+    const lesenOrder = START_ORDER.lesen;
+    items.sort((a, b) => {
+      const ia = lesenOrder.indexOf(a[1].id), ib = lesenOrder.indexOf(b[1].id);
+      return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+    });
+    items.forEach(([label, ex, fn], idx) => {
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">📖</span><span class="tile-title">${esc(label)}</span><span class="tile-sub">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("lesen"); fn(); });
       grid.appendChild(tile);
     });
@@ -320,7 +356,7 @@
 
   // ---------- SPRACHBAUSTEINE ----------
   routes.sprachbausteine = function () {
-    view.appendChild(el(`<div class="card"><h2>🧩 Sprachbausteine</h2><p class="subtitle-tr">Dil yapıları – dilbilgisi ve kelime bilgisi</p><p>Teil 1: Grammatik (a/b/c). Teil 2: Wortschatz – 15 Wörter, 10 Lücken, 5 bleiben übrig.</p>${trBox("Teil 1: Dilbilgisi (a/b/c). Teil 2: Kelime bilgisi – 15 kelime, 10 boşluk, 5 kelime artar.")}</div>`));
+    view.appendChild(el(`<div class="card"><h2>🧩 Sprachbausteine</h2><p class="subtitle-tr">Dil yapıları – dilbilgisi ve kelime bilgisi</p><p>Teil 1 ist Grammatik (a/b/c). Teil 2 ist Wortschatz. Du hast 15 Wörter und 10 Lücken. 5 Wörter bleiben übrig.</p>${trBox("Teil 1 dilbilgisidir (a/b/c). Teil 2 kelime bilgisidir. 15 kelimen ve 10 boşluğun var. 5 kelime kullanılmadan kalır.")}</div>`));
     const grid = el(`<div class="tile-grid"></div>`);
     window.SPRACHBAUSTEINE.teil1.forEach(ex => {
       const tile = el(`<button class="tile"><span class="tile-emoji">🧩</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
@@ -393,14 +429,27 @@
     const totalWords = window.VOKABELN.reduce((n, t) => n + t.words.length, 0);
     const knownWords = Object.values(known).reduce((n, a) => n + a.length, 0);
     view.appendChild(el(`<div class="card"><h2>🗂️ Vokabeltrainer</h2><p class="subtitle-tr">Kelime antrenörü – konu konu, Almanca-Türkçe</p>
-      <p>Alle wichtigen B1-Wörter nach Themen, mit Beispielsätzen. Lerne mit der Liste, den Karteikarten (Flashcards) oder dem Quiz. Markiere Wörter, die du sicher kannst, mit ⭐.</p>
-      ${trBox("Tüm önemli B1 kelimeleri konulara göre, örnek cümlelerle. Liste, kelime kartları veya quiz ile öğren. İyi bildiğin kelimeleri ⭐ ile işaretle.")}
+      <p>Hier sind alle wichtigen B1-Wörter. Sie sind nach Themen sortiert. Mit Beispielsätzen. Du kannst lernen mit: der Liste, den Karten (Flashcards) oder dem Quiz. Kannst du ein Wort schon gut? Dann markiere es mit ⭐.</p>
+      ${trBox("Burada tüm önemli B1 kelimeleri var. Konulara göre sıralanmıştır. Örnek cümlelerle. Şununla öğrenebilirsin: liste, kartlar (Flashcards) veya quiz. Bir kelimeyi iyi biliyor musun? O zaman ⭐ ile işaretle.")}
       <div class="progress-bar"><div class="progress-fill" style="width:${totalWords ? Math.round(knownWords / totalWords * 100) : 0}%"></div></div>
       <p><strong>${knownWords} / ${totalWords}</strong> Wörter gelernt / kelime öğrenildi</p></div>`));
+    const due = dueCards();
+    if (due.length) {
+      const btn = el(`<button class="continue-btn" style="margin-bottom:4px">🔁 ${due.length} Wörter wiederholen! / ${due.length} kelimeyi tekrar et!</button>`);
+      btn.addEventListener("click", () => {
+        view.innerHTML = "";
+        backLink("vokabeln");
+        view.appendChild(el(`<div class="card"><h2>🔁 Wiederholung / Tekrar</h2><p>Diese Wörter sind heute dran. Die App hat sie mit dem FSRS-System (Spaced Repetition) ausgewählt.</p>${trBox("Bugün sırası gelen kelimeler. Uygulama bunları FSRS sistemi (aralıklı tekrar) ile seçti.")}</div>`));
+        const c = el(`<div></div>`);
+        view.appendChild(c);
+        renderFlashcards(c, due);
+      });
+      view.appendChild(btn);
+    }
     const grid = el(`<div class="tile-grid"></div>`);
-    window.VOKABELN.forEach(topic => {
+    orderByStart(window.VOKABELN, "id", "vokabeln").forEach((topic, idx) => {
       const k = (known[topic.id] || []).length;
-      const tile = el(`<button class="tile"><span class="tile-emoji">${topic.emoji}</span><span class="tile-title">${esc(topic.title)}</span><span class="tile-sub">${esc(topic.titleTr)}</span><span class="tile-meta">⭐ ${k}/${topic.words.length}</span></button>`);
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">${topic.emoji}</span><span class="tile-title">${esc(topic.title)}</span><span class="tile-sub">${esc(topic.titleTr)}</span><span class="tile-meta">⭐ ${k}/${topic.words.length}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("vokabeln"); renderTopic(topic); });
       grid.appendChild(tile);
     });
@@ -422,7 +471,7 @@
       buttons.forEach(b => b.className = "btn" + (b.dataset.mode === mode ? "" : " secondary"));
       content.innerHTML = "";
       if (mode === "liste") renderWordList(content, topic);
-      if (mode === "karten") renderFlashcards(content, topic);
+      if (mode === "karten") renderFlashcards(content, topic.words.map((w, i) => ({ t: topic.id, i, w })));
       if (mode === "quiz") renderVocabQuiz(content, topic);
     }
     buttons.forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
@@ -459,8 +508,47 @@
     container.appendChild(card);
   }
 
-  function renderFlashcards(container, topic) {
-    let order = topic.words.map((_, i) => i).sort(() => Math.random() - 0.5);
+  // ---------- FSRS-Wiederholung (Spaced Repetition, nach open-spaced-repetition/FSRS) ----------
+  // Jede Karte hat: s = Stabilität (Tage), d = Schwierigkeit (1–10), due = nächster Termin, reps.
+  let fsrs = store.get("b1_fsrs", {});
+  const DAY = 24 * 60 * 60 * 1000;
+  function fsrsRate(topicId, idx, rating) { // rating: 1 = Nochmal, 2 = Gut, 3 = Einfach
+    const key = topicId + ":" + idx;
+    const now = Date.now();
+    let c = fsrs[key];
+    if (!c) {
+      // Erste Bewertung: Startwerte wie FSRS-Initialstabilität
+      c = { s: [0.4, 3, 8][rating - 1], d: [7.5, 5, 3.5][rating - 1], reps: 0 };
+    } else if (rating === 1) {
+      // Vergessen: Stabilität fällt stark, Karte wird schwieriger
+      c.s = Math.max(0.4, c.s * 0.35);
+      c.d = Math.min(10, c.d + 0.8);
+    } else {
+      // Erinnert: Stabilität wächst – leichtere Karten wachsen schneller (FSRS-Prinzip)
+      const bonus = rating === 3 ? 1.4 : 1.0;
+      const growth = 1 + (11 - c.d) * 0.28 * Math.pow(c.s, -0.15) * bonus;
+      c.s = Math.min(365, c.s * growth);
+      c.d = Math.max(1, c.d - (rating === 3 ? 0.4 : 0.15));
+    }
+    c.reps++;
+    c.due = now + Math.round(c.s * DAY);
+    fsrs[key] = c;
+    store.set("b1_fsrs", fsrs);
+    if (rating >= 2) toggleKnown(topicId, idx, true);
+  }
+  function dueCards() {
+    const now = Date.now();
+    const due = [];
+    window.VOKABELN.forEach(t => t.words.forEach((w, i) => {
+      const c = fsrs[t.id + ":" + i];
+      if (c && c.due <= now) due.push({ t: t.id, i, w, label: t.emoji + " " + t.title });
+    }));
+    return due;
+  }
+
+  // Karteikarten: cards = [{t: topicId, i: index, w: wort, label?}]
+  function renderFlashcards(container, cards) {
+    let queue = cards.slice().sort(() => Math.random() - 0.5);
     let pos = 0;
     const wrap = el(`<div class="card"></div>`);
     const counter = el(`<p style="text-align:center;font-weight:700"></p>`);
@@ -468,29 +556,39 @@
         <div class="flashcard-face flashcard-front"><div class="flashcard-word"></div><div class="flashcard-hint">Tippen zum Umdrehen / Çevirmek için dokun</div></div>
         <div class="flashcard-face flashcard-back"><div class="flashcard-word" style="color:var(--blue-dark)"></div><div class="flashcard-example"></div></div>
       </div></div>`);
+    const topicLabel = el(`<p style="text-align:center;font-size:.8rem;color:var(--ink-soft)"></p>`);
     const controls = el(`<div class="btn-row" style="justify-content:center">
-        <button class="btn orange">🔁 Nochmal üben / Tekrar</button>
-        <button class="btn green">⭐ Kann ich / Biliyorum</button>
+        <button class="btn orange">🔁 Nochmal<br><small>Tekrar (bugün)</small></button>
+        <button class="btn">👍 Gut<br><small>İyi (bald wieder)</small></button>
+        <button class="btn green">⭐ Einfach<br><small>Kolay (später)</small></button>
       </div>`);
+    const hint = el(`<p style="text-align:center;font-size:.75rem;color:var(--ink-soft)">Die App merkt sich deine Antwort und fragt das Wort zur richtigen Zeit wieder (Spaced Repetition / aralıklı tekrar sistemi).</p>`);
     function show() {
-      if (pos >= order.length) {
-        counter.textContent = "Fertig! / Bitti! 🎉";
+      if (pos >= queue.length) {
+        counter.textContent = "Fertig für heute! / Bugünlük bitti! 🎉";
         cardEl.style.display = "none";
         controls.style.display = "none";
+        topicLabel.textContent = "";
         return;
       }
-      const w = topic.words[order[pos]];
+      const c = queue[pos];
       cardEl.classList.remove("flipped");
-      cardEl.querySelector(".flashcard-front .flashcard-word").textContent = w.de;
-      cardEl.querySelector(".flashcard-back .flashcard-word").textContent = "🇹🇷 " + w.tr;
-      cardEl.querySelector(".flashcard-example").textContent = "„" + w.ex + "“";
-      counter.textContent = `Karte ${pos + 1} / ${order.length}`;
+      cardEl.querySelector(".flashcard-front .flashcard-word").textContent = c.w.de;
+      cardEl.querySelector(".flashcard-back .flashcard-word").textContent = "🇹🇷 " + c.w.tr;
+      cardEl.querySelector(".flashcard-example").textContent = "„" + c.w.ex + "“";
+      counter.textContent = `Karte ${pos + 1} / ${queue.length}`;
+      topicLabel.textContent = c.label || "";
     }
     cardEl.addEventListener("click", () => cardEl.classList.toggle("flipped"));
-    const [againBtn, knowBtn] = controls.querySelectorAll("button");
-    againBtn.addEventListener("click", () => { order.push(order[pos]); pos++; show(); });
-    knowBtn.addEventListener("click", () => { toggleKnown(topic.id, order[pos], true); pos++; show(); });
-    wrap.appendChild(counter); wrap.appendChild(cardEl); wrap.appendChild(controls);
+    const btns = controls.querySelectorAll("button");
+    btns.forEach((b, bi) => b.addEventListener("click", () => {
+      const c = queue[pos];
+      fsrsRate(c.t, c.i, bi + 1);
+      if (bi === 0) queue.push(c); // Nochmal: gleich noch einmal in dieser Runde
+      pos++;
+      show();
+    }));
+    wrap.appendChild(counter); wrap.appendChild(topicLabel); wrap.appendChild(cardEl); wrap.appendChild(controls); wrap.appendChild(hint);
     container.appendChild(wrap);
     show();
   }
@@ -587,8 +685,8 @@
       return;
     }
     const grid = el(`<div class="tile-grid"></div>`);
-    H.uebungen.forEach(ex => {
-      const tile = el(`<button class="tile"><span class="tile-emoji">🎧</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-sub">${esc(ex.titleTr)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+    orderByStart(H.uebungen, "id", "hoeren").forEach((ex, idx) => {
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">🎧</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-sub">${esc(ex.titleTr)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("hoeren"); renderHoeren(ex); });
       grid.appendChild(tile);
     });
@@ -713,10 +811,10 @@
 
   // ---------- GRAMMATIK ----------
   routes.grammatik = function () {
-    view.appendChild(el(`<div class="card"><h2>📐 Grammatik-Lernziele B1</h2><p class="subtitle-tr">B1 dilbilgisi öğrenme hedefleri</p><p>Jedes Lernziel enthält: einfache Erklärung (Deutsch + Türkisch), Formen-Tabelle, typische Fehler und ein Mini-Quiz. Genau diese Themen werden in den Sprachbausteinen getestet!</p>${trBox("Her öğrenme hedefi şunları içerir: basit açıklama (Almanca + Türkçe), form tablosu, tipik hatalar ve mini test. Sprachbausteine'de tam olarak bu konular test edilir!")}</div>`));
+    view.appendChild(el(`<div class="card"><h2>📐 Grammatik-Lernziele B1</h2><p class="subtitle-tr">B1 dilbilgisi öğrenme hedefleri</p><p>Jedes Thema hat: eine einfache Erklärung, eine Tabelle, typische Fehler und ein Mini-Quiz. Diese Themen kommen auch in den Sprachbausteinen!</p>${trBox("Her konuda şunlar var: basit bir açıklama, bir tablo, tipik hatalar ve bir mini test. Bu konular Sprachbausteine'de de çıkar!")}</div>`));
     const grid = el(`<div class="tile-grid"></div>`);
-    window.GRAMMATIK.forEach(g => {
-      const tile = el(`<button class="tile"><span class="tile-emoji">${g.emoji}</span><span class="tile-title">${esc(g.title)}</span><span class="tile-sub">${esc(g.titleTr)}</span><span class="tile-meta">${scoreBadge("gram-" + g.id)}</span></button>`);
+    orderByStart(window.GRAMMATIK, "id", "grammatik").forEach((g, idx) => {
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">${g.emoji}</span><span class="tile-title">${esc(g.title)}</span><span class="tile-sub">${esc(g.titleTr)}</span><span class="tile-meta">${scoreBadge("gram-" + g.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("grammatik"); renderGrammatik(g); });
       grid.appendChild(tile);
     });
@@ -736,11 +834,117 @@
     view.appendChild(quizCard);
   }
 
+  // ---------- Schreibtrainer (LanguageTool API) ----------
+  function schreibtrainerCard() {
+    const card = el(`<div class="card">
+      <h2>🖊️ Schreibtrainer mit Fehler-Check</h2>
+      <p class="subtitle-tr">Hata kontrollü yazma antrenörü (LanguageTool)</p>
+      <p>Schreib hier deinen Brief oder deine Sätze. Klick dann auf „Fehler suchen“. Das Programm LanguageTool findet Fehler und macht Vorschläge. Du brauchst dafür Internet.</p>
+      ${trBox("Buraya mektubunu veya cümlelerini yaz. Sonra „Fehler suchen“ (hata ara) düğmesine bas. LanguageTool programı hataları bulur ve öneri yapar. Bunun için internet gerekir.")}
+      <textarea id="ltText" rows="7" style="width:100%;font-family:inherit;font-size:.95rem;padding:12px;border:1.5px solid var(--line);border-radius:10px" placeholder="Sehr geehrte Damen und Herren, ich schreibe Ihnen, weil ..."></textarea>
+      <div class="btn-row"><button class="btn green" id="ltCheck">🔍 Fehler suchen / Hata ara</button></div>
+      <div id="ltResult"></div>
+    </div>`);
+    const resBox = card.querySelector("#ltResult");
+    card.querySelector("#ltCheck").addEventListener("click", async () => {
+      const text = card.querySelector("#ltText").value.trim();
+      if (!text) { resBox.innerHTML = `<div class="tr">Bitte zuerst etwas schreiben. / Önce bir şey yaz.</div>`; return; }
+      resBox.innerHTML = `<p>⏳ Prüfe deinen Text ... / Metnin kontrol ediliyor ...</p>`;
+      try {
+        const body = new URLSearchParams({ text, language: "de-DE" });
+        const resp = await fetch("https://api.languagetool.org/v2/check", { method: "POST", body });
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
+        const data = await resp.json();
+        if (!data.matches.length) {
+          resBox.innerHTML = `<div class="feedback good">Super! LanguageTool hat keine Fehler gefunden. 🎉 / Süper! LanguageTool hata bulamadı. 🎉</div>`;
+          return;
+        }
+        resBox.innerHTML = `<div class="feedback mid">${data.matches.length} Hinweis(e) gefunden / ${data.matches.length} uyarı bulundu:</div>` +
+          data.matches.slice(0, 15).map(m => {
+            const bad = m.context.text.substr(m.context.offset, m.context.length);
+            const sugg = m.replacements.slice(0, 3).map(r => `<strong>${esc(r.value)}</strong>`).join(", ");
+            return `<div class="question"><span style="color:var(--red);font-weight:700">„${esc(bad)}“</span> – ${esc(m.message)}${sugg ? `<div class="explain show">💡 Vorschlag / Öneri: ${sugg}</div>` : ""}</div>`;
+          }).join("");
+      } catch (e) {
+        resBox.innerHTML = `<div class="tts-warning">⚠️ Der Fehler-Check hat nicht geklappt. Hast du Internet? / Hata kontrolü çalışmadı. İnternetin var mı? (${esc(e.message)})</div>`;
+      }
+    });
+    return card;
+  }
+
+  // ---------- Aussprache-Trainer (Spracherkennung) ----------
+  function ausspracheCard() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const card = el(`<div class="card">
+      <h2>🎤 Aussprache-Trainer</h2>
+      <p class="subtitle-tr">Telaffuz antrenörü (konuşma tanıma)</p>
+      <p>So geht es: 1) Hör dir den Satz an. 2) Drück auf 🎤 und sprich den Satz laut. 3) Das Gerät schreibt auf, was es hört. Du siehst sofort, wie gut es war.</p>
+      ${trBox("Şöyle çalışır: 1) Cümleyi dinle. 2) 🎤 düğmesine bas ve cümleyi yüksek sesle söyle. 3) Cihaz duyduğunu yazar. Ne kadar iyi olduğunu hemen görürsün.")}
+      <div id="asContent"></div>
+    </div>`);
+    const content = card.querySelector("#asContent");
+    if (!SR) {
+      content.appendChild(el(`<div class="tts-warning">⚠️ Dein Browser kann keine Sprache erkennen. Auf dem iPhone: Benutze Safari und erlaube das Mikrofon. / Tarayıcın konuşma tanımıyor. iPhone'da: Safari kullan ve mikrofona izin ver.</div>`));
+      return card;
+    }
+    let idx = 0;
+    const sentences = window.SKILLS.aussprache;
+    const sentEl = el(`<div class="exercise-text" style="font-size:1.1rem;font-weight:700"></div>`);
+    const controls = el(`<div class="btn-row"></div>`);
+    const micBtn = el(`<button class="audio-btn">🎤 Sprechen / Konuş</button>`);
+    const nextBtn = el(`<button class="btn secondary">Nächster Satz / Sonraki ➡️</button>`);
+    const result = el(`<div></div>`);
+    function show() {
+      sentEl.textContent = sentences[idx];
+      result.innerHTML = "";
+    }
+    const listen2 = el(`<button class="audio-btn">▶️ Anhören / Dinle</button>`);
+    listen2.addEventListener("click", () => speak(sentences[idx], listen2));
+    micBtn.addEventListener("click", () => {
+      stopSpeech();
+      const rec = new SR();
+      rec.lang = "de-DE";
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+      micBtn.classList.add("playing");
+      micBtn.textContent = "🔴 Ich höre zu ... / Dinliyorum ...";
+      result.innerHTML = "";
+      rec.onresult = ev => {
+        const heard = ev.results[0][0].transcript;
+        const sim = similarity(sentences[idx], heard);
+        const cls = sim >= 80 ? "good" : sim >= 55 ? "mid" : "bad";
+        const msg = sim >= 80 ? "Super Aussprache! / Süper telaffuz!" : sim >= 55 ? "Gut! Übe noch ein bisschen. / İyi! Biraz daha çalış." : "Versuch es noch einmal – langsam sprechen hilft. / Bir daha dene – yavaş konuşmak yardımcı olur.";
+        result.innerHTML = `<div class="feedback ${cls}">${sim} % – ${msg}</div><p style="margin-top:8px">Ich habe verstanden / Anladığım: <em>„${esc(heard)}“</em></p>`;
+      };
+      rec.onerror = ev => { result.innerHTML = `<div class="tts-warning">⚠️ Mikrofon-Problem (${esc(ev.error)}). Erlaube das Mikrofon in den Einstellungen. / Mikrofon sorunu. Ayarlardan mikrofona izin ver.</div>`; };
+      rec.onend = () => { micBtn.classList.remove("playing"); micBtn.textContent = "🎤 Sprechen / Konuş"; };
+      rec.start();
+    });
+    nextBtn.addEventListener("click", () => { idx = (idx + 1) % sentences.length; show(); });
+    controls.appendChild(listen2); controls.appendChild(micBtn); controls.appendChild(nextBtn);
+    content.appendChild(sentEl); content.appendChild(controls); content.appendChild(result);
+    show();
+    return card;
+  }
+  function similarity(a, b) {
+    const norm = s => s.toLowerCase().replace(/[^a-zäöüß ]/g, "").split(/\s+/).filter(Boolean);
+    const wa = norm(a), wb = norm(b);
+    if (!wa.length) return 0;
+    let hit = 0;
+    const used = new Set();
+    wa.forEach(w => {
+      const j = wb.findIndex((x, k) => !used.has(k) && (x === w || (w.length > 3 && (x.startsWith(w.slice(0, -1)) || w.startsWith(x.slice(0, -1))))));
+      if (j > -1) { hit++; used.add(j); }
+    });
+    return Math.round(hit / wa.length * 100);
+  }
+
   // ---------- SKILLS (Schreiben, Hören, Sprechen) ----------
   routes.skills = function () {
     const S = window.SKILLS;
     // Schreiben
     view.appendChild(el(`<div class="card"><h2>✍️ ${esc(S.schreiben.title)}</h2><p class="subtitle-tr">${esc(S.schreiben.titleTr)}</p></div>`));
+    view.appendChild(schreibtrainerCard());
     S.schreiben.redemittel.forEach(group => {
       const acc = el(`<div class="accordion"><button class="accordion-head">💬 ${esc(group.name)}</button><div class="accordion-body"></div></div>`);
       const body = acc.querySelector(".accordion-body");
@@ -767,6 +971,7 @@
     view.appendChild(h);
     // Sprechen
     view.appendChild(el(`<div class="card"><h2>🗣️ ${esc(S.sprechen.title)}</h2><p class="subtitle-tr">${esc(S.sprechen.titleTr)}</p></div>`));
+    view.appendChild(ausspracheCard());
     S.sprechen.groups.forEach(group => {
       const acc = el(`<div class="accordion"><button class="accordion-head">💬 ${esc(group.name)}</button><div class="accordion-body"></div></div>`);
       const body = acc.querySelector(".accordion-body");

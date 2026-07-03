@@ -2,8 +2,8 @@
 // Die Texte werden vom Gerät auf Deutsch vorgelesen (SpeechSynthesis).
 window.HOEREN = {
   intro: {
-    de: "Dein Gerät liest dir die Hörtexte auf Deutsch vor – wie in der Prüfung. Höre zuerst, entscheide dann: richtig oder falsch? Das Transkript kannst du NACH dem Prüfen lesen. Tipp: Übe zuerst mit normaler Geschwindigkeit, bei Problemen wähle „langsam“.",
-    tr: "Cihazın dinleme metinlerini sana Almanca okur – sınavdaki gibi. Önce dinle, sonra karar ver: doğru mu yanlış mı? Metni (transkript) kontrol ettikten SONRA okuyabilirsin. İpucu: Önce normal hızda çalış, zorlanırsan „langsam“ (yavaş) seç."
+    de: "Dein Handy liest dir Texte auf Deutsch vor. Genau wie in der Prüfung. Zuerst hörst du. Dann sagst du: richtig oder falsch? Nach dem Prüfen kannst du den Text auch lesen. Tipp: Übe zuerst normal. Ist es schwer? Dann wähle „langsam“.",
+    tr: "Telefonun sana metinleri Almanca okur. Tıpkı sınavdaki gibi. Önce dinlersin. Sonra dersin: doğru mu yanlış mı? Kontrol ettikten sonra metni de okuyabilirsin. İpucu: Önce normal hızda dene. Zor mu geliyor? O zaman „langsam“ (yavaş) seç."
   },
   uebungen: [
     {

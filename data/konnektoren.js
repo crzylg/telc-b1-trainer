@@ -2,13 +2,13 @@
 // pos: "NS" = Nebensatz (Verb am Ende), "P0" = Position 0 (normale Wortstellung), "ADV" = Adverb (Verb direkt danach)
 window.KONNEKTOREN = {
   intro: {
-    de: "Konnektoren verbinden Sätze und machen deine Sprache logisch und professionell. In der Prüfung bringen sie Punkte beim Schreiben und Sprechen – und sie werden in den Sprachbausteinen direkt getestet! Entscheidend ist die WORTSTELLUNG: Es gibt drei Gruppen.",
-    tr: "Bağlaçlar cümleleri birbirine bağlar ve dilini mantıklı ve profesyonel yapar. Sınavda yazma ve konuşmada puan kazandırır – ayrıca Sprachbausteine'de doğrudan test edilir! Belirleyici olan KELİME DİZİLİŞİDİR: Üç grup vardır."
+    de: "Konnektoren sind Verbindungs-Wörter. Sie verbinden zwei Sätze. Sie machen deine Sprache besser. In der Prüfung bringen sie Punkte. Beim Schreiben. Beim Sprechen. Auch bei den Sprachbausteinen! Wichtig ist die WORTSTELLUNG. Es gibt drei Gruppen.",
+    tr: "Bağlaçlar birleştirme kelimeleridir. İki cümleyi birbirine bağlarlar. Dilini daha iyi yaparlar. Sınavda puan kazandırırlar. Yazarken. Konuşurken. Sprachbausteine'de de! Önemli olan KELİME SIRASIDIR. Üç grup vardır."
   },
   posRules: [
-    { code: "NS", name: "Nebensatz-Konnektor", rule: { de: "Das Verb geht ans ENDE des Nebensatzes: „…, weil ich müde BIN.“", tr: "Fiil yan cümlenin SONUNA gider: „…, weil ich müde BIN.“ (çünkü yorgunum)" } },
-    { code: "P0", name: "Position 0 (Konjunktion)", rule: { de: "Die Wortstellung bleibt NORMAL: „…, denn ich BIN müde.“", tr: "Kelime dizilişi NORMAL kalır: „…, denn ich BIN müde.“" } },
-    { code: "ADV", name: "Adverb (Position 1)", rule: { de: "Das Verb kommt DIREKT nach dem Konnektor: „…, deshalb GEHE ich ins Bett.“", tr: "Fiil bağlaçtan HEMEN SONRA gelir: „…, deshalb GEHE ich ins Bett.“ (bu yüzden yatıyorum)" } }
+    { code: "NS", name: "Nebensatz-Konnektor", rule: { de: "Das Verb geht ans ENDE. Beispiel: „…, weil ich müde BIN.“", tr: "Fiil SONA gider. Örnek: „…, weil ich müde BIN.“ (çünkü yorgunum)" } },
+    { code: "P0", name: "Position 0 (Konjunktion)", rule: { de: "Die Wortstellung bleibt NORMAL. Beispiel: „…, denn ich BIN müde.“", tr: "Kelime sırası NORMAL kalır. Örnek: „…, denn ich BIN müde.“" } },
+    { code: "ADV", name: "Adverb (Position 1)", rule: { de: "Das Verb kommt DIREKT danach. Beispiel: „…, deshalb GEHE ich ins Bett.“", tr: "Fiil HEMEN SONRA gelir. Örnek: „…, deshalb GEHE ich ins Bett.“ (bu yüzden yatıyorum)" } }
   ],
   categories: [
     {

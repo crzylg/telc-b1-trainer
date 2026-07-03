@@ -1,14 +1,15 @@
 // ===== Prüfungsinformationen: telc Deutsch B1 & Goethe-Zertifikat B1 =====
+// Sprache: sehr einfach (A1), wie für Kinder erklärt.
 window.PRUEFUNG = {
   intro: {
-    de: "Hier findest du den genauen Aufbau der beiden wichtigsten B1-Prüfungen: telc Deutsch B1 (Zertifikat Deutsch) und Goethe-Zertifikat B1. Beide Prüfungen testen die gleichen Fähigkeiten, aber der Aufbau ist unterschiedlich.",
-    tr: "Burada en önemli iki B1 sınavının tam yapısını bulacaksın: telc Deutsch B1 (Zertifikat Deutsch) ve Goethe-Zertifikat B1. İki sınav da aynı becerileri test eder, ancak yapıları farklıdır."
+    de: "Es gibt zwei wichtige B1-Prüfungen. Die erste heißt telc Deutsch B1. Die zweite heißt Goethe-Zertifikat B1. Beide Prüfungen sind fast gleich schwer. Aber der Aufbau ist anders. Hier zeigen wir dir beide Prüfungen genau.",
+    tr: "İki önemli B1 sınavı var. Birincisi telc Deutsch B1. İkincisi Goethe-Zertifikat B1. İki sınav da aynı zorlukta. Ama yapıları farklı. Burada sana iki sınavı da tam olarak gösteriyoruz."
   },
   telc: {
     name: "telc Deutsch B1 (Zertifikat Deutsch)",
     summary: {
-      de: "Gesamtpunktzahl: 300 Punkte (schriftlich 225 + mündlich 75). Zum Bestehen brauchst du mindestens 60 % im schriftlichen Teil UND 60 % im mündlichen Teil – also 135 Punkte schriftlich und 45 Punkte mündlich.",
-      tr: "Toplam puan: 300 (yazılı 225 + sözlü 75). Geçmek için yazılı bölümde en az %60 VE sözlü bölümde en az %60 gerekir – yani yazılıda 135, sözlüde 45 puan."
+      de: "Du kannst 300 Punkte bekommen. Der schriftliche Teil hat 225 Punkte. Der mündliche Teil hat 75 Punkte. Du musst in JEDEM Teil mindestens 60 % schaffen. Das sind 135 Punkte schriftlich. Und 45 Punkte mündlich.",
+      tr: "300 puan alabilirsin. Yazılı bölüm 225 puan. Sözlü bölüm 75 puan. HER bölümde en az %60 almalısın. Bu, yazılıda 135 puan demek. Sözlüde ise 45 puan demek."
     },
     parts: [
       { teil: "Leseverstehen Teil 1", zeit: "≈ 15 Min.", punkte: "25", aufgabe: "5 Zeitungstexte → 10 Überschriften zuordnen", tr: "5 gazete metnine 10 başlıktan uygun olanı eşleştir" },
@@ -22,28 +23,28 @@ window.PRUEFUNG = {
     ],
     hinweise: {
       de: [
-        "Leseverstehen + Sprachbausteine zusammen: 90 Minuten. Du teilst dir die Zeit selbst ein!",
-        "Falsche Antworten geben KEINE Minuspunkte – rate immer, wenn du unsicher bist.",
-        "Du darfst kein Wörterbuch benutzen.",
-        "Der Antwortbogen (S30) wird maschinell gelesen – markiere sauber und übertrage deine Lösungen rechtzeitig.",
-        "Vor der Mündlichen Prüfung hast du 20 Minuten Vorbereitungszeit und darfst Notizen machen.",
-        "Noten: 270–300 sehr gut, 240–269,5 gut, 210–239,5 befriedigend, 180–209,5 ausreichend, unter 180 nicht bestanden."
+        "Lesen und Sprachbausteine sind zusammen. Du hast dafür 90 Minuten Zeit.",
+        "Eine falsche Antwort ist nicht schlimm. Du bekommst keine Minuspunkte. Rate lieber, als nichts zu schreiben!",
+        "Ein Wörterbuch ist nicht erlaubt.",
+        "Ein Computer liest deinen Antwortbogen (S30). Schreibe deshalb sauber. Trage deine Antworten rechtzeitig ein.",
+        "Vor dem Sprechen hast du 20 Minuten Zeit. In dieser Zeit darfst du Notizen machen.",
+        "So bekommst du deine Note: 270–300 Punkte = sehr gut. 240–269,5 = gut. 210–239,5 = befriedigend. 180–209,5 = ausreichend. Unter 180 = nicht bestanden."
       ],
       tr: [
-        "Okuma + Sprachbausteine birlikte: 90 dakika. Zamanı kendin bölüştürürsün!",
-        "Yanlış cevaplar puan DÜŞÜRMEZ – emin değilsen mutlaka tahmin et.",
+        "Okuma ve Sprachbausteine birliktedir. Bunun için 90 dakikan var.",
+        "Yanlış cevap kötü değildir. Eksi puan almazsın. Boş bırakmaktansa tahmin et!",
         "Sözlük kullanmak yasaktır.",
-        "Cevap kağıdı (S30) makinede okunur – temiz işaretle ve cevaplarını zamanında aktar.",
-        "Sözlü sınavdan önce 20 dakika hazırlık süren var ve not alabilirsin.",
-        "Notlar: 270–300 pekiyi, 240–269,5 iyi, 210–239,5 orta, 180–209,5 geçer, 180 altı başarısız."
+        "Cevap kağıdını (S30) bir bilgisayar okur. Bu yüzden temiz yaz. Cevaplarını zamanında işaretle.",
+        "Konuşmadan önce 20 dakikan var. Bu sürede not alabilirsin.",
+        "Notun şöyle hesaplanır: 270–300 puan = pekiyi. 240–269,5 = iyi. 210–239,5 = orta. 180–209,5 = geçer. 180'in altı = kaldın."
       ]
     }
   },
   goethe: {
     name: "Goethe-Zertifikat B1",
     summary: {
-      de: "Vier Module: Lesen, Hören, Schreiben, Sprechen. Jedes Modul hat 100 Punkte und kann einzeln abgelegt und einzeln bestanden werden (mindestens 60 Punkte pro Modul).",
-      tr: "Dört modül: Okuma, Dinleme, Yazma, Konuşma. Her modül 100 puandır ve ayrı ayrı girilebilir, ayrı ayrı geçilebilir (her modülde en az 60 puan)."
+      de: "Diese Prüfung hat vier Teile: Lesen, Hören, Schreiben, Sprechen. Jeder Teil hat 100 Punkte. Du kannst jeden Teil einzeln machen. Du brauchst pro Teil mindestens 60 Punkte.",
+      tr: "Bu sınavın dört bölümü var: Okuma, Dinleme, Yazma, Konuşma. Her bölüm 100 puandır. Her bölümü ayrı ayrı girebilirsin. Her bölümde en az 60 puan gerekir."
     },
     parts: [
       { teil: "Lesen Teil 1", zeit: "10 Min.", punkte: "6 Items", aufgabe: "Blog/Brief lesen → richtig/falsch", tr: "Blog/mektup oku → doğru/yanlış" },
@@ -57,24 +58,24 @@ window.PRUEFUNG = {
     ],
     hinweise: {
       de: [
-        "Lesen: 65 Minuten für 5 Teile mit insgesamt 30 Items.",
-        "Module können einzeln wiederholt werden – wenn du z. B. nur Schreiben nicht bestehst, wiederholst du nur Schreiben.",
-        "Bei Lesen Teil 3 gibt es die Antwort „x“ (keine Anzeige passt) – dieses „x“ gibt es übrigens auch bei telc Lesen Teil 3!",
-        "Beim Sprechen hast du 15 Minuten Vorbereitungszeit."
+        "Der Teil Lesen hat 5 Aufgaben. Dafür hast du 65 Minuten Zeit. Es gibt 30 Fragen.",
+        "Du kannst einen Teil noch einmal machen. Zum Beispiel: Du bestehst nur Schreiben nicht. Dann machst du nur Schreiben noch einmal.",
+        "Bei Lesen Teil 3 gibt es die Antwort „x“. Das heißt: Keine Anzeige passt. Diese Antwort „x“ gibt es auch bei telc!",
+        "Vor dem Sprechen hast du 15 Minuten Zeit zum Vorbereiten."
       ],
       tr: [
-        "Okuma: 5 bölüm, toplam 30 soru için 65 dakika.",
-        "Modüller ayrı ayrı tekrarlanabilir – örneğin sadece Yazma'dan kalırsan, sadece Yazma'yı tekrar edersin.",
-        "Okuma Teil 3'te „x“ cevabı vardır (uygun ilan yok) – bu „x“ telc Lesen Teil 3'te de vardır!",
-        "Konuşma sınavından önce 15 dakika hazırlık süresi verilir."
+        "Okuma bölümünün 5 kısmı var. Bunun için 65 dakikan var. Toplam 30 soru vardır.",
+        "Bir bölümü tekrar yapabilirsin. Örnek: Sadece Yazma'dan kaldın. O zaman sadece Yazma'yı tekrar yaparsın.",
+        "Okuma Teil 3'te „x“ cevabı vardır. Bu, hiçbir ilanın uymadığı anlamına gelir. Bu „x“ telc'de de vardır!",
+        "Konuşmadan önce hazırlanmak için 15 dakikan var."
       ]
     }
   },
   dtz: {
     name: "DTZ – Deutsch-Test für Zuwanderer (A2–B1)",
     summary: {
-      de: "Der DTZ ist die Abschlussprüfung des Integrationskurses (eine telc-Prüfung auf zwei Stufen: A2 oder B1). Für die Einbürgerung und den Abschluss des Integrationskurses reicht der DTZ mit dem Ergebnis B1. Wichtig: Für B1 musst du im mündlichen UND im schriftlichen Teil B1-Niveau erreichen.",
-      tr: "DTZ, uyum kursunun bitirme sınavıdır (iki seviyeli bir telc sınavı: A2 veya B1). Vatandaşlık ve uyum kursu bitirmesi için B1 sonuçlu DTZ yeterlidir. Önemli: B1 için hem sözlü HEM yazılı bölümde B1 seviyesine ulaşmalısın."
+      de: "Der DTZ ist eine Prüfung für Integrationskurse. Es gibt zwei Stufen: A2 oder B1. Für die Einbürgerung reicht das Ergebnis B1. Wichtig: Du brauchst B1 im Sprechen UND im Schreiben.",
+      tr: "DTZ, entegrasyon kursları için bir sınavdır. İki seviyesi vardır: A2 veya B1. Vatandaşlık için B1 sonucu yeterlidir. Önemli: Konuşmada VE yazmada B1 seviyesi gerekir."
     },
     parts: [
       { teil: "Hören Teil 1–4", zeit: "25 Min.", punkte: "20 Items", aufgabe: "Ansagen am Telefon, Radio-Infos, Gespräche, Meinungen – Multiple Choice", tr: "Telefon anonsları, radyo bilgileri, konuşmalar, görüşler – çoktan seçmeli" },
@@ -84,19 +85,19 @@ window.PRUEFUNG = {
     ],
     hinweise: {
       de: [
-        "Die Aufgabenformate von Lesen Teil 3 (Anzeigen) und dem gemeinsamen Planen sind fast identisch mit telc B1 – dieses Training hilft dir also auch direkt für den DTZ!",
-        "Beim DTZ-Sprechen gibt es eine Bildbeschreibung – bereite Redemittel wie „Auf dem Bild sehe ich …“, „Im Vordergrund/Hintergrund …“ vor.",
-        "Das Schreiben ist kürzer als bei telc B1: eine halbformelle Nachricht mit meist 3 Leitpunkten."
+        "Zwei Aufgaben sind fast wie bei telc B1: Lesen Teil 3 (Anzeigen) und das gemeinsame Planen. Wenn du für telc übst, übst du also auch für den DTZ!",
+        "Beim Sprechen bekommst du ein Bild. Du musst das Bild beschreiben. Lerne dafür Sätze wie „Auf dem Bild sehe ich …“.",
+        "Das Schreiben ist kürzer als bei telc B1. Du schreibst eine kurze Nachricht mit meistens 3 Punkten."
       ],
       tr: [
-        "Lesen Teil 3 (ilanlar) ve birlikte plan yapma bölümlerinin formatları telc B1 ile neredeyse aynı – bu antrenman DTZ için de doğrudan işine yarar!",
-        "DTZ konuşma sınavında resim anlatma vardır – „Auf dem Bild sehe ich …“ (Resimde … görüyorum), „Im Vordergrund/Hintergrund …“ (Ön planda/arka planda …) gibi kalıpları hazırla.",
-        "Yazma bölümü telc B1'den kısadır: genelde 3 maddelik yarı resmi bir mesaj."
+        "İki görev telc B1'e çok benzer: Lesen Teil 3 (ilanlar) ve birlikte plan yapma. telc için çalışırsan DTZ için de çalışmış olursun!",
+        "Konuşma sınavında bir resim alırsın. Bu resmi anlatmalısın. Bunun için „Auf dem Bild sehe ich …“ (Resimde … görüyorum) gibi cümleler öğren.",
+        "Yazma bölümü telc B1'den daha kısadır. Genelde 3 maddelik kısa bir mesaj yazarsın."
       ]
     }
   },
   vergleich: {
-    de: "Welche Prüfung passt zu dir? telc B1 wird oft für die Einbürgerung und von Integrationskursen verwendet (der Deutsch-Test für Zuwanderer DTZ ist eine telc-Prüfung auf A2–B1). Goethe B1 ist international sehr bekannt und modular. Für beide gilt: Wer die Aufgabentypen kennt und trainiert, hat einen großen Vorteil!",
-    tr: "Hangi sınav sana uygun? telc B1 genellikle vatandaşlık başvurusu ve entegrasyon kursları için kullanılır (Deutsch-Test für Zuwanderer DTZ, A2–B1 seviyesinde bir telc sınavıdır). Goethe B1 uluslararası alanda çok tanınır ve modülerdir. Her ikisi için de geçerli: Soru tiplerini tanıyan ve pratik yapan büyük avantaj sağlar!"
+    de: "Welche Prüfung ist gut für dich? telc B1 ist gut für die Einbürgerung. Der DTZ ist auch eine telc-Prüfung. Goethe B1 kennen viele Länder auf der Welt. Ein Tipp für beide Prüfungen: Übe die Aufgabentypen. Dann hast du einen großen Vorteil!",
+    tr: "Hangi sınav sana uygun? telc B1, vatandaşlık için iyidir. DTZ de bir telc sınavıdır. Goethe B1'i dünyada birçok ülke tanır. İki sınav için de bir ipucu: Soru tiplerini çalış. O zaman büyük avantaj kazanırsın!"
   }
 };

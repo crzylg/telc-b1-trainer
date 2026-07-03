@@ -1,4 +1,5 @@
 // ===== Strategien & Taktiken für die B1-Prüfung (DE + TR) =====
+// Sprache: sehr einfach (A1), wie für Kinder erklärt.
 window.STRATEGIEN = [
   {
     id: "lesen-allgemein",
@@ -9,23 +10,23 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "Die drei Lesestile / Üç okuma tekniği",
-        de: "In der Prüfung liest du NIE Wort für Wort. Es gibt drei Techniken: 1) GLOBALES LESEN (Skimming): Du überfliegst den Text schnell und verstehst nur das Hauptthema. Frage dich: Worum geht es? 2) SELEKTIVES LESEN (Scanning): Du suchst gezielt eine bestimmte Information, z. B. eine Zahl, einen Ort, einen Preis. 3) DETAILLIERTES LESEN: Nur die Stelle, die für die Aufgabe wichtig ist, liest du genau.",
-        tr: "Sınavda ASLA kelime kelime okumazsın. Üç teknik vardır: 1) GENEL OKUMA (Skimming): Metni hızla gözden geçirir, sadece ana konuyu anlarsın. Kendine sor: Konu ne? 2) SEÇİCİ OKUMA (Scanning): Belirli bir bilgiyi hedefli ararsın, örn. bir sayı, yer, fiyat. 3) DETAYLI OKUMA: Sadece soru için önemli olan yeri dikkatlice okursun."
+        de: "In der Prüfung liest du NICHT jedes Wort. Es gibt drei Techniken. 1) SCHNELL LESEN: Du liest den Text schnell. Du verstehst nur das Hauptthema. Frage dich: Worum geht es? 2) GENAU SUCHEN: Du suchst eine Information. Zum Beispiel eine Zahl. Oder einen Ort. Oder einen Preis. 3) GENAU LESEN: Du liest nur die wichtige Stelle. Diese Stelle liest du sehr genau.",
+        tr: "Sınavda her kelimeyi okumazsın. Üç teknik vardır. 1) HIZLI OKUMA: Metni hızlı okursun. Sadece ana konuyu anlarsın. Kendine sor: Konu ne? 2) ARAMA: Belirli bir bilgiyi ararsın. Örneğin bir sayı. Veya bir yer. Veya bir fiyat. 3) DİKKATLİ OKUMA: Sadece önemli yeri okursun. Bu yeri çok dikkatli okursun."
       },
       {
         h: "Unbekannte Wörter / Bilinmeyen kelimeler",
-        de: "Du musst NICHT jedes Wort verstehen! Bei einem unbekannten Wort: Erstens weiterlesen – oft ist das Wort unwichtig. Zweitens aus dem Kontext raten: Was passt logisch? Drittens auf Wortteile achten: „Arbeitslosigkeit“ = Arbeit + los + igkeit. Panik wegen einzelner Wörter kostet Zeit und Punkte.",
-        tr: "Her kelimeyi anlamak ZORUNDA DEĞİLSİN! Bilinmeyen bir kelimede: Önce okumaya devam et – çoğu zaman kelime önemsizdir. İkinci olarak bağlamdan tahmin et: Mantıklı olan ne? Üçüncüsü kelime parçalarına bak: „Arbeitslosigkeit“ = Arbeit (iş) + los (-sız) + igkeit (-lık) = işsizlik. Tek tek kelimeler için panik yapmak zaman ve puan kaybettirir."
+        de: "Du musst nicht jedes Wort kennen! Kennst du ein Wort nicht? Dann mach das: Erstens, lies einfach weiter. Das Wort ist oft nicht wichtig. Zweitens, rate das Wort. Was passt zum Text? Drittens, schau dir die Wortteile an. Zum Beispiel: „Arbeitslosigkeit“ = Arbeit + los + igkeit. Keine Panik bei einem Wort! Das kostet nur Zeit.",
+        tr: "Her kelimeyi bilmek zorunda değilsin! Bir kelimeyi bilmiyor musun? O zaman şunu yap: Birincisi, okumaya devam et. Kelime çoğu zaman önemli değildir. İkincisi, kelimeyi tahmin et. Metne ne uyuyor? Üçüncüsü, kelimenin parçalarına bak. Örnek: „Arbeitslosigkeit“ = Arbeit (iş) + los (-sız) + igkeit (-lık). Bir kelime için panik yapma! Bu sadece zaman kaybettirir."
       },
       {
         h: "Zeitmanagement / Zaman yönetimi",
-        de: "telc: 90 Minuten für Lesen UND Sprachbausteine zusammen. Empfehlung: Teil 1 → 15 Min., Teil 2 → 20 Min., Teil 3 → 15 Min., Sprachbausteine → 20 Min., Rest → Kontrolle und Antwortbogen. Bleib nie zu lange an einer Aufgabe hängen! Markiere sie, geh weiter und komm später zurück.",
-        tr: "telc: Okuma VE Sprachbausteine için birlikte 90 dakika. Öneri: Teil 1 → 15 dk, Teil 2 → 20 dk, Teil 3 → 15 dk, Sprachbausteine → 20 dk, kalan → kontrol ve cevap kağıdı. Bir soruda asla çok uzun takılıp kalma! İşaretle, devam et, sonra geri dön."
+        de: "Bei telc hast du 90 Minuten. Diese Zeit ist für Lesen UND Sprachbausteine. Ein guter Plan: Teil 1 → 15 Minuten. Teil 2 → 20 Minuten. Teil 3 → 15 Minuten. Sprachbausteine → 20 Minuten. Der Rest ist für die Kontrolle. Bleib nie zu lange bei einer Frage! Mach ein Zeichen. Geh weiter. Komm später zurück.",
+        tr: "telc'de 90 dakikan var. Bu süre Okuma VE Sprachbausteine içindir. İyi bir plan: Teil 1 → 15 dakika. Teil 2 → 20 dakika. Teil 3 → 15 dakika. Sprachbausteine → 20 dakika. Kalan süre kontrol içindir. Bir soruda asla çok uzun kalma! Bir işaret koy. Devam et. Sonra geri dön."
       },
       {
         h: "Immer antworten! / Her zaman cevapla!",
-        de: "Es gibt keine Minuspunkte. Eine leere Antwort ist garantiert 0 Punkte, eine geratene Antwort hat immer eine Chance. Bei a/b/c: Wenn du eine Option sicher ausschließen kannst, steigt deine Chance von 33 % auf 50 %.",
-        tr: "Eksi puan yoktur. Boş cevap garanti 0 puandır, tahmin edilen cevabın her zaman şansı vardır. a/b/c'de: Bir seçeneği kesin eleyebilirsen, şansın %33'ten %50'ye çıkar."
+        de: "Eine falsche Antwort ist NICHT schlimm. Eine leere Antwort gibt immer 0 Punkte. Eine geratene Antwort hat immer eine Chance. Bei a/b/c: Kannst du eine Antwort sicher ausschließen? Dann steigt deine Chance von 33 % auf 50 %.",
+        tr: "Yanlış cevap KÖTÜ değildir. Boş cevap her zaman 0 puandır. Tahmin edilen cevabın her zaman bir şansı vardır. a/b/c'de: Bir cevabı kesin eleyebilir misin? O zaman şansın %33'ten %50'ye çıkar."
       }
     ]
   },
@@ -38,18 +39,18 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "So gehst du vor / Adım adım yöntem",
-        de: "1) Lies ZUERST die 10 Überschriften und unterstreiche die Schlüsselwörter. 2) Lies dann den ersten Text global – nur das Thema verstehen. 3) Frage: Welche 2–3 Überschriften kommen in Frage? 4) Vergleiche genau: Die richtige Überschrift fasst den GANZEN Text zusammen, nicht nur ein Detail. 5) Streiche benutzte Überschriften durch.",
-        tr: "1) ÖNCE 10 başlığı oku ve anahtar kelimelerin altını çiz. 2) Sonra ilk metni genel oku – sadece konuyu anla. 3) Sor: Hangi 2–3 başlık uygun olabilir? 4) Dikkatli karşılaştır: Doğru başlık metnin TAMAMINI özetler, sadece bir detayı değil. 5) Kullandığın başlıkların üstünü çiz."
+        de: "1) Lies ZUERST alle 10 Überschriften. Markiere die wichtigen Wörter. 2) Lies dann den ersten Text schnell. Verstehe nur das Thema. 3) Frage dich: Welche 2 oder 3 Überschriften passen vielleicht? 4) Vergleiche genau. Die richtige Überschrift passt zum GANZEN Text. Nicht nur zu einem Detail. 5) Streiche benutzte Überschriften durch.",
+        tr: "1) ÖNCE 10 başlığı oku. Önemli kelimeleri işaretle. 2) Sonra ilk metni hızlı oku. Sadece konuyu anla. 3) Kendine sor: Hangi 2 veya 3 başlık uyabilir? 4) Dikkatli karşılaştır. Doğru başlık metnin TAMAMINA uyar. Sadece bir detaya değil. 5) Kullandığın başlıkların üstünü çiz."
       },
       {
         h: "Typische Fallen / Tipik tuzaklar",
-        de: "FALLE 1: Eine Überschrift enthält ein Wort aus dem Text, passt aber inhaltlich nicht. Gleiches Wort ≠ gleiche Bedeutung! FALLE 2: Zwei Überschriften scheinen zu passen – lies dann den letzten Satz des Textes, dort steht oft die Hauptaussage. FALLE 3: 5 Überschriften bleiben übrig – lass dich nicht verwirren, das ist normal.",
-        tr: "TUZAK 1: Bir başlık metindeki bir kelimeyi içerir ama içerik olarak uymaz. Aynı kelime ≠ aynı anlam! TUZAK 2: İki başlık uygun görünüyor – o zaman metnin son cümlesini oku, ana fikir genelde oradadır. TUZAK 3: 5 başlık artar – kafan karışmasın, bu normaldir."
+        de: "FALLE 1: Eine Überschrift hat ein Wort aus dem Text. Aber sie passt nicht zum Inhalt. Gleiches Wort heißt nicht gleiche Bedeutung! FALLE 2: Zwei Überschriften passen vielleicht. Dann lies den letzten Satz vom Text. Dort steht oft die wichtigste Aussage. FALLE 3: Am Ende bleiben 5 Überschriften übrig. Das ist normal. Keine Sorge!",
+        tr: "TUZAK 1: Bir başlıkta metindeki bir kelime var. Ama içeriğe uymuyor. Aynı kelime, aynı anlam demek değildir! TUZAK 2: İki başlık uyuyor gibi görünüyor. O zaman metnin son cümlesini oku. Ana fikir genelde orada olur. TUZAK 3: Sonunda 5 başlık artar. Bu normaldir. Endişelenme!"
       },
       {
         h: "Profi-Tipp / Profesyonel ipucu",
-        de: "Beginne mit dem Text, der dir am leichtesten erscheint. Jede sichere Zuordnung reduziert die Auswahl für die schweren Texte. Achte auf Synonyme: Im Text steht „Auto“, in der Überschrift „Wagen“ oder „Pkw“ – die richtige Antwort benutzt fast NIE dieselben Wörter wie der Text.",
-        tr: "Sana en kolay görünen metinle başla. Her emin eşleştirme, zor metinler için seçenek sayısını azaltır. Eş anlamlılara dikkat: Metinde „Auto“, başlıkta „Wagen“ veya „Pkw“ yazar – doğru cevap neredeyse HİÇBİR ZAMAN metindeki kelimelerin aynısını kullanmaz."
+        de: "Beginne mit dem leichtesten Text. Jede sichere Antwort hilft dir bei den schweren Texten. Achte auf Synonyme: Im Text steht „Auto“. In der Überschrift steht „Wagen“. Die richtige Antwort benutzt fast nie die gleichen Wörter wie der Text!",
+        tr: "En kolay metinle başla. Her emin cevap, zor metinlerde sana yardım eder. Eş anlamlılara dikkat et: Metinde „Auto“ (araba) yazar. Başlıkta „Wagen“ (taşıt) yazar. Doğru cevap, metindeki kelimelerle neredeyse hiç aynı olmaz!"
       }
     ]
   },
@@ -62,18 +63,18 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "So gehst du vor / Adım adım yöntem",
-        de: "1) Lies zuerst die 5 Fragen (NICHT die Antworten a/b/c – die verwirren nur). 2) Die Fragen folgen der Reihenfolge des Textes: Frage 1 → Textanfang, Frage 5 → Textende. Nutze das! 3) Suche die Textstelle zur Frage und lies sie GENAU. 4) Formuliere die Antwort erst im Kopf, DANN vergleiche mit a/b/c. 5) Die richtige Option sagt dasselbe wie der Text – aber mit anderen Wörtern.",
-        tr: "1) Önce 5 soruyu oku (a/b/c cevapları DEĞİL – onlar kafa karıştırır). 2) Sorular metnin sırasını takip eder: Soru 1 → metnin başı, Soru 5 → metnin sonu. Bunu kullan! 3) Soruyla ilgili metin yerini bul ve DİKKATLİCE oku. 4) Cevabı önce kafanda oluştur, SONRA a/b/c ile karşılaştır. 5) Doğru seçenek metinle aynı şeyi söyler – ama farklı kelimelerle."
+        de: "1) Lies zuerst nur die 5 Fragen. Lies noch NICHT die Antworten a/b/c. Die machen dich sonst nur unsicher. 2) Die Fragen folgen dem Text. Frage 1 ist am Textanfang. Frage 5 ist am Textende. 3) Suche die richtige Stelle im Text. Lies sie GENAU. 4) Denk dir zuerst selbst eine Antwort aus. DANN schau bei a/b/c. 5) Die richtige Antwort sagt das Gleiche wie der Text. Aber mit anderen Wörtern.",
+        tr: "1) Önce sadece 5 soruyu oku. a/b/c cevaplarını henüz okuma. Onlar seni sadece şaşırtır. 2) Sorular metni takip eder. Soru 1 metnin başındadır. Soru 5 metnin sonundadır. 3) Metinde doğru yeri bul. Onu DİKKATLİ oku. 4) Önce kendi kafanda bir cevap düşün. SONRA a/b/c'ye bak. 5) Doğru cevap metinle aynı şeyi söyler. Ama farklı kelimelerle."
       },
       {
         h: "Typische Fallen / Tipik tuzaklar",
-        de: "FALLE 1: Eine Option wiederholt Wörter aus dem Text, ist aber inhaltlich falsch (z. B. falsche Person, falsche Zeit). FALLE 2: Eine Option ist allgemein richtig, steht aber NICHT im Text – es zählt nur, was im Text steht! FALLE 3: Achte auf kleine Wörter wie „nur“, „alle“, „nie“, „immer“ – sie machen eine Option oft falsch. FALLE 4: Negationen: „nicht unwichtig“ = wichtig.",
-        tr: "TUZAK 1: Bir seçenek metindeki kelimeleri tekrarlar ama içerik olarak yanlıştır (örn. yanlış kişi, yanlış zaman). TUZAK 2: Bir seçenek genel olarak doğrudur ama metinde YOKTUR – sadece metinde yazan sayılır! TUZAK 3: „nur“ (sadece), „alle“ (hepsi), „nie“ (asla), „immer“ (her zaman) gibi küçük kelimelere dikkat – bunlar seçeneği çoğu zaman yanlış yapar. TUZAK 4: Olumsuzlamalar: „nicht unwichtig“ = önemli."
+        de: "FALLE 1: Eine Antwort hat Wörter aus dem Text. Aber sie ist falsch. Zum Beispiel eine falsche Person oder falsche Zeit. FALLE 2: Eine Antwort klingt richtig. Aber sie steht NICHT im Text. Nur der Text zählt! FALLE 3: Achte auf kleine Wörter: „nur“, „alle“, „nie“, „immer“. Diese Wörter machen eine Antwort oft falsch. FALLE 4: „nicht unwichtig“ heißt eigentlich „wichtig“.",
+        tr: "TUZAK 1: Bir cevapta metindeki kelimeler var. Ama cevap yanlış. Örneğin yanlış kişi veya yanlış zaman. TUZAK 2: Bir cevap doğru gibi duruyor. Ama metinde YOK. Sadece metin sayılır! TUZAK 3: Küçük kelimelere dikkat et: „nur“ (sadece), „alle“ (hepsi), „nie“ (asla), „immer“ (her zaman). Bu kelimeler cevabı çoğu zaman yanlış yapar. TUZAK 4: „nicht unwichtig“ aslında „önemli“ demektir."
       },
       {
         h: "Ausschlussverfahren / Eleme yöntemi",
-        de: "Wenn du unsicher bist: Streiche zuerst die Option, die sicher falsch ist. Vergleiche die zwei übrigen Wort für Wort mit der Textstelle. Frage bei jeder Option: „Steht das WIRKLICH so im Text?“ Wenn du es nicht belegen kannst, ist es wahrscheinlich falsch.",
-        tr: "Emin değilsen: Önce kesin yanlış olan seçeneği çiz. Kalan ikisini metin yeriyle kelime kelime karşılaştır. Her seçenekte sor: „Bu GERÇEKTEN metinde böyle mi yazıyor?“ Kanıtlayamıyorsan, muhtemelen yanlıştır."
+        de: "Bist du unsicher? Streiche zuerst die Antwort, die sicher falsch ist. Vergleiche dann die zwei anderen mit dem Text. Frage bei jeder Antwort: „Steht das WIRKLICH so im Text?“ Kannst du es nicht finden? Dann ist die Antwort wahrscheinlich falsch.",
+        tr: "Emin değil misin? Önce kesin yanlış olan cevabı çiz. Sonra kalan ikisini metinle karşılaştır. Her cevapta sor: „Bu GERÇEKTEN metinde böyle mi yazıyor?“ Bulamıyor musun? O zaman cevap muhtemelen yanlıştır."
       }
     ]
   },
@@ -86,18 +87,18 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "So gehst du vor / Adım adım yöntem",
-        de: "1) Lies ZUERST die Situation und markiere die Schlüsselinfos: WER sucht WAS, mit welchen BEDINGUNGEN (Ort? Zeit? Preis? gebraucht/neu?). 2) Überfliege dann die 12 Anzeigen und suche die passende. 3) Prüfe ALLE Bedingungen der Situation – eine Anzeige, die nur zur Hälfte passt, ist falsch! 4) Jede Anzeige passt nur zu EINER Situation. Streiche benutzte Anzeigen durch.",
-        tr: "1) ÖNCE durumu oku ve anahtar bilgileri işaretle: KİM, NE arıyor, hangi ŞARTLARLA (Yer? Zaman? Fiyat? ikinci el/yeni?). 2) Sonra 12 ilanı gözden geçir ve uygun olanı ara. 3) Durumun TÜM şartlarını kontrol et – yarısı uyan ilan yanlıştır! 4) Her ilan sadece BİR duruma uyar. Kullandığın ilanların üstünü çiz."
+        de: "1) Lies ZUERST die Situation. Markiere die wichtigen Infos: WER sucht WAS? Mit welchen Bedingungen? Zum Beispiel: Ort, Zeit, Preis, gebraucht oder neu. 2) Schau dann alle 12 Anzeigen an. Suche die passende. 3) Prüfe ALLE Bedingungen. Passt nur die Hälfte? Dann ist die Anzeige falsch! 4) Jede Anzeige passt nur zu EINER Situation. Streiche benutzte Anzeigen durch.",
+        tr: "1) ÖNCE durumu oku. Önemli bilgileri işaretle: KİM, NE arıyor? Hangi şartlarla? Örneğin: yer, zaman, fiyat, ikinci el veya yeni. 2) Sonra 12 ilanı incele. Uygun olanı ara. 3) TÜM şartları kontrol et. Sadece yarısı mı uyuyor? O zaman ilan yanlıştır! 4) Her ilan sadece BİR duruma uyar. Kullandığın ilanların üstünü çiz."
       },
       {
         h: "Typische Fallen / Tipik tuzaklar",
-        de: "FALLE 1: Zwei Anzeigen zum gleichen Thema (z. B. zwei Sprachkurse) – aber nur eine erfüllt ALLE Bedingungen (z. B. „am Abend“ oder „für Anfänger“). FALLE 2: Achte auf Details wie „privat/beruflich“, „kaufen/verkaufen“, „suchen/anbieten“. FALLE 3: Zeitangaben genau prüfen: „wochentags“, „nur am Wochenende“, „ab 18 Uhr“.",
-        tr: "TUZAK 1: Aynı konuda iki ilan (örn. iki dil kursu) – ama sadece biri TÜM şartları karşılar (örn. „akşamları“ veya „başlangıç seviyesi için“). TUZAK 2: „özel/mesleki“, „almak/satmak“, „aramak/sunmak“ gibi detaylara dikkat. TUZAK 3: Zaman bilgilerini iyi kontrol et: „hafta içi“, „sadece hafta sonu“, „18:00'den itibaren“."
+        de: "FALLE 1: Zwei Anzeigen haben das gleiche Thema. Zum Beispiel zwei Sprachkurse. Aber nur eine passt zu ALLEN Bedingungen. FALLE 2: Achte auf Wörter wie „privat“ oder „beruflich“, „kaufen“ oder „verkaufen“. FALLE 3: Prüfe die Zeit genau: „wochentags“, „nur am Wochenende“, „ab 18 Uhr“.",
+        tr: "TUZAK 1: İki ilan aynı konuda. Örneğin iki dil kursu. Ama sadece biri TÜM şartlara uyar. TUZAK 2: „özel“ veya „mesleki“, „almak“ veya „satmak“ gibi kelimelere dikkat et. TUZAK 3: Zamanı iyi kontrol et: „hafta içi“, „sadece hafta sonu“, „18:00'den itibaren“."
       },
       {
         h: "Das „x“ nicht vergessen! / „x“ seçeneğini unutma!",
-        de: "WICHTIG: Auch bei telc gibt es das „x“! Die offizielle Anweisung lautet: „Wenn Sie zu einer Situation keine Anzeige finden, markieren Sie ein x.“ Im offiziellen Übungstest 1 ist das sogar bei ZWEI von zehn Situationen die richtige Antwort. Vorsicht: Eine Anzeige zum gleichen Thema ist noch kein Treffer – wenn auch nur EINE Bedingung nicht erfüllt ist (z. B. „keine Haustiere“, falsche Uhrzeit), ist die Antwort „x“.",
-        tr: "ÖNEMLİ: telc'de de „x“ vardır! Resmi talimat şöyle: „Bir duruma uygun ilan bulamazsanız, x işaretleyin.“ Resmi deneme testinde on durumdan İKİSİNDE doğru cevap „x“tir. Dikkat: Aynı konudaki bir ilan henüz doğru cevap değildir – TEK bir şart bile uymuyorsa (örn. „evcil hayvan yasak“, yanlış saat), cevap „x“tir."
+        de: "WICHTIG: Bei telc gibt es auch das „x“! Die Regel heißt: Findest du keine passende Anzeige? Dann markiere ein „x“. Im echten Test ist „x“ oft die richtige Antwort. Achtung: Eine Anzeige zum gleichen Thema ist noch kein Treffer. Fehlt nur EINE Bedingung? Zum Beispiel „keine Haustiere“ oder falsche Uhrzeit? Dann ist die Antwort „x“.",
+        tr: "ÖNEMLİ: telc'de de „x“ vardır! Kural şu: Uygun ilan bulamadın mı? O zaman „x“ işaretle. Gerçek sınavda „x“ sık sık doğru cevaptır. Dikkat: Aynı konudaki bir ilan henüz doğru cevap değildir. Sadece TEK bir şart eksik mi? Örneğin „evcil hayvan yasak“ veya yanlış saat? O zaman cevap „x“tir."
       }
     ]
   },
@@ -109,18 +110,18 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "Teil 1 – Grammatik (a/b/c)",
-        de: "Hier wird Grammatik getestet: Verbformen, Präpositionen, Pronomen, Konnektoren, Artikel. Methode: 1) Lies den ganzen Satz, nicht nur die Lücke. 2) Bestimme, WAS fehlt: Verb? Präposition? Pronomen? 3) Denke an die Regel (z. B. „weil“ → Verb ans Ende). 4) Setze die Lösung ein und lies den Satz noch einmal – klingt er richtig?",
-        tr: "Burada dilbilgisi test edilir: fiil çekimleri, edatlar, zamirler, bağlaçlar, artikeller. Yöntem: 1) Sadece boşluğu değil, tüm cümleyi oku. 2) NEYİN eksik olduğunu belirle: Fiil mi? Edat mı? Zamir mi? 3) Kuralı düşün (örn. „weil“ → fiil sona). 4) Cevabı yerleştir ve cümleyi tekrar oku – doğru geliyor mu?"
+        de: "Hier testet man Grammatik: Verben, Präpositionen, Pronomen, Konnektoren, Artikel. So machst du es: 1) Lies den ganzen Satz. Nicht nur die Lücke! 2) Was fehlt? Ein Verb? Eine Präposition? Ein Pronomen? 3) Denk an die Regel. Zum Beispiel: Nach „weil“ steht das Verb am Ende. 4) Setze die Antwort ein. Lies den Satz noch einmal. Klingt er richtig?",
+        tr: "Burada dilbilgisi test edilir: fiiller, edatlar, zamirler, bağlaçlar, artikeller. Şöyle yaparsın: 1) Tüm cümleyi oku. Sadece boşluğu değil! 2) Ne eksik? Bir fiil mi? Bir edat mı? Bir zamir mi? 3) Kuralı düşün. Örneğin: „weil“den sonra fiil sona gider. 4) Cevabı yerleştir. Cümleyi tekrar oku. Doğru geliyor mu?"
       },
       {
         h: "Teil 2 – Wortschatz (15 Wörter, 10 Lücken)",
-        de: "Hier zählt Wortschatz im Kontext. Methode: 1) Lies den Brief einmal komplett. 2) Bestimme für jede Lücke die WORTART: Braucht die Lücke ein Verb, Nomen, Adjektiv oder einen Konnektor? 3) Sortiere die 15 Wörter im Kopf nach Wortart – das reduziert die Auswahl enorm. 4) Achte auf feste Verbindungen: „sich freuen AUF“, „Interesse AN“, „zur Verfügung stehen“.",
-        tr: "Burada bağlam içinde kelime bilgisi önemlidir. Yöntem: 1) Mektubu bir kez tamamen oku. 2) Her boşluk için KELİME TÜRÜNÜ belirle: Boşluğa fiil mi, isim mi, sıfat mı yoksa bağlaç mı gerekiyor? 3) 15 kelimeyi kafanda türlerine göre grupla – bu seçenekleri çok azaltır. 4) Kalıp ifadelere dikkat: „sich freuen AUF“, „Interesse AN“, „zur Verfügung stehen“."
+        de: "Hier zählt der Wortschatz. So machst du es: 1) Lies den ganzen Brief einmal. 2) Für jede Lücke: Welche Wortart brauchst du? Ein Verb? Ein Nomen? Ein Adjektiv? Einen Konnektor? 3) Sortiere die 15 Wörter im Kopf nach Wortart. Das macht die Auswahl kleiner. 4) Achte auf feste Wortpaare: „sich freuen AUF“, „Interesse AN“.",
+        tr: "Burada kelime bilgisi önemlidir. Şöyle yaparsın: 1) Mektubun tamamını bir kez oku. 2) Her boşluk için: Hangi kelime türü gerekir? Fiil mi? İsim mi? Sıfat mı? Bağlaç mı? 3) 15 kelimeyi kafanda türlerine göre sırala. Bu, seçimi kolaylaştırır. 4) Sabit kelime çiftlerine dikkat: „sich freuen AUF“, „Interesse AN“."
       },
       {
         h: "Die 5 häufigsten Grammatik-Themen / En sık 5 dilbilgisi konusu",
-        de: "1) Konnektoren und Wortstellung (weil, obwohl, deshalb, trotzdem), 2) Präpositionen mit Dativ/Akkusativ, 3) Verbformen (Perfekt, Konjunktiv II: wäre, hätte, würde, könnte), 4) Relativpronomen (der, die, das, dem, den), 5) Reflexivpronomen (mich, dich, sich). Lerne diese Themen im Grammatik-Bereich dieser App!",
-        tr: "1) Bağlaçlar ve kelime sırası (weil, obwohl, deshalb, trotzdem), 2) Datif/Akuzatif edatları, 3) Fiil formları (Perfekt, Konjunktiv II: wäre, hätte, würde, könnte), 4) İlgi zamirleri (der, die, das, dem, den), 5) Dönüşlü zamirler (mich, dich, sich). Bu konuları bu uygulamanın Dilbilgisi bölümünde öğren!"
+        de: "Diese 5 Themen kommen oft vor: 1) Konnektoren und Wortstellung (weil, obwohl, deshalb, trotzdem). 2) Präpositionen mit Dativ oder Akkusativ. 3) Verbformen (Perfekt, und wäre, hätte, würde, könnte). 4) Relativpronomen (der, die, das, dem, den). 5) Reflexivpronomen (mich, dich, sich). Lerne diese Themen im Bereich „Grammatik“!",
+        tr: "Bu 5 konu sık sık çıkar: 1) Bağlaçlar ve kelime sırası (weil, obwohl, deshalb, trotzdem). 2) Datif veya Akuzatif'li edatlar. 3) Fiil formları (Perfekt, ve wäre, hätte, würde, könnte). 4) İlgi zamirleri (der, die, das, dem, den). 5) Dönüşlü zamirler (mich, dich, sich). Bu konuları „Grammatik“ bölümünde öğren!"
       }
     ]
   },
@@ -132,18 +133,18 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "Vor dem Hören / Dinlemeden önce",
-        de: "Nutze jede Pause, um die Aufgaben zu LESEN. Unterstreiche Schlüsselwörter in den Sätzen. Wenn du weißt, worauf du hören musst, verstehst du viel mehr. Die Aufgaben folgen der Reihenfolge der Hörtexte.",
-        tr: "Her duraklamayı soruları OKUMAK için kullan. Cümlelerdeki anahtar kelimelerin altını çiz. Neyi dinlemen gerektiğini bilirsen, çok daha fazla anlarsın. Sorular dinleme metinlerinin sırasını takip eder."
+        de: "Nutze jede Pause zum LESEN der Aufgaben. Markiere die wichtigen Wörter in den Sätzen. Weißt du, worauf du hören musst? Dann verstehst du viel mehr. Die Aufgaben folgen der Reihenfolge vom Hörtext.",
+        tr: "Her duraklamayı soruları OKUMAK için kullan. Cümlelerdeki önemli kelimeleri işaretle. Neyi dinlemen gerektiğini biliyor musun? O zaman çok daha fazla anlarsın. Sorular dinleme metninin sırasını takip eder."
       },
       {
         h: "Während des Hörens / Dinlerken",
-        de: "telc Teil 1 (5 kurze Texte) hörst du nur EINMAL – volle Konzentration! Teil 2 (langes Gespräch, 10 Aufgaben) und Teil 3 (5 kurze Texte) hörst du ZWEIMAL: Nutze den ersten Durchgang zum Antworten, den zweiten zur Kontrolle. Wenn du eine Aufgabe verpasst: sofort loslassen und zur nächsten gehen. Eine verpasste Frage darf nicht drei weitere kosten. Markiert wird richtig (+) oder falsch (–).",
-        tr: "telc Teil 1'i (5 kısa metin) sadece BİR KEZ dinlersin – tam konsantrasyon! Teil 2'yi (uzun konuşma, 10 soru) ve Teil 3'ü (5 kısa metin) İKİ KEZ dinlersin: İlk dinlemede cevapla, ikincisinde kontrol et. Bir soruyu kaçırırsan: hemen bırak ve sonrakine geç. Kaçan bir soru üç soru daha kaybettirmemeli. İşaretleme doğru (+) veya yanlış (–) şeklindedir."
+        de: "telc Teil 1 hat 5 kurze Texte. Diese hörst du nur EINMAL. Sei sehr konzentriert! Teil 2 ist ein langes Gespräch mit 10 Aufgaben. Teil 3 hat 5 kurze Texte. Diese zwei Teile hörst du ZWEIMAL. Beim ersten Mal antwortest du. Beim zweiten Mal kontrollierst du. Verpasst du eine Aufgabe? Dann lass sie los! Geh zur nächsten Aufgabe.",
+        tr: "telc Teil 1'de 5 kısa metin var. Bunları sadece BİR KEZ dinlersin. Çok konsantre ol! Teil 2, 10 sorulu uzun bir konuşmadır. Teil 3'te 5 kısa metin var. Bu iki bölümü İKİ KEZ dinlersin. İlk seferde cevapla. İkinci seferde kontrol et. Bir soruyu kaçırdın mı? O zaman bırak! Bir sonraki soruya geç."
       },
       {
         h: "Trainings-Tipp / Antrenman ipucu",
-        de: "Höre jeden Tag 15 Minuten Deutsch: langsame Nachrichten (z. B. „Langsam gesprochene Nachrichten“ von der Deutschen Welle), Podcasts auf B1-Niveau, deutsche Serien mit deutschen Untertiteln. Das Ohr trainiert man nur durch Hören!",
-        tr: "Her gün 15 dakika Almanca dinle: yavaş haberler (örn. Deutsche Welle'nin „Langsam gesprochene Nachrichten“ programı), B1 seviyesinde podcast'ler, Almanca altyazılı Alman dizileri. Kulak sadece dinleyerek eğitilir!"
+        de: "Höre jeden Tag 15 Minuten Deutsch. Zum Beispiel: langsame Nachrichten von der Deutschen Welle. Oder Podcasts auf B1-Niveau. Oder deutsche Serien mit deutschen Untertiteln. So trainierst du dein Ohr!",
+        tr: "Her gün 15 dakika Almanca dinle. Örneğin: Deutsche Welle'nin yavaş haberleri. Veya B1 seviyesinde podcast'ler. Veya Almanca altyazılı Alman dizileri. Böylece kulağını eğitirsin!"
       }
     ]
   },
@@ -155,23 +156,23 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "Die goldene Regel / Altın kural",
-        de: "Bearbeite ALLE vier Leitpunkte (telc) bzw. alle drei Punkte (Goethe)! Ein vergessener Leitpunkt kostet massiv Punkte – egal wie schön dein Deutsch ist. Hake jeden Punkt ab, wenn du ihn geschrieben hast.",
-        tr: "TÜM dört içerik maddesini (telc) veya üç maddeyi (Goethe) işle! Unutulan bir madde çok ciddi puan kaybettirir – Almancan ne kadar güzel olursa olsun. Her maddeyi yazdıktan sonra yanına tik at."
+        de: "Schreibe zu ALLEN vier Punkten (telc). Oder zu allen drei Punkten (Goethe). Vergisst du einen Punkt? Das kostet viele Punkte! Auch bei schönem Deutsch. Hake jeden Punkt ab, wenn du ihn geschrieben hast.",
+        tr: "TÜM dört maddeye yaz (telc). Veya tüm üç maddeye (Goethe). Bir maddeyi unuttun mu? Bu çok puan kaybettirir! Almancan güzel olsa bile. Her maddeyi yazdıktan sonra işaretle."
       },
       {
         h: "Struktur / Yapı",
-        de: "Immer gleich aufbauen: 1) Anrede (Sehr geehrte Damen und Herren, / Liebe Anna,), 2) Einleitung (Warum schreibe ich?), 3) Hauptteil (die Leitpunkte, verbunden mit Konnektoren), 4) Schluss (Ich freue mich auf Ihre Antwort.), 5) Gruß (Mit freundlichen Grüßen + Name). Konnektoren wie „deshalb“, „außerdem“, „trotzdem“ bringen Stil-Punkte!",
-        tr: "Her zaman aynı yapıyı kur: 1) Hitap (Sehr geehrte Damen und Herren, / Liebe Anna,), 2) Giriş (Neden yazıyorum?), 3) Ana bölüm (bağlaçlarla bağlanmış içerik maddeleri), 4) Kapanış (Ich freue mich auf Ihre Antwort.), 5) Selam (Mit freundlichen Grüßen + isim). „deshalb“, „außerdem“, „trotzdem“ gibi bağlaçlar stil puanı kazandırır!"
+        de: "Baue deinen Brief immer gleich auf: 1) Anrede. Zum Beispiel „Sehr geehrte Damen und Herren,“. 2) Einleitung. Warum schreibst du? 3) Hauptteil. Hier stehen die Leitpunkte. Verbinde sie mit Konnektoren. 4) Schluss. Zum Beispiel „Ich freue mich auf Ihre Antwort.“ 5) Gruß und dein Name. Wörter wie „deshalb“ oder „außerdem“ bringen extra Punkte!",
+        tr: "Mektubunu her zaman aynı şekilde kur: 1) Hitap. Örneğin „Sehr geehrte Damen und Herren,“. 2) Giriş. Neden yazıyorsun? 3) Ana bölüm. Burada içerik maddeleri olur. Onları bağlaçlarla bağla. 4) Kapanış. Örneğin „Ich freue mich auf Ihre Antwort.“ 5) Selam ve adın. „deshalb“ (bu yüzden) veya „außerdem“ (ayrıca) gibi kelimeler ekstra puan getirir!"
       },
       {
         h: "Formell oder informell? / Resmi mi, gayri resmi mi?",
-        de: "Entscheide am Anfang: Schreibe ich an eine Firma/Behörde (Sie-Form!) oder an Freunde (du-Form)? Mische NIE Sie und du im selben Brief – das ist ein typischer Fehler. Formell: „Sehr geehrte Damen und Herren“ + „Mit freundlichen Grüßen“. Informell: „Liebe/Lieber …“ + „Viele Grüße“.",
-        tr: "Başta karar ver: Bir firmaya/resmi kuruma mı (Sie formu!) yoksa arkadaşlara mı (du formu) yazıyorum? Aynı mektupta ASLA Sie ve du'yu karıştırma – bu tipik bir hatadır. Resmi: „Sehr geehrte Damen und Herren“ + „Mit freundlichen Grüßen“. Gayri resmi: „Liebe/Lieber …“ + „Viele Grüße“."
+        de: "Entscheide zuerst: Schreibst du an eine Firma? Dann benutze „Sie“. Schreibst du an einen Freund? Dann benutze „du“. Mische „Sie“ und „du“ NIE im gleichen Brief! Das ist ein großer Fehler. Formell: „Sehr geehrte Damen und Herren“ und „Mit freundlichen Grüßen“. Informell: „Liebe/Lieber …“ und „Viele Grüße“.",
+        tr: "Önce karar ver: Bir firmaya mı yazıyorsun? O zaman „Sie“ kullan. Bir arkadaşa mı yazıyorsun? O zaman „du“ kullan. „Sie“ ve „du“yu ASLA aynı mektupta karıştırma! Bu büyük bir hatadır. Resmi: „Sehr geehrte Damen und Herren“ ve „Mit freundlichen Grüßen“. Gayri resmi: „Liebe/Lieber …“ ve „Viele Grüße“."
       },
       {
         h: "Zeitplan für 30 Minuten / 30 dakikalık zaman planı",
-        de: "5 Min.: Aufgabe lesen, Stichwörter zu jedem Leitpunkt notieren. 20 Min.: Schreiben (ca. 80–100 Wörter reichen bei telc). 5 Min.: Kontrolle – Verb an Position 2? Nomen groß geschrieben? Alle Leitpunkte? Anrede und Gruß?",
-        tr: "5 dk: Görevi oku, her maddeye anahtar kelimeler not et. 20 dk: Yaz (telc'de yaklaşık 80–100 kelime yeter). 5 dk: Kontrol – Fiil 2. pozisyonda mı? İsimler büyük harfle mi? Tüm maddeler var mı? Hitap ve selam var mı?"
+        de: "5 Minuten: Lies die Aufgabe. Notiere Stichwörter zu jedem Punkt. 20 Minuten: Schreibe deinen Text. Bei telc reichen circa 80 bis 100 Wörter. 5 Minuten: Kontrolliere. Steht das Verb an Position 2? Sind Nomen groß geschrieben? Hast du alle Punkte? Hast du Anrede und Gruß?",
+        tr: "5 dakika: Görevi oku. Her maddeye anahtar kelimeler yaz. 20 dakika: Metnini yaz. telc'de yaklaşık 80–100 kelime yeter. 5 dakika: Kontrol et. Fiil 2. sırada mı? İsimler büyük harfle mi? Tüm maddeler var mı? Hitap ve selam var mı?"
       }
     ]
   },
@@ -183,23 +184,23 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "telc Teil 1: Kontakt aufnehmen / Tanışma",
-        de: "Bereite deine Vorstellung ZU HAUSE perfekt vor: Name, Herkunft, Wohnort, Familie, Beruf, Hobbys, warum du Deutsch lernst. Das sind sichere Punkte! Der Prüfer stellt danach 1–2 Zusatzfragen (z. B. zur Bedeutung deines Namens).",
-        tr: "Kendini tanıtmayı EVDE mükemmel hazırla: isim, memleket, oturduğun yer, aile, meslek, hobiler, neden Almanca öğrendiğin. Bunlar garanti puanlardır! Sınav görevlisi sonrasında 1–2 ek soru sorar (örn. isminin anlamı)."
+        de: "Übe deine Vorstellung ZU HAUSE! Sage: deinen Namen, wo du herkommst, wo du wohnst, deine Familie, deinen Beruf, deine Hobbys, warum du Deutsch lernst. Diese Punkte sind sicher! Der Prüfer stellt danach noch 1 oder 2 Fragen.",
+        tr: "Kendini tanıtmayı EVDE çalış! Şunu söyle: adın, nereden geldiğin, nerede oturduğun, ailen, mesleğin, hobilerin, neden Almanca öğrendiğin. Bu puanlar garantidir! Sınav görevlisi sonra 1 veya 2 soru daha sorar."
       },
       {
         h: "telc Teil 2: Über ein Thema sprechen / Bir konu hakkında konuşma",
-        de: "Offizieller Ablauf: Du und dein Partner bekommt UNTERSCHIEDLICHE Aufgabenblätter mit kontroversen Meinungen zu einem Thema (z. B. „Gruppenreisen“). Ihr habt vorher 20 Minuten Vorbereitungszeit und dürft Notizen machen. Struktur: 1) Berichte, was auf DEINEM Blatt steht („Auf meinem Blatt geht es um … Frau X meint, dass …“), 2) Höre den Bericht deines Partners, 3) Tauscht eure eigenen Meinungen und Erfahrungen aus. Redemittel: „Meiner Meinung nach…“, „Ich habe die Erfahrung gemacht, dass…“, „Bei uns in der Türkei…“",
-        tr: "Resmi akış: Sen ve partnerin bir konu hakkında (örn. „grup seyahatleri“) ZIT görüşler içeren FARKLI görev kağıtları alırsınız. Öncesinde 20 dakika hazırlık süreniz vardır ve not alabilirsiniz. Yapı: 1) KENDİ kağıdında ne yazdığını anlat („Auf meinem Blatt geht es um … Bay/Bayan X diyor ki …“), 2) Partnerinin anlatımını dinle, 3) Kendi görüş ve deneyimlerinizi tartışın. Kalıplar: „Meiner Meinung nach…“ (Bence…), „Ich habe die Erfahrung gemacht, dass…“ (Şu deneyimi yaşadım ki…), „Bei uns in der Türkei…“ (Bizde Türkiye'de…)"
+        de: "Du und dein Partner bekommen zwei verschiedene Blätter. Auf jedem Blatt steht eine andere Meinung. Vorher habt ihr 20 Minuten Zeit zum Üben. So machst du es: 1) Erzähle, was auf DEINEM Blatt steht. 2) Höre gut zu, was dein Partner erzählt. 3) Sagt eure eigene Meinung. Nützliche Sätze: „Meiner Meinung nach…“, „Bei uns in der Türkei…“",
+        tr: "Sen ve partnerin iki farklı kağıt alırsınız. Her kağıtta farklı bir görüş yazar. Öncesinde 20 dakika çalışma süreniz var. Şöyle yaparsın: 1) KENDİ kağıdında ne yazdığını anlat. 2) Partnerinin anlattıklarını iyi dinle. 3) Kendi görüşünüzü söyleyin. Faydalı cümleler: „Meiner Meinung nach…“ (Bence…), „Bei uns in der Türkei…“ (Bizde Türkiye'de…)"
       },
       {
         h: "telc Teil 3: Gemeinsam planen / Birlikte plan yapma",
-        de: "Ihr plant z. B. eine Party oder einen Ausflug. WICHTIG: Es ist ein Dialog, kein Monolog! Mache Vorschläge, reagiere auf deinen Partner, frag nach seiner Meinung. Redemittel: „Ich schlage vor, dass…“, „Wie findest du…?“, „Einverstanden!“, „Das ist eine gute Idee, aber…“, „Sollen wir…?“",
-        tr: "Birlikte örn. bir parti veya gezi planlarsınız. ÖNEMLİ: Bu bir diyalog, monolog değil! Öneriler yap, partnerine tepki ver, fikrini sor. Kalıplar: „Ich schlage vor, dass…“ (Öneriyorum ki…), „Wie findest du…?“ (Nasıl buluyorsun…?), „Einverstanden!“ (Anlaştık!), „Das ist eine gute Idee, aber…“ (İyi fikir ama…), „Sollen wir…?“ (…yapalım mı?)"
+        de: "Ihr plant zusammen etwas. Zum Beispiel eine Party. WICHTIG: Das ist ein Gespräch. Kein Monolog! Mache Vorschläge. Reagiere auf deinen Partner. Frag nach seiner Meinung. Nützliche Sätze: „Ich schlage vor, dass…“, „Wie findest du…?“, „Einverstanden!“",
+        tr: "Birlikte bir şey planlarsınız. Örneğin bir parti. ÖNEMLİ: Bu bir konuşmadır. Tek başına anlatma değil! Öneriler yap. Partnerine tepki ver. Fikrini sor. Faydalı cümleler: „Ich schlage vor, dass…“ (Öneriyorum ki…), „Wie findest du…?“ (Nasıl buluyorsun?), „Einverstanden!“ (Anlaştık!)"
       },
       {
         h: "Fehler sind okay! / Hata yapmak normal!",
-        de: "Auf B1 musst du NICHT fehlerfrei sprechen. Wichtiger ist: flüssig sprechen, verständlich sein, auf den Partner reagieren. Wenn dir ein Wort fehlt, umschreibe es: „das Ding, mit dem man…“ Sprich lieber einfach und richtig als kompliziert und falsch.",
-        tr: "B1'de hatasız konuşmak ZORUNDA DEĞİLSİN. Daha önemlisi: akıcı konuşmak, anlaşılır olmak, partnere tepki vermek. Bir kelime aklına gelmezse, tarif et: „das Ding, mit dem man…“ (şu şey, onunla insan…). Karmaşık ve yanlış yerine basit ve doğru konuş."
+        de: "Bei B1 musst du NICHT perfekt sprechen. Wichtiger ist: Sprich flüssig. Sei verständlich. Reagiere auf deinen Partner. Fehlt dir ein Wort? Beschreibe es einfach: „das Ding, mit dem man…“ Sprich lieber einfach und richtig. Nicht kompliziert und falsch.",
+        tr: "B1'de mükemmel konuşmak ZORUNDA değilsin. Daha önemlisi: Akıcı konuş. Anlaşılır ol. Partnerine tepki ver. Bir kelime aklına gelmiyor mu? Onu basitçe tarif et: „das Ding, mit dem man…“ (şu şey, onunla insan…). Karmaşık ve yanlış yerine basit ve doğru konuş."
       }
     ]
   },
@@ -210,24 +211,24 @@ window.STRATEGIEN = [
     titleTr: "Öğrenme Alışkanlıkları: Küçük Başla, Devam Et",
     sections: [
       {
-        h: "Die 1-%-Regel / %1 kuralı",
-        de: "Du musst nicht jeden Tag drei Stunden lernen. Wer jeden Tag nur ein bisschen besser wird, ist nach einigen Monaten enorm weit. 15 Minuten TÄGLICH bringen mehr als 3 Stunden einmal pro Woche – denn das Gehirn braucht Wiederholung. Mach dir das Ziel klein: „Ich lerne heute EIN Vokabelthema“ statt „Ich muss die ganze Prüfung schaffen“.",
-        tr: "Her gün üç saat çalışmak zorunda değilsin. Her gün birazcık daha iyi olan, birkaç ay sonra çok ileride olur. HER GÜN 15 dakika, haftada bir kez 3 saatten daha etkilidir – çünkü beyin tekrara ihtiyaç duyar. Hedefi küçült: „Bugün BİR kelime konusu çalışacağım“ – „Bütün sınavı halletmeliyim“ değil."
+        h: "Kleine Schritte / Küçük adımlar",
+        de: "Du musst nicht jeden Tag drei Stunden lernen! Wirst du jeden Tag nur ein bisschen besser? Dann bist du nach ein paar Monaten sehr weit. 15 Minuten JEDEN TAG sind besser als 3 Stunden einmal pro Woche. Dein Gehirn braucht Wiederholung. Mach dein Ziel klein: „Ich lerne heute EIN Thema.“ Nicht: „Ich muss alles schaffen.“",
+        tr: "Her gün üç saat çalışmak zorunda değilsin! Her gün biraz daha iyi olursan, birkaç ay sonra çok ilerlersin. HER GÜN 15 dakika, haftada bir 3 saatten daha iyidir. Beynin tekrara ihtiyaç duyar. Hedefini küçült: „Bugün BİR konu çalışacağım.“ Şunu değil: „Her şeyi bitirmeliyim.“"
       },
       {
         h: "Gewohnheiten koppeln / Alışkanlık zincirleme",
-        de: "Hänge das Lernen an eine feste Gewohnheit, die du schon hast: „NACH dem Frühstückskaffee mache ich 10 Flashcards.“ „IM Bus höre ich 10 Minuten Deutsch.“ So musst du dich nicht jeden Tag neu entscheiden – das Lernen passiert automatisch. Genau dafür ist diese App auf deinem Handy: Sie ist immer dabei.",
-        tr: "Öğrenmeyi zaten var olan sabit bir alışkanlığa bağla: „Sabah kahvemden SONRA 10 kelime kartı yapacağım.“ „Otobüste 10 dakika Almanca dinleyeceğim.“ Böylece her gün yeniden karar vermek zorunda kalmazsın – öğrenme otomatik gerçekleşir. Bu uygulamanın telefonunda olmasının nedeni tam da bu: hep yanında."
+        de: "Verbinde das Lernen mit etwas, was du schon jeden Tag machst. Zum Beispiel: „Nach dem Kaffee lerne ich 10 Wörter.“ Oder: „Im Bus höre ich 10 Minuten Deutsch.“ So musst du nicht jeden Tag neu entscheiden. Das Lernen passiert automatisch. Deshalb ist diese App auf deinem Handy: Sie ist immer bei dir.",
+        tr: "Öğrenmeyi zaten her gün yaptığın bir şeyle birleştir. Örneğin: „Kahvemden sonra 10 kelime öğreneceğim.“ Veya: „Otobüste 10 dakika Almanca dinleyeceğim.“ Böylece her gün yeniden karar vermek zorunda kalmazsın. Öğrenme kendiliğinden olur. Bu uygulama bu yüzden telefonunda: Her zaman yanında."
       },
       {
         h: "Mach es dir leicht / Kolaylaştır",
-        de: "Entferne Hindernisse: Leg die App auf den Startbildschirm. Bestimme einen festen Lernplatz. Und wenn du gar keine Lust hast, gilt die 2-Minuten-Regel: Fang nur für 2 Minuten an – meistens machst du dann doch weiter. Ein schlechter Lerntag ist okay; wichtig ist nur: NIE zweimal hintereinander aussetzen.",
-        tr: "Engelleri kaldır: Uygulamayı ana ekrana koy. Sabit bir çalışma yeri belirle. Hiç isteğin yoksa 2 dakika kuralı geçerli: Sadece 2 dakikalığına başla – çoğu zaman devam edersin. Kötü bir çalışma günü olabilir; önemli olan tek şey: ASLA üst üste iki kez atlama."
+        de: "Mach dir das Lernen leicht. Leg die App auf deinen Startbildschirm. Wähle einen festen Platz zum Lernen. Hast du gar keine Lust? Dann gilt die 2-Minuten-Regel: Fang nur für 2 Minuten an. Meistens machst du dann weiter. Ein schlechter Tag ist okay. Wichtig ist nur: Mach NIE zwei Tage hintereinander eine Pause.",
+        tr: "Öğrenmeyi kendine kolaylaştır. Uygulamayı ana ekranına koy. Çalışmak için sabit bir yer seç. Hiç isteğin yok mu? O zaman 2 dakika kuralı geçerli: Sadece 2 dakikalığına başla. Genelde sonra devam edersin. Kötü bir gün olabilir. Önemli olan: ASLA üst üste iki gün ara verme."
       },
       {
         h: "Fortschritt sichtbar machen / İlerlemeyi görünür kıl",
-        de: "Das Gehirn liebt sichtbare Erfolge. Diese App zählt deine gelernten Wörter und deine besten Übungsergebnisse – schau dir die Zahlen regelmäßig an und feiere kleine Erfolge. Wiederhole Übungen nach einigen Tagen: Wenn dein Ergebnis besser wird, siehst du deinen Fortschritt schwarz auf weiß.",
-        tr: "Beyin görünür başarıları sever. Bu uygulama öğrendiğin kelimeleri ve en iyi alıştırma sonuçlarını sayar – sayılara düzenli bak ve küçük başarıları kutla. Alıştırmaları birkaç gün sonra tekrarla: Sonucun iyileşiyorsa, ilerlemeni siyah üstüne beyaz görürsün."
+        de: "Dein Gehirn liebt sichtbare Erfolge. Diese App zählt deine Wörter. Diese App zeigt deine besten Ergebnisse. Schau dir die Zahlen oft an. Freu dich über kleine Erfolge! Wiederhole eine Übung nach ein paar Tagen. Wird dein Ergebnis besser? Dann siehst du deinen Fortschritt genau.",
+        tr: "Beynin görünür başarıları sever. Bu uygulama kelimelerini sayar. Bu uygulama en iyi sonuçlarını gösterir. Sayılara sık sık bak. Küçük başarılara sevin! Bir alıştırmayı birkaç gün sonra tekrarla. Sonucun daha iyi mi oluyor? O zaman ilerlemeni tam olarak görürsün."
       }
     ]
   },
@@ -239,23 +240,23 @@ window.STRATEGIEN = [
     sections: [
       {
         h: "Woche 1–2: Diagnose & Grundlagen / Teşhis ve temeller",
-        de: "Mache einen kompletten Modelltest (telc Übungstest 1 ist kostenlos auf telc.net). Notiere: Wo verlierst du Punkte? Beginne mit dem Vokabeltrainer (jeden Tag 1 Thema) und den Lesestrategien.",
-        tr: "Tam bir deneme sınavı çöz (telc Übungstest 1, telc.net'te ücretsizdir). Not al: Nerede puan kaybediyorsun? Kelime antrenörüyle başla (her gün 1 konu) ve okuma stratejilerini öğren."
+        de: "Mach zuerst einen ganzen Test. Der telc Übungstest 1 ist kostenlos auf telc.net. Notiere: Wo verlierst du Punkte? Beginne mit dem Vokabeltrainer. Lerne jeden Tag 1 Thema. Lies auch die Lese-Strategien.",
+        tr: "Önce tam bir test çöz. telc Übungstest 1, telc.net'te ücretsizdir. Not al: Nerede puan kaybediyorsun? Kelime antrenörü ile başla. Her gün 1 konu öğren. Okuma stratejilerini de oku."
       },
       {
         h: "Woche 3–4: Grammatik & Hören / Dilbilgisi ve dinleme",
-        de: "Arbeite alle Grammatik-Lernziele in dieser App durch, besonders Konnektoren, Perfekt, Konjunktiv II und Präpositionen. Höre täglich 15 Minuten Deutsch. Trainiere Sprachbausteine.",
-        tr: "Bu uygulamadaki tüm dilbilgisi hedeflerini çalış, özellikle bağlaçlar, Perfekt, Konjunktiv II ve edatlar. Her gün 15 dakika Almanca dinle. Sprachbausteine alıştırmaları yap."
+        de: "Lerne alle Grammatik-Themen in dieser App. Besonders wichtig: Konnektoren, Perfekt, Konjunktiv II und Präpositionen. Höre jeden Tag 15 Minuten Deutsch. Übe auch Sprachbausteine.",
+        tr: "Bu uygulamadaki tüm dilbilgisi konularını öğren. Özellikle önemli: bağlaçlar, Perfekt, Konjunktiv II ve edatlar. Her gün 15 dakika Almanca dinle. Sprachbausteine alıştırmaları da yap."
       },
       {
         h: "Woche 5–6: Lesen intensiv & Schreiben / Yoğun okuma ve yazma",
-        de: "Trainiere jeden Lesen-Teil mehrmals mit Zeitlimit. Schreibe jede Woche 2–3 Briefe zu typischen Themen (Beschwerde, Anfrage, Entschuldigung, Einladung) und nutze die Briefbausteine in dieser App.",
-        tr: "Her okuma bölümünü süre tutarak birkaç kez çalış. Her hafta tipik konularda 2–3 mektup yaz (şikayet, bilgi isteme, özür, davet) ve bu uygulamadaki mektup kalıplarını kullan."
+        de: "Übe jeden Lese-Teil mehrmals. Nimm dir eine Zeit-Grenze. Schreibe jede Woche 2 oder 3 Briefe. Zum Beispiel eine Beschwerde oder eine Einladung. Nutze die Briefbausteine in dieser App.",
+        tr: "Her okuma bölümünü birkaç kez çalış. Kendine bir süre sınırı koy. Her hafta 2 veya 3 mektup yaz. Örneğin bir şikayet veya bir davet. Bu uygulamadaki mektup kalıplarını kullan."
       },
       {
         h: "Woche 7–8: Sprechen & Generalprobe / Konuşma ve genel prova",
-        de: "Übe die mündliche Prüfung laut – am besten mit einem Partner. Nimm dich mit dem Handy auf und höre dir zu. In der letzten Woche: 2 komplette Modelltests unter echten Prüfungsbedingungen (Zeit stoppen, keine Hilfsmittel).",
-        tr: "Sözlü sınavı sesli çalış – en iyisi bir partnerle. Kendini telefonla kaydet ve dinle. Son hafta: gerçek sınav koşullarında 2 tam deneme (süre tut, yardımcı malzeme yok)."
+        de: "Übe die mündliche Prüfung laut. Am besten mit einem Partner. Nimm dich mit dem Handy auf. Höre dir danach zu. In der letzten Woche: Mach 2 ganze Tests. Nutze echte Prüfungs-Bedingungen. Stoppe die Zeit. Benutze keine Hilfsmittel.",
+        tr: "Sözlü sınavı sesli çalış. En iyisi bir partnerle. Kendini telefonla kaydet. Sonra dinle. Son hafta: 2 tam test yap. Gerçek sınav koşulları kullan. Süreyi tut. Yardımcı malzeme kullanma."
       }
     ]
   }

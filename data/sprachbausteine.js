@@ -7,8 +7,8 @@ window.SPRACHBAUSTEINE = {
       id: "sb1-a",
       title: "Teil 1 – Übung 1: Brief an die Vermieterin",
       anleitung: {
-        de: "Lesen Sie den Brief und entscheiden Sie, welches Wort (a, b oder c) in die Lücke passt.",
-        tr: "Mektubu oku ve boşluğa hangi kelimenin (a, b veya c) uyduğuna karar ver."
+        de: "Lesen Sie den Brief. Welches Wort (a, b oder c) passt in die Lücke?",
+        tr: "Mektubu oku. Boşluğa hangi kelime (a, b veya c) uyuyor?"
       },
       intro: "Sehr geehrte Frau Weber,",
       gaps: [
@@ -28,8 +28,8 @@ window.SPRACHBAUSTEINE = {
       id: "sb1-b",
       title: "Teil 1 – Übung 2: E-Mail an einen Freund",
       anleitung: {
-        de: "Lesen Sie die E-Mail und entscheiden Sie, welches Wort (a, b oder c) in die Lücke passt.",
-        tr: "E-postayı oku ve boşluğa hangi kelimenin (a, b veya c) uyduğuna karar ver."
+        de: "Lesen Sie die E-Mail. Welches Wort (a, b oder c) passt in die Lücke?",
+        tr: "E-postayı oku. Boşluğa hangi kelime (a, b veya c) uyuyor?"
       },
       intro: "Lieber Jan,",
       gaps: [
@@ -53,8 +53,8 @@ window.SPRACHBAUSTEINE = {
       id: "sb2-a",
       title: "Teil 2 – Übung 1: E-Mail an die Sprachschule",
       anleitung: {
-        de: "Lesen Sie den Text und entscheiden Sie, welches Wort aus der Liste (a–o) in die Lücke passt. Jedes Wort passt nur einmal – fünf Wörter bleiben übrig.",
-        tr: "Metni oku ve listeden (a–o) hangi kelimenin boşluğa uyduğuna karar ver. Her kelime bir kez kullanılır – beş kelime artar."
+        de: "Lesen Sie den Text. Welches Wort aus der Liste (a–o) passt in die Lücke? Jedes Wort nur einmal benutzen! Fünf Wörter bleiben übrig.",
+        tr: "Metni oku. Listedeki (a–o) hangi kelime boşluğa uyuyor? Her kelimeyi sadece bir kez kullan! Beş kelime kullanılmadan kalır."
       },
       words: ["ANMELDEN", "AUSKUNFT", "BESONDERS", "DESHALB", "ERFAHRUNG", "GERN", "KOSTET", "LEIDER", "MITTEILEN", "MÖGLICHKEIT", "OBWOHL", "SEIT", "STATTFINDET", "TERMIN", "VORAUS"],
       intro: "Sehr geehrte Damen und Herren,",

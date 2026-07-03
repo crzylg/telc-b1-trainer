@@ -5,8 +5,8 @@ window.GRAMMATIK = [
     emoji: "⏮️",
     title: "Perfekt & Präteritum",
     titleTr: "Geçmiş Zaman",
-    de: "Das Perfekt benutzt du beim SPRECHEN und in persönlichen Briefen über die Vergangenheit: „Ich habe gestern gearbeitet.“ Das Präteritum benutzt du vor allem bei „sein“, „haben“ und den Modalverben („ich war, ich hatte, ich musste“) sowie in Zeitungstexten. Bildung Perfekt: haben/sein + Partizip II. Mit SEIN bei Bewegung (gehen, fahren, fliegen, kommen) und Zustandsänderung (aufstehen, einschlafen, sterben) sowie bei: bleiben, sein, passieren.",
-    tr: "Perfekt'i KONUŞURKEN ve kişisel mektuplarda geçmiş için kullanırsın: „Ich habe gestern gearbeitet.“ (Dün çalıştım.) Präteritum'u özellikle „sein“, „haben“ ve modal fiillerde („ich war, ich hatte, ich musste“) ve gazete metinlerinde kullanırsın. Perfekt yapılışı: haben/sein + Partizip II. SEIN ile: hareket fiilleri (gehen, fahren, fliegen, kommen), durum değişikliği (aufstehen, einschlafen, sterben) ve bleiben, sein, passieren.",
+    de: "Das Perfekt ist für das Sprechen. Auch für Briefe an Freunde. Beispiel: „Ich habe gestern gearbeitet.“ Das Präteritum ist für „sein“ und „haben“. Auch für Modalverben. Zum Beispiel: „ich war“, „ich hatte“, „ich musste“. Zeitungen benutzen oft das Präteritum. So bildest du das Perfekt: haben ODER sein + Partizip II. Du brauchst SEIN bei Bewegung. Zum Beispiel: gehen, fahren, fliegen, kommen. Du brauchst SEIN auch bei: aufstehen, einschlafen, sterben, bleiben, passieren.",
+    tr: "Perfekt, konuşmak içindir. Arkadaşlara mektup için de kullanılır. Örnek: „Ich habe gestern gearbeitet.“ (Dün çalıştım.) Präteritum, „sein“ ve „haben“ içindir. Modal fiiller için de kullanılır. Örneğin: „ich war“, „ich hatte“, „ich musste“. Gazeteler genelde Präteritum kullanır. Perfekt böyle yapılır: haben VEYA sein + Partizip II. Hareket fiillerinde SEIN gerekir. Örneğin: gehen, fahren, fliegen, kommen. Şunlarda da SEIN gerekir: aufstehen, einschlafen, sterben, bleiben, passieren.",
     table: {
       head: ["Infinitiv", "Perfekt", "Präteritum", "Türkçe"],
       rows: [
@@ -23,8 +23,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Ich bin gearbeitet“ → ✓ „Ich habe gearbeitet“. ✗ „Ich habe nach Berlin gefahren“ → ✓ „Ich bin nach Berlin gefahren“. Verben auf -ieren ohne ge-: ✓ „hat telefoniert“ (nicht „getelefoniert“). Nicht trennbare Verben (be-, ver-, er-) ohne ge-: ✓ „hat verstanden“.",
-      tr: "Tipik hatalar: ✗ „Ich bin gearbeitet“ → ✓ „Ich habe gearbeitet“. ✗ „Ich habe nach Berlin gefahren“ → ✓ „Ich bin nach Berlin gefahren“ (hareket → sein). -ieren ile biten fiiller ge- almaz: ✓ „hat telefoniert“. Ayrılmayan fiiller (be-, ver-, er-) ge- almaz: ✓ „hat verstanden“."
+      de: "Diese Fehler sind oft: ✗ „Ich bin gearbeitet“ ist falsch. ✓ Richtig ist: „Ich habe gearbeitet“. ✗ „Ich habe nach Berlin gefahren“ ist falsch. ✓ Richtig ist: „Ich bin nach Berlin gefahren“. Verben mit -ieren haben kein ge-: ✓ „hat telefoniert“. Verben mit be-, ver-, er- haben auch kein ge-: ✓ „hat verstanden“.",
+      tr: "Bu hatalar sık yapılır: ✗ „Ich bin gearbeitet“ yanlıştır. ✓ Doğrusu: „Ich habe gearbeitet“. ✗ „Ich habe nach Berlin gefahren“ yanlıştır. ✓ Doğrusu: „Ich bin nach Berlin gefahren“ (hareket → sein). -ieren ile biten fiillerde ge- olmaz: ✓ „hat telefoniert“. be-, ver-, er- ile başlayan fiillerde de ge- olmaz: ✓ „hat verstanden“."
     },
     quiz: [
       { q: "Gestern ___ ich mit meiner Mutter telefoniert.", options: ["habe", "bin", "hatte"], answer: 0, explain: { de: "„telefonieren“ → Perfekt mit „haben“.", tr: "„telefonieren“ → Perfekt „haben“ ile." } },
@@ -37,8 +37,8 @@ window.GRAMMATIK = [
     emoji: "🧷",
     title: "Nebensätze (dass, weil, wenn, ob)",
     titleTr: "Yan Cümleler",
-    de: "In einem Nebensatz wandert das konjugierte Verb ans ENDE. Nebensatz-Konnektoren sind z. B.: dass, weil, wenn, als, ob, obwohl, damit, bevor, nachdem, während. Wichtig: Zwischen Hauptsatz und Nebensatz steht IMMER ein Komma. Wenn der Nebensatz zuerst kommt, beginnt der Hauptsatz mit dem Verb: „Weil ich krank bin, BLEIBE ich zu Hause.“ (Verb – Verb in der Mitte!)",
-    tr: "Yan cümlede çekimli fiil SONA gider. Yan cümle bağlaçları örn.: dass, weil, wenn, als, ob, obwohl, damit, bevor, nachdem, während. Önemli: Ana cümle ile yan cümle arasına HER ZAMAN virgül konur. Yan cümle önce gelirse ana cümle fiille başlar: „Weil ich krank bin, BLEIBE ich zu Hause.“ (Ortada fiil – fiil yan yana!)",
+    de: "In einem Nebensatz steht das Verb am ENDE. Wichtige Wörter für einen Nebensatz sind: dass, weil, wenn, als, ob, obwohl, damit, bevor, nachdem, während. Wichtig: Zwischen den zwei Sätzen steht IMMER ein Komma. Kommt der Nebensatz zuerst? Dann beginnt der Hauptsatz mit dem Verb: „Weil ich krank bin, BLEIBE ich zu Hause.“",
+    tr: "Bir yan cümlede fiil SONDA olur. Yan cümle için önemli kelimeler: dass, weil, wenn, als, ob, obwohl, damit, bevor, nachdem, während. Önemli: İki cümle arasına HER ZAMAN virgül konur. Yan cümle önce mi geliyor? O zaman ana cümle fiille başlar: „Weil ich krank bin, BLEIBE ich zu Hause.“ (Hastayım, bu yüzden evde kalıyorum.)",
     table: {
       head: ["Konnektor", "Beispiel", "Türkçe"],
       rows: [
@@ -50,8 +50,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Ich glaube, dass er hat Recht“ → ✓ „…, dass er Recht hat“. Bei trennbaren Verben im Nebensatz: zusammen! ✓ „…, weil er früh aufsteht“. Bei Perfekt im Nebensatz: ✓ „…, weil ich krank gewesen bin“ (konjugiertes Verb ganz am Ende).",
-      tr: "Tipik hatalar: ✗ „Ich glaube, dass er hat Recht“ → ✓ „…, dass er Recht hat“. Ayrılabilen fiiller yan cümlede birleşik yazılır: ✓ „…, weil er früh aufsteht“. Yan cümlede Perfekt: ✓ „…, weil ich krank gewesen bin“ (çekimli fiil en sonda)."
+      de: "Dieser Fehler ist oft: ✗ „Ich glaube, dass er hat Recht“ ist falsch. ✓ Richtig ist: „…, dass er Recht hat“. Trennbare Verben im Nebensatz bleiben zusammen: ✓ „…, weil er früh aufsteht“.",
+      tr: "Bu hata sık yapılır: ✗ „Ich glaube, dass er hat Recht“ yanlıştır. ✓ Doğrusu: „…, dass er Recht hat“. Ayrılabilen fiiller yan cümlede birleşik kalır: ✓ „…, weil er früh aufsteht“."
     },
     quiz: [
       { q: "Ich hoffe, dass du bald ___.", options: ["kommst", "du kommst", "kommen"], answer: 0, explain: { de: "Verb am Ende des dass-Satzes: „…, dass du bald kommst.“", tr: "dass cümlesinde fiil sonda: „…, dass du bald kommst.“" } },
@@ -64,8 +64,8 @@ window.GRAMMATIK = [
     emoji: "🔍",
     title: "Relativsätze",
     titleTr: "İlgi Cümleleri",
-    de: "Relativsätze geben mehr Informationen über ein Nomen: „Das ist der Mann, DER nebenan wohnt.“ Das Relativpronomen richtet sich in GENUS und NUMERUS nach dem Nomen davor, der KASUS hängt von seiner Funktion im Nebensatz ab. Das Verb steht am Ende. Mit Präposition: Die Präposition steht VOR dem Pronomen: „die Frau, MIT DER ich arbeite“.",
-    tr: "İlgi cümleleri bir isim hakkında ek bilgi verir: „Das ist der Mann, DER nebenan wohnt.“ (Yan tarafta oturan adam bu.) İlgi zamiri CİNS ve SAYI olarak önceki isme uyar, HAL (Kasus) ise yan cümledeki görevine bağlıdır. Fiil sonda durur. Edatla: Edat zamirin ÖNÜNE gelir: „die Frau, MIT DER ich arbeite“ (birlikte çalıştığım kadın).",
+    de: "Ein Relativsatz gibt mehr Information über ein Nomen. Beispiel: „Das ist der Mann, DER nebenan wohnt.“ Das kleine Wort (der/die/das) passt zum Nomen davor. Das Verb steht am Ende vom Relativsatz. Mit einer Präposition: Die Präposition steht VOR dem kleinen Wort. Beispiel: „die Frau, MIT DER ich arbeite“.",
+    tr: "Bir ilgi cümlesi bir isim hakkında daha çok bilgi verir. Örnek: „Das ist der Mann, DER nebenan wohnt.“ (Yan tarafta oturan adam bu.) Küçük kelime (der/die/das) önceki isme uyar. Fiil, ilgi cümlesinin sonunda olur. Bir edatla: Edat, küçük kelimenin ÖNÜNDE olur. Örnek: „die Frau, MIT DER ich arbeite“ (birlikte çalıştığım kadın).",
     table: {
       head: ["", "maskulin", "feminin", "neutral", "Plural"],
       rows: [
@@ -75,8 +75,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „der Film, das ich gesehen habe“ → ✓ „der Film, DEN ich gesehen habe“ (der Film = maskulin, im Nebensatz Akkusativ-Objekt). Nach „alles/etwas/nichts“ benutzt man „was“: „alles, was ich brauche“.",
-      tr: "Tipik hatalar: ✗ „der Film, das ich gesehen habe“ → ✓ „der Film, DEN ich gesehen habe“ (der Film = eril, yan cümlede Akkusativ nesne). „alles/etwas/nichts“ sonrasında „was“ kullanılır: „alles, was ich brauche“ (ihtiyacım olan her şey)."
+      de: "Dieser Fehler ist oft: ✗ „der Film, das ich gesehen habe“ ist falsch. ✓ Richtig ist: „der Film, DEN ich gesehen habe“. Nach den Wörtern „alles“, „etwas“, „nichts“ benutzt man „was“: „alles, was ich brauche“.",
+      tr: "Bu hata sık yapılır: ✗ „der Film, das ich gesehen habe“ yanlıştır. ✓ Doğrusu: „der Film, DEN ich gesehen habe“. „alles“, „etwas“, „nichts“ kelimelerinden sonra „was“ kullanılır: „alles, was ich brauche“ (ihtiyacım olan her şey)."
     },
     quiz: [
       { q: "Das ist die Kollegin, ___ mir immer hilft.", options: ["der", "die", "das"], answer: 1, explain: { de: "die Kollegin → feminin, Subjekt im Nebensatz → „die“.", tr: "die Kollegin → dişil, yan cümlede özne → „die“." } },
@@ -89,8 +89,8 @@ window.GRAMMATIK = [
     emoji: "💭",
     title: "Konjunktiv II (würde, hätte, wäre, könnte)",
     titleTr: "Dilek/Şart Kipi",
-    de: "Der Konjunktiv II hat drei Hauptfunktionen: 1) HÖFLICHE BITTEN: „Könnten Sie mir helfen?“, „Ich hätte gern…“, „Würden Sie bitte…?“ – super wichtig für Briefe und die mündliche Prüfung! 2) IRREALE WÜNSCHE: „Ich wäre jetzt gern am Meer.“ 3) IRREALE BEDINGUNGEN: „Wenn ich mehr Zeit hätte, würde ich Sport machen.“ Bildung: würde + Infinitiv, außer bei sein (wäre), haben (hätte) und Modalverben (könnte, müsste, sollte, dürfte).",
-    tr: "Konjunktiv II'nin üç ana işlevi vardır: 1) KİBAR RİCALAR: „Könnten Sie mir helfen?“ (Bana yardım edebilir miydiniz?), „Ich hätte gern…“ – mektuplar ve sözlü sınav için çok önemli! 2) GERÇEK DIŞI DİLEKLER: „Ich wäre jetzt gern am Meer.“ (Şimdi denizde olsam ne güzel olurdu.) 3) GERÇEK DIŞI KOŞULLAR: „Wenn ich mehr Zeit hätte, würde ich Sport machen.“ (Daha çok vaktim olsaydı spor yapardım.) Yapılış: würde + mastar; ama sein (wäre), haben (hätte) ve modal fiiller (könnte, müsste, sollte, dürfte) kendi formlarını kullanır.",
+    de: "Der Konjunktiv II hat drei Funktionen. 1) EINE HÖFLICHE BITTE: „Könnten Sie mir helfen?“ Das ist sehr wichtig für Briefe! 2) EIN WUNSCH: „Ich wäre jetzt gern am Meer.“ 3) EINE BEDINGUNG: „Wenn ich mehr Zeit hätte, würde ich Sport machen.“ So bildest du es: würde + Infinitiv. Aber sein macht „wäre“. Haben macht „hätte“. Modalverben machen: könnte, müsste, sollte, dürfte.",
+    tr: "Konjunktiv II'nin üç işlevi vardır. 1) KİBAR BİR RİCA: „Könnten Sie mir helfen?“ (Bana yardım edebilir miydiniz?) Bu, mektuplar için çok önemli! 2) BİR DİLEK: „Ich wäre jetzt gern am Meer.“ (Şimdi denizde olsam ne güzel olurdu.) 3) BİR KOŞUL: „Wenn ich mehr Zeit hätte, würde ich Sport machen.“ (Daha çok vaktim olsaydı spor yapardım.) Böyle yapılır: würde + mastar. Ama sein „wäre“ olur. Haben „hätte“ olur. Modal fiiller: könnte, müsste, sollte, dürfte olur.",
     table: {
       head: ["Verb", "Konjunktiv II", "Beispiel", "Türkçe"],
       rows: [
@@ -103,8 +103,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Wenn ich würde Zeit haben“ → ✓ „Wenn ich Zeit HÄTTE“ (bei haben/sein kein würde!). Im wenn-Satz steht das Verb am Ende: „Wenn ich reich wäre, …“",
-      tr: "Tipik hatalar: ✗ „Wenn ich würde Zeit haben“ → ✓ „Wenn ich Zeit HÄTTE“ (haben/sein için würde kullanılmaz!). wenn cümlesinde fiil sonda: „Wenn ich reich wäre, …“"
+      de: "Dieser Fehler ist oft: ✗ „Wenn ich würde Zeit haben“ ist falsch. ✓ Richtig ist: „Wenn ich Zeit HÄTTE“. Im wenn-Satz steht das Verb am Ende: „Wenn ich reich wäre, …“",
+      tr: "Bu hata sık yapılır: ✗ „Wenn ich würde Zeit haben“ yanlıştır. ✓ Doğrusu: „Wenn ich Zeit HÄTTE“. wenn cümlesinde fiil sonda olur: „Wenn ich reich wäre, …“"
     },
     quiz: [
       { q: "___ Sie mir bitte das Formular schicken?", options: ["Könnten", "Konnten", "Können Sie würden"], answer: 0, explain: { de: "Höfliche Bitte → Konjunktiv II: „Könnten Sie…?“", tr: "Kibar rica → Konjunktiv II: „Könnten Sie…?“" } },
@@ -117,8 +117,8 @@ window.GRAMMATIK = [
     emoji: "🏭",
     title: "Passiv (Präsens & Präteritum)",
     titleTr: "Edilgen Çatı",
-    de: "Das Passiv benutzt du, wenn die HANDLUNG wichtiger ist als die Person: „Das Brot WIRD GEBACKEN.“ (Wer? Unwichtig!) Bildung: werden + Partizip II. Präsens: „wird repariert“, Präteritum: „wurde repariert“, Perfekt: „ist repariert worden“. Mit Modalverb: „Das Auto muss repariert WERDEN.“ Das Passiv kommt oft in Zeitungstexten (Lesen Teil 2!) und in den Sprachbausteinen vor.",
-    tr: "Edilgen çatıyı EYLEM kişiden önemli olduğunda kullanırsın: „Das Brot WIRD GEBACKEN.“ (Ekmek pişiriliyor – kim pişiriyor önemli değil!) Yapılış: werden + Partizip II. Şimdiki zaman: „wird repariert“ (tamir ediliyor), geçmiş: „wurde repariert“ (tamir edildi), Perfekt: „ist repariert worden“. Modal fiille: „Das Auto muss repariert WERDEN.“ (Araba tamir edilmeli.) Edilgen çatı gazete metinlerinde (Lesen Teil 2!) ve Sprachbausteine'de sık çıkar.",
+    de: "Das Passiv ist wichtig, wenn die AKTION wichtiger ist als die Person. Beispiel: „Das Brot WIRD GEBACKEN.“ Wer backt? Das ist nicht wichtig! So bildest du es: werden + Partizip II. Präsens: „wird repariert“. Präteritum: „wurde repariert“. Mit einem Modalverb: „Das Auto muss repariert WERDEN.“ Das Passiv kommt oft in Zeitungen vor.",
+    tr: "Edilgen çatı önemlidir. Kişiden çok eylem önemli olduğunda kullanılır. Örnek: „Das Brot WIRD GEBACKEN.“ (Ekmek pişiriliyor.) Kim pişiriyor? Bu önemli değil! Böyle yapılır: werden + Partizip II. Şimdiki zaman: „wird repariert“ (tamir ediliyor). Geçmiş zaman: „wurde repariert“ (tamir edildi). Modal fiille: „Das Auto muss repariert WERDEN.“ (Araba tamir edilmeli.) Edilgen çatı gazetelerde sık çıkar.",
     table: {
       head: ["Zeit", "Aktiv", "Passiv", "Türkçe"],
       rows: [
@@ -128,8 +128,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Das Haus ist gebaut“ (Zustand) statt ✓ „Das Haus wird gebaut“ (Vorgang). Der „Täter“ steht mit „von“: „Der Brief wurde VON der Chefin geschrieben.“",
-      tr: "Tipik hatalar: ✗ „Das Haus ist gebaut“ (durum) yerine ✓ „Das Haus wird gebaut“ (süreç). Eylemi yapan „von“ ile belirtilir: „Der Brief wurde VON der Chefin geschrieben.“ (Mektup müdire tarafından yazıldı.)"
+      de: "Achtung: „Das Haus ist gebaut“ heißt: Das Haus ist FERTIG. „Das Haus wird gebaut“ heißt: Man baut JETZT. Wer die Aktion macht, steht mit „von“: „Der Brief wurde VON der Chefin geschrieben.“",
+      tr: "Dikkat: „Das Haus ist gebaut“ demek: Ev BİTMİŞ. „Das Haus wird gebaut“ demek: ŞİMDİ inşa ediliyor. Eylemi yapan kişi „von“ ile belirtilir: „Der Brief wurde VON der Chefin geschrieben.“ (Mektup müdire tarafından yazıldı.)"
     },
     quiz: [
       { q: "Die Rechnung ___ schon bezahlt.", options: ["wurde", "hat", "ist worden"], answer: 0, explain: { de: "Passiv Präteritum: „wurde bezahlt“.", tr: "Edilgen geçmiş: „wurde bezahlt“ (ödendi)." } },
@@ -142,8 +142,8 @@ window.GRAMMATIK = [
     emoji: "🎨",
     title: "Adjektivdeklination",
     titleTr: "Sıfat Çekimi",
-    de: "Vor einem Nomen bekommt das Adjektiv eine Endung. Die Endung hängt vom Artikel ab. Merkhilfe: Nach der/die/das meistens -e oder -en. Nach ein/kein zeigt das Adjektiv das Genus: „ein kleinER Mann, eine kleinE Frau, ein kleinES Kind“. Ohne Artikel übernimmt das Adjektiv die Artikel-Endung: „frischES Brot, mit frischEM Brot“. Im Dativ und im Plural mit Artikel: fast immer -en!",
-    tr: "İsimden önce gelen sıfat bir ek alır. Ek, artikele bağlıdır. İpucu: der/die/das'tan sonra çoğunlukla -e veya -en. ein/kein'dan sonra sıfat cinsi gösterir: „ein kleinER Mann, eine kleinE Frau, ein kleinES Kind“. Artikelsiz sıfat, artikelin ekini üstlenir: „frischES Brot, mit frischEM Brot“. Dativ'de ve artikelli çoğulda: neredeyse her zaman -en!",
+    de: "Vor einem Nomen bekommt das Adjektiv eine Endung. Die Endung hängt vom kleinen Wort davor ab (der/die/das oder ein/kein). Nach der/die/das: meistens -e oder -en. Nach ein/kein zeigt das Adjektiv, ob es maskulin, feminin oder neutral ist: „ein kleinER Mann, eine kleinE Frau, ein kleinES Kind“. Ohne Artikel: fast wie der/die/das. Im Dativ und im Plural mit Artikel: fast immer -en!",
+    tr: "İsimden önce gelen sıfat bir ek alır. Bu ek, öndeki küçük kelimeye (der/die/das veya ein/kein) bağlıdır. der/die/das'tan sonra: çoğunlukla -e veya -en. ein/kein'dan sonra sıfat, eril mi dişil mi nötr mü olduğunu gösterir: „ein kleinER Mann, eine kleinE Frau, ein kleinES Kind“. Artikelsiz: neredeyse der/die/das gibi. Dativ'de ve artikelli çoğulda: neredeyse her zaman -en!",
     table: {
       head: ["", "mit der/die/das", "mit ein/kein", "ohne Artikel"],
       rows: [
@@ -156,8 +156,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „ein interessante Buch“ → ✓ „ein interessantES Buch“ (neutral!). ✗ „mit meinem alte Auto“ → ✓ „mit meinem altEN Auto“ (Dativ → -en).",
-      tr: "Tipik hatalar: ✗ „ein interessante Buch“ → ✓ „ein interessantES Buch“ (nötr!). ✗ „mit meinem alte Auto“ → ✓ „mit meinem altEN Auto“ (Dativ → -en)."
+      de: "Diese Fehler sind oft: ✗ „ein interessante Buch“ ist falsch. ✓ Richtig ist: „ein interessantES Buch“. ✗ „mit meinem alte Auto“ ist falsch. ✓ Richtig ist: „mit meinem altEN Auto“.",
+      tr: "Bu hatalar sık yapılır: ✗ „ein interessante Buch“ yanlıştır. ✓ Doğrusu: „ein interessantES Buch“. ✗ „mit meinem alte Auto“ yanlıştır. ✓ Doğrusu: „mit meinem altEN Auto“."
     },
     quiz: [
       { q: "Ich suche eine ___ Wohnung.", options: ["größere", "größeren", "größerer"], answer: 0, explain: { de: "eine + feminin Akkusativ → -e: „eine größere Wohnung“.", tr: "eine + dişil Akkusativ → -e: „eine größere Wohnung“." } },
@@ -170,8 +170,8 @@ window.GRAMMATIK = [
     emoji: "📍",
     title: "Präpositionen & Wechselpräpositionen",
     titleTr: "Edatlar",
-    de: "Drei Gruppen: 1) IMMER DATIV: aus, bei, mit, nach, seit, von, zu. 2) IMMER AKKUSATIV: durch, für, gegen, ohne, um. 3) WECHSELPRÄPOSITIONEN (an, auf, hinter, in, neben, über, unter, vor, zwischen): WOHIN? (Bewegung/Richtung) → Akkusativ: „Ich hänge das Bild AN DIE Wand.“ WO? (Position) → Dativ: „Das Bild hängt AN DER Wand.“",
-    tr: "Üç grup: 1) HER ZAMAN DATIV: aus, bei, mit, nach, seit, von, zu. 2) HER ZAMAN AKKUSATIV: durch, für, gegen, ohne, um. 3) DEĞİŞKEN EDATLAR (an, auf, hinter, in, neben, über, unter, vor, zwischen): NEREYE? (hareket/yön) → Akkusativ: „Ich hänge das Bild AN DIE Wand.“ (Resmi duvara asıyorum.) NEREDE? (konum) → Dativ: „Das Bild hängt AN DER Wand.“ (Resim duvarda asılı.)",
+    de: "Es gibt drei Gruppen. 1) IMMER DATIV: aus, bei, mit, nach, seit, von, zu. 2) IMMER AKKUSATIV: durch, für, gegen, ohne, um. 3) MANCHMAL DATIV, MANCHMAL AKKUSATIV: an, auf, hinter, in, neben, über, unter, vor, zwischen. Frage WOHIN? Das ist eine Bewegung. Dann Akkusativ: „Ich hänge das Bild AN DIE Wand.“ Frage WO? Das ist ein Ort. Dann Dativ: „Das Bild hängt AN DER Wand.“",
+    tr: "Üç grup vardır. 1) HER ZAMAN DATIV: aus, bei, mit, nach, seit, von, zu. 2) HER ZAMAN AKKUSATIV: durch, für, gegen, ohne, um. 3) BAZEN DATIV, BAZEN AKKUSATIV: an, auf, hinter, in, neben, über, unter, vor, zwischen. NEREYE sorusu mu? Bu bir harekettir. O zaman Akkusativ: „Ich hänge das Bild AN DIE Wand.“ (Resmi duvara asıyorum.) NEREDE sorusu mu? Bu bir yerdir. O zaman Dativ: „Das Bild hängt AN DER Wand.“ (Resim duvarda asılı.)",
     table: {
       head: ["Frage", "Kasus", "Beispiel", "Türkçe"],
       rows: [
@@ -182,8 +182,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Ich gehe in dem Supermarkt“ → ✓ „in den Supermarkt“ (wohin? → Akk.). Merke Kurzformen: in + das = ins, in + dem = im, an + das = ans, zu + der = zur, zu + dem = zum. Bei Ländern und Städten: „nach“ (nach Berlin, in die Türkei – Ausnahme mit Artikel!).",
-      tr: "Tipik hatalar: ✗ „Ich gehe in dem Supermarkt“ → ✓ „in den Supermarkt“ (nereye? → Akk.). Kısaltmalar: in + das = ins, in + dem = im, an + das = ans, zu + der = zur, zu + dem = zum. Ülke ve şehirlerde: „nach“ (nach Berlin; ama artikelli ülkeler: in die Türkei!)."
+      de: "Dieser Fehler ist oft: ✗ „Ich gehe in dem Supermarkt“ ist falsch. ✓ Richtig ist: „in den Supermarkt“. Merke diese kurzen Formen: in + das = ins, in + dem = im, an + das = ans, zu + der = zur, zu + dem = zum. Bei Ländern und Städten benutzt man oft „nach“: „nach Berlin“.",
+      tr: "Bu hata sık yapılır: ✗ „Ich gehe in dem Supermarkt“ yanlıştır. ✓ Doğrusu: „in den Supermarkt“. Bu kısa formları ezberle: in + das = ins, in + dem = im, an + das = ans, zu + der = zur, zu + dem = zum. Ülke ve şehirlerde genelde „nach“ kullanılır: „nach Berlin“."
     },
     quiz: [
       { q: "Ich stelle die Vase ___ Tisch.", options: ["auf den", "auf dem", "auf der"], answer: 0, explain: { de: "Wohin? → Akkusativ: „auf den Tisch“.", tr: "Nereye? → Akkusativ: „auf den Tisch“." } },
@@ -196,8 +196,8 @@ window.GRAMMATIK = [
     emoji: "🔗",
     title: "Infinitiv mit „zu“",
     titleTr: "„zu“lu Mastar",
-    de: "Nach bestimmten Ausdrücken steht „zu + Infinitiv“: nach Verben (anfangen, aufhören, versuchen, vergessen, hoffen, vorhaben, sich freuen), nach Nomen (Zeit, Lust, Angst, die Möglichkeit) und nach Adjektiven (wichtig, schwierig, leicht). Beispiel: „Ich habe vergessen, die Tür ZU schließen.“ Bei trennbaren Verben geht „zu“ in die Mitte: „einzukaufen, aufzustehen“. KEIN „zu“ nach Modalverben (ich muss gehen) und nach: sehen, hören, lassen, gehen, bleiben.",
-    tr: "Belirli ifadelerden sonra „zu + mastar“ gelir: fiillerden sonra (anfangen, aufhören, versuchen, vergessen, hoffen, vorhaben, sich freuen), isimlerden sonra (Zeit, Lust, Angst, die Möglichkeit) ve sıfatlardan sonra (wichtig, schwierig, leicht). Örnek: „Ich habe vergessen, die Tür ZU schließen.“ (Kapıyı kapatmayı unuttum.) Ayrılabilen fiillerde „zu“ ortaya girer: „einzukaufen, aufzustehen“. Modal fiillerden sonra „zu“ KULLANILMAZ (ich muss gehen); sehen, hören, lassen, gehen, bleiben'dan sonra da kullanılmaz.",
+    de: "Nach manchen Wörtern steht „zu + Infinitiv“. Zum Beispiel nach Verben: anfangen, versuchen, vergessen, hoffen. Auch nach Adjektiven: wichtig, schwierig, leicht. Beispiel: „Ich habe vergessen, die Tür ZU schließen.“ Bei trennbaren Verben geht „zu“ in die Mitte: „einzukaufen“. KEIN „zu“ nach Modalverben: „ich muss gehen“.",
+    tr: "Bazı kelimelerden sonra „zu + mastar“ gelir. Örneğin fiillerden sonra: anfangen, versuchen, vergessen, hoffen. Sıfatlardan sonra da: wichtig, schwierig, leicht. Örnek: „Ich habe vergessen, die Tür ZU schließen.“ (Kapıyı kapatmayı unuttum.) Ayrılabilen fiillerde „zu“ ortaya girer: „einzukaufen“. Modal fiillerden sonra „zu“ YOKTUR: „ich muss gehen“.",
     table: {
       head: ["Auslöser", "Beispiel", "Türkçe"],
       rows: [
@@ -209,8 +209,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Ich muss zu arbeiten“ → ✓ „Ich muss arbeiten“ (Modalverb ohne zu). ✗ „Ich habe vor, auszusteigen um 8 Uhr“ → Infinitiv ans Ende: ✓ „…, um 8 Uhr auszusteigen“.",
-      tr: "Tipik hatalar: ✗ „Ich muss zu arbeiten“ → ✓ „Ich muss arbeiten“ (modal fiil zu almaz). Mastar grubu sona gider: ✓ „…, um 8 Uhr auszusteigen“."
+      de: "Dieser Fehler ist oft: ✗ „Ich muss zu arbeiten“ ist falsch. ✓ Richtig ist: „Ich muss arbeiten“. Das zu-Wort steht ganz am Ende: ✓ „…, um 8 Uhr auszusteigen“.",
+      tr: "Bu hata sık yapılır: ✗ „Ich muss zu arbeiten“ yanlıştır. ✓ Doğrusu: „Ich muss arbeiten“. zu'lu kelime grubu en sona gider: ✓ „…, um 8 Uhr auszusteigen“."
     },
     quiz: [
       { q: "Hast du Zeit, mir ___?", options: ["zu helfen", "helfen", "hilfst"], answer: 0, explain: { de: "Nach „Zeit haben“ → zu + Infinitiv.", tr: "„Zeit haben“den sonra → zu + mastar." } },
@@ -223,8 +223,8 @@ window.GRAMMATIK = [
     emoji: "🧾",
     title: "Genitiv & n-Deklination",
     titleTr: "Genitiv ve n-Çekimi",
-    de: "Der Genitiv zeigt Besitz oder Zugehörigkeit: „das Auto MEINES Vaters“, „die Meinung DER Lehrerin“. Maskulin und neutral: des + Nomen mit -(e)s; feminin und Plural: der. Wichtige Genitiv-Präpositionen für B1: wegen, trotz, während, statt. Die n-Deklination: Einige maskuline Nomen (der Junge, der Kollege, der Kunde, der Mensch, der Herr, der Name, der Nachbar, der Student) bekommen in allen Fällen außer Nominativ ein -n: „Ich helfe dem KollegeN.“",
-    tr: "Genitiv sahiplik veya aitlik gösterir: „das Auto MEINES Vaters“ (babamın arabası), „die Meinung DER Lehrerin“ (öğretmenin görüşü). Eril ve nötr: des + isim -(e)s ekiyle; dişil ve çoğul: der. B1 için önemli Genitiv edatları: wegen, trotz, während, statt. n-Çekimi: Bazı eril isimler (der Junge, der Kollege, der Kunde, der Mensch, der Herr, der Name, der Nachbar, der Student) Nominativ dışındaki tüm hallerde -n alır: „Ich helfe dem KollegeN.“ (İş arkadaşıma yardım ediyorum.)",
+    de: "Der Genitiv zeigt: Das gehört zu jemandem. Beispiel: „das Auto MEINES Vaters“. Bei maskulin und neutral: des + Nomen mit -(e)s. Bei feminin und Plural: der. Wichtige Wörter mit Genitiv: wegen, trotz, während, statt. Die n-Deklination: Einige Nomen bekommen ein -n. Zum Beispiel: der Junge, der Kollege, der Kunde, der Student. Beispiel: „Ich helfe dem KollegeN.“",
+    tr: "Genitiv şunu gösterir: Bu, birine aittir. Örnek: „das Auto MEINES Vaters“ (babamın arabası). Eril ve nötrde: des + isim -(e)s ekiyle. Dişil ve çoğulda: der. Genitiv ile kullanılan önemli kelimeler: wegen, trotz, während, statt. n-Çekimi: Bazı isimler -n eki alır. Örneğin: der Junge, der Kollege, der Kunde, der Student. Örnek: „Ich helfe dem KollegeN.“ (İş arkadaşıma yardım ediyorum.)",
     table: {
       head: ["", "maskulin", "feminin", "neutral", "Plural"],
       rows: [
@@ -233,8 +233,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „wegen dem Regen“ (umgangssprachlich) → in der Prüfung besser ✓ „wegen des Regens“. ✗ „Ich frage der Student“ → ✓ „Ich frage den StudentEN“ (n-Deklination!).",
-      tr: "Tipik hatalar: ✗ „wegen dem Regen“ (günlük dil) → sınavda tercihen ✓ „wegen des Regens“. ✗ „Ich frage der Student“ → ✓ „Ich frage den StudentEN“ (n-çekimi!)."
+      de: "In der Prüfung ist besser: ✓ „wegen des Regens“ (nicht „wegen dem Regen“). Dieser Fehler ist auch oft: ✗ „Ich frage der Student“ ist falsch. ✓ Richtig ist: „Ich frage den StudentEN“.",
+      tr: "Sınavda daha iyisi: ✓ „wegen des Regens“ („wegen dem Regen“ değil). Bu hata da sık yapılır: ✗ „Ich frage der Student“ yanlıştır. ✓ Doğrusu: „Ich frage den StudentEN“."
     },
     quiz: [
       { q: "Wegen ___ Sturms fallen alle Flüge aus.", options: ["des", "dem", "der"], answer: 0, explain: { de: "„wegen“ + Genitiv, maskulin → „des Sturms“.", tr: "„wegen“ + Genitiv, eril → „des Sturms“." } },
@@ -247,8 +247,8 @@ window.GRAMMATIK = [
     emoji: "❔",
     title: "Indirekte Fragen",
     titleTr: "Dolaylı Sorular",
-    de: "Indirekte Fragen klingen höflicher – perfekt für Briefe und Ämter! W-Fragen: Das Fragewort leitet den Nebensatz ein, das Verb geht ans Ende: „Wann beginnt der Kurs?“ → „Können Sie mir sagen, WANN der Kurs BEGINNT?“ Ja/Nein-Fragen: mit „ob“: „Hat er Zeit?“ → „Ich weiß nicht, OB er Zeit HAT.“ Typische Einleitungen: Wissen Sie, …? / Können Sie mir sagen, …? / Ich möchte wissen, … / Ich frage mich, …",
-    tr: "Dolaylı sorular daha kibar duyulur – mektuplar ve resmi daireler için mükemmel! W-soruları: Soru kelimesi yan cümleyi başlatır, fiil sona gider: „Wann beginnt der Kurs?“ → „Können Sie mir sagen, WANN der Kurs BEGINNT?“ (Kursun ne zaman başladığını söyleyebilir misiniz?) Evet/Hayır soruları: „ob“ ile: „Hat er Zeit?“ → „Ich weiß nicht, OB er Zeit HAT.“ Tipik girişler: Wissen Sie, …? / Können Sie mir sagen, …? / Ich möchte wissen, … / Ich frage mich, …",
+    de: "Eine indirekte Frage ist höflich. Das ist gut für Briefe! Bei W-Fragen: Das Fragewort steht vorne. Das Verb geht ans Ende. Beispiel: „Wann beginnt der Kurs?“ wird zu „Können Sie mir sagen, WANN der Kurs BEGINNT?“ Bei Ja/Nein-Fragen benutzt du „ob“: „Hat er Zeit?“ wird zu „Ich weiß nicht, OB er Zeit HAT.“",
+    tr: "Dolaylı bir soru kibardır. Bu, mektuplar için iyidir! W-sorularında: Soru kelimesi önde durur. Fiil sona gider. Örnek: „Wann beginnt der Kurs?“ şuna dönüşür: „Können Sie mir sagen, WANN der Kurs BEGINNT?“ (Kursun ne zaman başladığını söyleyebilir misiniz?) Evet/Hayır sorularında „ob“ kullanılır: „Hat er Zeit?“ şuna dönüşür: „Ich weiß nicht, OB er Zeit HAT.“",
     table: {
       head: ["Direkte Frage", "Indirekte Frage", "Türkçe"],
       rows: [
@@ -258,8 +258,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Wissen Sie, wo ist der Bahnhof?“ → ✓ „…, wo der Bahnhof IST?“ (Verb ans Ende!). ✗ „Ich weiß nicht, wenn er kommt“ → ✓ „OB er kommt“ (Ja/Nein-Frage → ob, nicht wenn!).",
-      tr: "Tipik hatalar: ✗ „Wissen Sie, wo ist der Bahnhof?“ → ✓ „…, wo der Bahnhof IST?“ (fiil sona!). ✗ „Ich weiß nicht, wenn er kommt“ → ✓ „OB er kommt“ (evet/hayır sorusu → ob, wenn değil!)."
+      de: "Dieser Fehler ist oft: ✗ „Wissen Sie, wo ist der Bahnhof?“ ist falsch. ✓ Richtig ist: „…, wo der Bahnhof IST?“. Bei Ja/Nein-Fragen brauchst du „ob“, nicht „wenn“: ✓ „Ich weiß nicht, OB er kommt.“",
+      tr: "Bu hata sık yapılır: ✗ „Wissen Sie, wo ist der Bahnhof?“ yanlıştır. ✓ Doğrusu: „…, wo der Bahnhof IST?“. Evet/hayır sorularında „ob“ gerekir, „wenn“ değil: ✓ „Ich weiß nicht, OB er kommt.“"
     },
     quiz: [
       { q: "Können Sie mir sagen, wann der Zug ___?", options: ["abfährt", "fährt ab", "abfahren"], answer: 0, explain: { de: "Nebensatz: trennbares Verb zusammen am Ende → „abfährt“.", tr: "Yan cümle: ayrılabilen fiil sonda birleşik → „abfährt“." } },
@@ -272,8 +272,8 @@ window.GRAMMATIK = [
     emoji: "🔮",
     title: "Futur I & Plusquamperfekt",
     titleTr: "Gelecek Zaman ve -miş'li Geçmiş",
-    de: "FUTUR I: werden + Infinitiv – für Zukunftspläne und Vermutungen: „Ich werde nächstes Jahr die B2-Prüfung machen.“ Oft reicht auch das Präsens mit Zeitangabe: „Morgen fahre ich nach Köln.“ PLUSQUAMPERFEKT: hatte/war + Partizip II – für etwas, das VOR einem anderen Ereignis in der Vergangenheit passierte. Es kommt fast immer mit „nachdem“ vor: „Nachdem ich gegessen HATTE, ging ich spazieren.“",
-    tr: "FUTUR I: werden + mastar – gelecek planları ve tahminler için: „Ich werde nächstes Jahr die B2-Prüfung machen.“ (Gelecek yıl B2 sınavına gireceğim.) Zaman ifadesiyle şimdiki zaman da yeterlidir: „Morgen fahre ich nach Köln.“ PLUSQUAMPERFEKT: hatte/war + Partizip II – geçmişte başka bir olaydan ÖNCE olan şey için. Neredeyse her zaman „nachdem“ ile kullanılır: „Nachdem ich gegessen HATTE, ging ich spazieren.“ (Yemek yedikten sonra yürüyüşe çıktım.)",
+    de: "FUTUR I ist für Pläne. Du bildest es so: werden + Infinitiv. Beispiel: „Ich werde nächstes Jahr die B2-Prüfung machen.“ Oft reicht auch das Präsens: „Morgen fahre ich nach Köln.“ PLUSQUAMPERFEKT ist für etwas ganz Altes. Es passierte VOR einer anderen Sache. Du bildest es so: hatte/war + Partizip II. Es kommt fast immer mit „nachdem“ vor: „Nachdem ich gegessen HATTE, ging ich spazieren.“",
+    tr: "FUTUR I planlar içindir. Böyle yapılır: werden + mastar. Örnek: „Ich werde nächstes Jahr die B2-Prüfung machen.“ (Gelecek yıl B2 sınavına gireceğim.) Çoğu zaman şimdiki zaman da yeter: „Morgen fahre ich nach Köln.“ PLUSQUAMPERFEKT çok eski bir şey içindir. Başka bir şeyden ÖNCE olmuştur. Böyle yapılır: hatte/war + Partizip II. Neredeyse her zaman „nachdem“ ile kullanılır: „Nachdem ich gegessen HATTE, ging ich spazieren.“ (Yemek yedikten sonra yürüyüşe çıktım.)",
     table: {
       head: ["Zeit", "Beispiel", "Türkçe"],
       rows: [
@@ -283,8 +283,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Ich will morgen arbeiten werden“ → ✓ „Ich werde morgen arbeiten“. Nach „nachdem“ IMMER eine Zeitstufe zurück: Hauptsatz Präteritum → Nebensatz Plusquamperfekt.",
-      tr: "Tipik hatalar: ✗ „Ich will morgen arbeiten werden“ → ✓ „Ich werde morgen arbeiten“. „nachdem“den sonra HER ZAMAN bir zaman geriye git: Ana cümle Präteritum → yan cümle Plusquamperfekt."
+      de: "Dieser Fehler ist oft: ✗ „Ich will morgen arbeiten werden“ ist falsch. ✓ Richtig ist: „Ich werde morgen arbeiten“. Nach „nachdem“ brauchst du IMMER eine ältere Zeitform.",
+      tr: "Bu hata sık yapılır: ✗ „Ich will morgen arbeiten werden“ yanlıştır. ✓ Doğrusu: „Ich werde morgen arbeiten“. „nachdem“den sonra HER ZAMAN daha eski bir zaman gerekir."
     },
     quiz: [
       { q: "Nächsten Monat ___ wir nach Berlin ziehen.", options: ["werden", "wurden", "worden"], answer: 0, explain: { de: "Futur I: „werden + Infinitiv“.", tr: "Gelecek zaman: „werden + mastar“." } },
@@ -297,8 +297,8 @@ window.GRAMMATIK = [
     emoji: "📣",
     title: "Imperativ & höfliche Aufforderungen",
     titleTr: "Emir Kipi ve Kibar Ricalar",
-    de: "Der Imperativ gibt Anweisungen: du-Form ohne -st: „Komm! Lies! Nimm!“; ihr-Form wie Präsens: „Kommt!“; Sie-Form mit Pronomen: „Kommen Sie!“ Bei e→i/ie-Verben bleibt der Wechsel: „Sprich lauter!“ Höflicher geht es mit „bitte“ oder Konjunktiv II: „Würden Sie bitte das Fenster schließen?“ In der Prüfung brauchst du den Imperativ für Anleitungen und Ratschläge: „Nimm die Tabletten dreimal täglich!“",
-    tr: "Emir kipi talimat verir: du-formu -st'siz: „Komm! Lies! Nimm!“; ihr-formu şimdiki zaman gibi: „Kommt!“; Sie-formu zamirle: „Kommen Sie!“ e→i/ie değişimli fiillerde değişim kalır: „Sprich lauter!“ (Daha yüksek sesle konuş!) „bitte“ veya Konjunktiv II ile daha kibar olur: „Würden Sie bitte das Fenster schließen?“ Sınavda emir kipi talimatlar ve tavsiyeler için gerekir: „Nimm die Tabletten dreimal täglich!“",
+    de: "Der Imperativ sagt: Mach das! Die du-Form hat kein -st: „Komm! Lies! Nimm!“ Die ihr-Form ist wie das Präsens: „Kommt!“ Die Sie-Form braucht das Wort „Sie“: „Kommen Sie!“ Willst du höflicher sein? Dann sag „bitte“: „Kommen Sie bitte!“ Oder benutze Konjunktiv II: „Würden Sie bitte das Fenster schließen?“",
+    tr: "Emir kipi „Bunu yap!“ demektir. du-formunda -st yoktur: „Komm! Lies! Nimm!“ ihr-formu şimdiki zaman gibidir: „Kommt!“ Sie-formu „Sie“ kelimesini gerektirir: „Kommen Sie!“ Daha kibar olmak mı istiyorsun? O zaman „bitte“ de: „Kommen Sie bitte!“ Veya Konjunktiv II kullan: „Würden Sie bitte das Fenster schließen?“",
     table: {
       head: ["Infinitiv", "du", "ihr", "Sie"],
       rows: [
@@ -310,8 +310,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Kommst du her!“ → ✓ „Komm her!“ (du-Imperativ ohne Pronomen und ohne -st). ✗ „Ist ruhig!“ → ✓ „Sei ruhig!“",
-      tr: "Tipik hatalar: ✗ „Kommst du her!“ → ✓ „Komm her!“ (du emir kipi zamirsiz ve -st'siz). ✗ „Ist ruhig!“ → ✓ „Sei ruhig!“"
+      de: "Diese Fehler sind oft: ✗ „Kommst du her!“ ist falsch. ✓ Richtig ist: „Komm her!“. ✗ „Ist ruhig!“ ist falsch. ✓ Richtig ist: „Sei ruhig!“",
+      tr: "Bu hatalar sık yapılır: ✗ „Kommst du her!“ yanlıştır. ✓ Doğrusu: „Komm her!“. ✗ „Ist ruhig!“ yanlıştır. ✓ Doğrusu: „Sei ruhig!“"
     },
     quiz: [
       { q: "___ bitte langsamer! (du)", options: ["Sprich", "Sprichst", "Sprechen"], answer: 0, explain: { de: "du-Imperativ von sprechen: „Sprich!“ (e→i bleibt).", tr: "sprechen'in du emir kipi: „Sprich!“ (e→i kalır)." } },
@@ -324,8 +324,8 @@ window.GRAMMATIK = [
     emoji: "🔧",
     title: "Das Verb „lassen“",
     titleTr: "„lassen“ Fiili",
-    de: "„lassen“ hat drei wichtige Bedeutungen: 1) ETWAS MACHEN LASSEN (man macht es nicht selbst): „Ich lasse mein Auto reparieren.“ – jemand anderes repariert es. Struktur wie ein Modalverb: lassen + Infinitiv am Ende. 2) ERLAUBEN: „Meine Eltern lassen mich lange schlafen.“ 3) ZURÜCKLASSEN / NICHT MITNEHMEN: „Ich lasse den Schlüssel zu Hause.“ Konjugation: ich lasse, du lässt, er/sie lässt, wir lassen. Perfekt mit doppeltem Infinitiv: „Ich habe die Haare schneiden lassen.“",
-    tr: "„lassen“ fiilinin üç önemli anlamı vardır: 1) BİR ŞEYİ YAPTIRMAK (kendin yapmazsın): „Ich lasse mein Auto reparieren.“ (Arabamı tamir ettiriyorum.) – başkası tamir eder. Yapı modal fiil gibi: lassen + sonda mastar. 2) İZİN VERMEK: „Meine Eltern lassen mich lange schlafen.“ (Ailem geç saate kadar uyumama izin veriyor.) 3) BIRAKMAK: „Ich lasse den Schlüssel zu Hause.“ (Anahtarı evde bırakıyorum.) Çekim: ich lasse, du lässt, er/sie lässt, wir lassen. Perfekt çift mastarla: „Ich habe die Haare schneiden lassen.“ (Saçımı kestirdim.)",
+    de: "„lassen“ hat drei Bedeutungen. 1) DU MACHST ES NICHT SELBST: „Ich lasse mein Auto reparieren.“ Eine andere Person repariert es. 2) ERLAUBEN: „Meine Eltern lassen mich lange schlafen.“ 3) NICHT MITNEHMEN: „Ich lasse den Schlüssel zu Hause.“ So sagst du es: ich lasse, du lässt, er/sie lässt, wir lassen. Im Perfekt sagst du: „Ich habe die Haare schneiden lassen.“",
+    tr: "„lassen“ fiilinin üç anlamı vardır. 1) BİR ŞEYİ KENDİN YAPMAZSIN: „Ich lasse mein Auto reparieren.“ (Arabamı tamir ettiriyorum.) Başka biri tamir eder. 2) İZİN VERMEK: „Meine Eltern lassen mich lange schlafen.“ (Ailem geç saate kadar uyumama izin veriyor.) 3) BIRAKIP GİTMEK: „Ich lasse den Schlüssel zu Hause.“ (Anahtarı evde bırakıyorum.) Böyle söylersin: ich lasse, du lässt, er/sie lässt, wir lassen. Perfekt'te şöyle dersin: „Ich habe die Haare schneiden lassen.“ (Saçımı kestirdim.)",
     table: {
       head: ["Bedeutung", "Beispiel", "Türkçe"],
       rows: [
@@ -337,8 +337,8 @@ window.GRAMMATIK = [
       ]
     },
     fehler: {
-      de: "Typische Fehler: ✗ „Ich lasse reparieren mein Auto“ → ✓ „Ich lasse mein Auto reparieren“ (Infinitiv ans Ende!). ✗ „du lasst“ → ✓ „du lässt“. Verwechsle „lassen“ nicht mit „verlassen“ (= weggehen von): „Er verlässt das Haus um 8 Uhr.“",
-      tr: "Tipik hatalar: ✗ „Ich lasse reparieren mein Auto“ → ✓ „Ich lasse mein Auto reparieren“ (mastar sona!). ✗ „du lasst“ → ✓ „du lässt“. „lassen“ ile „verlassen“ (= terk etmek, ayrılmak) fiilini karıştırma: „Er verlässt das Haus um 8 Uhr.“ (Evden saat 8'de çıkıyor.)"
+      de: "Dieser Fehler ist oft: ✗ „Ich lasse reparieren mein Auto“ ist falsch. ✓ Richtig ist: „Ich lasse mein Auto reparieren“. ✗ „du lasst“ ist falsch. ✓ Richtig ist: „du lässt“. Verwechsle nicht: „lassen“ und „verlassen“ (= weggehen). „Er verlässt das Haus um 8 Uhr.“",
+      tr: "Bu hata sık yapılır: ✗ „Ich lasse reparieren mein Auto“ yanlıştır. ✓ Doğrusu: „Ich lasse mein Auto reparieren“. ✗ „du lasst“ yanlıştır. ✓ Doğrusu: „du lässt“. Bunları karıştırma: „lassen“ ve „verlassen“ (= ayrılmak, terk etmek). „Er verlässt das Haus um 8 Uhr.“ (Evden saat 8'de çıkıyor.)"
     },
     quiz: [
       { q: "Meine Haare sind zu lang. Ich ___ sie morgen ___.", options: ["lasse … schneiden", "werde … schneiden lassen werden", "schneide … lassen"], answer: 0, explain: { de: "„Ich lasse sie schneiden“ – jemand anderes schneidet.", tr: "„Kestiriyorum“ – başkası kesiyor." } },

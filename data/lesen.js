@@ -7,8 +7,8 @@ window.LESEN = {
       id: "t1-a",
       title: "Übung 1: Überschriften zuordnen",
       anleitung: {
-        de: "Lesen Sie zuerst die 10 Überschriften. Lesen Sie dann die 5 Texte und entscheiden Sie, welche Überschrift (a–j) am besten passt.",
-        tr: "Önce 10 başlığı oku. Sonra 5 metni oku ve hangi başlığın (a–j) en iyi uyduğuna karar ver."
+        de: "Lesen Sie zuerst die 10 Überschriften. Lesen Sie dann die 5 Texte. Welche Überschrift (a–j) passt am besten?",
+        tr: "Önce 10 başlığı oku. Sonra 5 metni oku. Hangi başlık (a–j) en iyi uyuyor?"
       },
       headings: [
         "Immer mehr Deutsche arbeiten von zu Hause",
@@ -54,8 +54,8 @@ window.LESEN = {
       id: "t1-b",
       title: "Übung 2: Überschriften zuordnen",
       anleitung: {
-        de: "Lesen Sie zuerst die 10 Überschriften. Lesen Sie dann die 5 Texte und entscheiden Sie, welche Überschrift (a–j) am besten passt.",
-        tr: "Önce 10 başlığı oku. Sonra 5 metni oku ve hangi başlığın (a–j) en iyi uyduğuna karar ver."
+        de: "Lesen Sie zuerst die 10 Überschriften. Lesen Sie dann die 5 Texte. Welche Überschrift (a–j) passt am besten?",
+        tr: "Önce 10 başlığı oku. Sonra 5 metni oku. Hangi başlık (a–j) en iyi uyuyor?"
       },
       headings: [
         "Handy in der Schule: Lehrer fordern Verbot",
@@ -105,8 +105,8 @@ window.LESEN = {
       id: "t2-a",
       title: "Übung 1: Zeitungsartikel „Ehrenamt“",
       anleitung: {
-        de: "Lesen Sie den Text und die Aufgaben 1–5. Welche Lösung (a, b oder c) ist richtig?",
-        tr: "Metni ve 1–5 arası soruları oku. Hangi cevap (a, b veya c) doğru?"
+        de: "Lesen Sie den Text. Lesen Sie die Fragen 1–5. Welche Antwort (a, b oder c) ist richtig?",
+        tr: "Metni oku. 1–5 arası soruları oku. Hangi cevap (a, b veya c) doğru?"
       },
       text: "<strong>Arbeiten ohne Geld – warum Millionen Deutsche ein Ehrenamt haben</strong><br><br>Ob bei der Freiwilligen Feuerwehr, im Sportverein oder in der Flüchtlingshilfe: Rund 29 Millionen Menschen in Deutschland arbeiten in ihrer Freizeit freiwillig und ohne Bezahlung – das ist fast jeder Dritte. Warum machen sie das?<br><br>Maria Schneider (54) aus Köln trainiert seit zwölf Jahren eine Mädchen-Fußballmannschaft. „Am Anfang habe ich nur ausgeholfen, weil die Trainerin krank war“, erzählt sie. „Aber die Arbeit mit den Kindern hat mir so viel Freude gemacht, dass ich geblieben bin.“ Zweimal pro Woche steht sie auf dem Platz, am Wochenende fährt sie mit dem Team zu Spielen. Geld bekommt sie dafür nicht – nur die Fahrtkosten werden ihr ersetzt.<br><br>Wissenschaftler haben untersucht, was Menschen zum Ehrenamt motiviert. Das Ergebnis: Die meisten wollen anderen helfen, aber fast genauso wichtig ist der Kontakt zu anderen Menschen. Viele sagen auch, dass sie durch das Ehrenamt neue Fähigkeiten lernen, die ihnen im Beruf helfen.<br><br>Es gibt allerdings auch Probleme: Viele Vereine finden immer schwerer Freiwillige, besonders junge Leute. Experten meinen, das liege nicht am fehlenden Interesse, sondern an der fehlenden Zeit: Wer lange arbeitet oder studiert, hat oft keine Kraft mehr für regelmäßige Termine. Deshalb bieten manche Organisationen jetzt flexible Projekte an, bei denen man auch nur einmal im Monat helfen kann.",
       questions: [
@@ -146,8 +146,8 @@ window.LESEN = {
       id: "t2-b",
       title: "Übung 2: Zeitungsartikel „Wochenmarkt“",
       anleitung: {
-        de: "Lesen Sie den Text und die Aufgaben 1–5. Welche Lösung (a, b oder c) ist richtig?",
-        tr: "Metni ve 1–5 arası soruları oku. Hangi cevap (a, b veya c) doğru?"
+        de: "Lesen Sie den Text. Lesen Sie die Fragen 1–5. Welche Antwort (a, b oder c) ist richtig?",
+        tr: "Metni oku. 1–5 arası soruları oku. Hangi cevap (a, b veya c) doğru?"
       },
       text: "<strong>Einkaufen mit allen Sinnen – der Wochenmarkt erlebt ein Comeback</strong><br><br>Jahrelang sah es so aus, als hätten die Wochenmärkte gegen die großen Supermärkte keine Chance. Doch seit einiger Zeit ändert sich das: Immer mehr Menschen, vor allem in den Städten, kaufen ihr Obst und Gemüse wieder am Marktstand.<br><br>Ein Grund dafür ist das gestiegene Interesse an regionalen Lebensmitteln. „Meine Kunden wollen wissen, woher die Kartoffeln kommen“, sagt Bauer Heinrich Mertens, der seit 30 Jahren auf dem Markt in Frankfurt steht. „Bei mir kommt alles vom eigenen Feld, keine 40 Kilometer von hier.“ Im Supermarkt dagegen kommen Tomaten oft aus Spanien und Äpfel sogar aus Neuseeland.<br><br>Auch die Atmosphäre spielt eine Rolle. Auf dem Markt trifft man Nachbarn, probiert einen neuen Käse, bekommt vom Händler ein Rezept empfohlen. „Das kann kein Online-Shop und kein Supermarkt bieten“, meint eine Kundin, die jeden Samstag zum Markt kommt.<br><br>Ein Problem bleibt allerdings der Preis: Auf dem Markt kostet vieles mehr als im Discounter. Händler Mertens versteht, dass nicht jeder so viel ausgeben kann. Er beobachtet aber, dass viele Kunden lieber weniger, dafür aber bessere Lebensmittel kaufen. Und wer kurz vor Marktschluss kommt, bekommt Obst und Gemüse oft deutlich billiger – die Händler wollen ihre Ware nicht wieder mit nach Hause nehmen.",
       questions: [
@@ -191,8 +191,8 @@ window.LESEN = {
       id: "t3-a",
       title: "Übung: Anzeigen zuordnen",
       anleitung: {
-        de: "Lesen Sie die Situationen 1–10 und die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige. Sie können jede Anzeige nur einmal benutzen. Wenn Sie zu einer Situation keine Anzeige finden, markieren Sie ein „x“ (wie in der echten telc-Prüfung!).",
-        tr: "1–10 arası durumları ve a–l arası ilanları oku. Her durum için uygun ilanı bul. Her ilanı sadece bir kez kullanabilirsin. Bir duruma uygun ilan bulamazsan „x“ işaretle (gerçek telc sınavındaki gibi!)."
+        de: "Lesen Sie die Situationen 1–10. Lesen Sie die Anzeigen a–l. Finden Sie für jede Situation die passende Anzeige. Jede Anzeige nur einmal benutzen! Passt keine Anzeige? Dann markieren Sie ein „x“. Das ist wie in der echten telc-Prüfung!",
+        tr: "1–10 arası durumları oku. a–l arası ilanları oku. Her duruma uygun ilanı bul. Her ilanı sadece bir kez kullan! Uygun ilan yok mu? O zaman „x“ işaretle. Bu, gerçek telc sınavındaki gibidir!"
       },
       ads: [
         "Nachhilfe in Mathe und Physik! Lehramtsstudent gibt Schülern aller Klassen Unterricht bei Ihnen zu Hause. 15 €/Stunde. Tel. 0171-2345678",
@@ -229,8 +229,8 @@ window.LESEN = {
       id: "g4-a",
       title: "Goethe-Stil Teil 4: Meinungen – Ja oder Nein?",
       anleitung: {
-        de: "Thema: „Sollen Handys an Schulen verboten werden?“ Lesen Sie die Meinungen 1–7. Ist die Person FÜR ein Verbot (Ja) oder DAGEGEN (Nein)?",
-        tr: "Konu: „Okullarda cep telefonu yasaklanmalı mı?“ 1–7 arası görüşleri oku. Kişi yasağa TARAFTAR mı (Ja) yoksa KARŞI mı (Nein)?"
+        de: "Das Thema ist: „Sollen Handys an Schulen verboten werden?“ Lesen Sie die Meinungen 1–7. Ist die Person FÜR ein Verbot? Dann ist die Antwort Ja. Ist die Person DAGEGEN? Dann ist die Antwort Nein.",
+        tr: "Konu şu: „Okullarda cep telefonu yasaklanmalı mı?“ 1–7 arası görüşleri oku. Kişi yasağa taraftar mı? O zaman cevap Ja (Evet). Kişi karşı mı? O zaman cevap Nein (Hayır)."
       },
       labels: { yes: "JA – für das Verbot / yasağa taraftar", no: "NEIN – gegen das Verbot / yasağa karşı" },
       statements: [
