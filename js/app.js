@@ -166,13 +166,56 @@
   }
   tabs.forEach(t => t.addEventListener("click", () => navigate(t.dataset.view)));
 
+  // ---------- Name der Nutzerin / Kullanıcı adı ----------
+  function getName() { return store.get("b1_name", "Yasemin"); }
+  function setName(n) { store.set("b1_name", n && n.trim() ? n.trim() : "Yasemin"); }
+
+  // ---------- Tagesmotivation / Günlük motivasyon ----------
+  function getDailyQuote() {
+    const list = window.MOTIVATION || [];
+    if (!list.length) return null;
+    const days = Math.floor(Date.now() / 86400000);
+    return list[days % list.length];
+  }
+
+  // ---------- Toast-Meldung ----------
+  let toastTimer = null;
+  function toast(msg) {
+    const el2 = document.getElementById("toast");
+    if (!el2) return;
+    el2.textContent = msg;
+    el2.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el2.classList.remove("show"), 3200);
+  }
+
+  // ---------- Kaynakları Yenile / Ressourcen im Hintergrund aktualisieren ----------
+  function refreshResources(btn) {
+    if (btn.classList.contains("spinning")) return;
+    btn.classList.add("spinning");
+    toast("🔄 Kaynaklar yenileniyor... / Ressourcen werden aktualisiert...");
+    const urls = [...document.querySelectorAll('script[src], link[rel="stylesheet"]')].map(e => e.src || e.href);
+    Promise.all(urls.map(u => fetch(u, { cache: "no-store" }).catch(() => null)))
+      .then(() => {
+        toast("✅ Fertig! Seite wird neu geladen... / Bitti! Sayfa yenileniyor...");
+        setTimeout(() => location.reload(), 700);
+      })
+      .catch(() => {
+        btn.classList.remove("spinning");
+        toast("⚠️ Konnte Ressourcen nicht aktualisieren. / Kaynaklar yenilenemedi.");
+      });
+  }
+  document.getElementById("refreshBtn").addEventListener("click", function () { refreshResources(this); });
+
   // ---------- HOME: Lernweg ----------
   routes.home = function () {
     const totalWords = window.VOKABELN.reduce((n, t) => n + t.words.length, 0);
     const knownWords = Object.values(known).reduce((n, a) => n + a.length, 0);
+    const quote = getDailyQuote();
     view.appendChild(el(`
-      <div class="card">
-        <h2>Willkommen! · Hoş geldin!</h2>
+      <div class="card welcome-card">
+        <span class="welcome-name" id="welcomeName">👋 Hoşgeldin ${esc(getName())}! <span class="edit-hint">✏️</span></span>
+        <p style="margin-top:6px">Willkommen zurück! · Tekrar hoş geldin!</p>
         <p>Diese App hilft dir für <strong>telc B1</strong>, <strong>Goethe B1</strong> und <strong>DTZ</strong>. Wichtig ist vor allem <strong>Lesen &amp; Verstehen</strong>. Mach einfach Schritt 1. Dann Schritt 2. Dann Schritt 3. Und so weiter bis 9.</p>
         ${trBox("Bu uygulama sana telc B1, Goethe B1 ve DTZ için yardımcı olur. En önemlisi Okuma ve Anlama'dır. Önce 1. Adımı yap. Sonra 2. Adımı. Sonra 3. Adımı. Böyle devam et, 9'a kadar. Her gün 15 dakika yeter!")}
         <div class="stat-row">
@@ -181,6 +224,17 @@
           <div class="stat-box"><div class="num">${Object.keys(scores).length}</div><div class="lbl">Übungen gemacht<br>yapılan alıştırma</div></div>
         </div>
       </div>`));
+    if (quote) {
+      view.appendChild(el(`<div class="quote-card">
+        <span class="quote-emoji">💪</span>
+        <div class="quote-de">${esc(quote.de)}</div>
+        <div class="quote-tr">🇹🇷 ${esc(quote.tr)}</div>
+      </div>`));
+    }
+    document.getElementById("welcomeName").addEventListener("click", () => {
+      const n = prompt("Wie heißt du? / Adın ne?", getName());
+      if (n !== null) { setName(n); navigate("home"); }
+    });
     const last = store.get("b1_last", null);
     if (last && routes[last]) {
       const cont = el(`<button class="continue-btn">▶️ Weiterlernen / Kaldığın yerden devam et</button>`);
