@@ -40,6 +40,75 @@
     return `<span class="start-badge">🚀 Hier starten!<br><small>Buradan başla!</small></span>`;
   }
 
+  // ---------- Bunte Modul-Farben (Duolingo-Stil) ----------
+  const MODULE_COLORS = {
+    pruefung: { c: "var(--mod-pruefung)", d: "#0d8fd0", icon: "📋" },
+    vokabeln: { c: "var(--mod-vokabeln)", d: "var(--mod-vokabeln-dark)", icon: "🗂️" },
+    grammatik: { c: "var(--mod-grammatik)", d: "#a95cf0", icon: "📐" },
+    konnektoren: { c: "var(--mod-konnektoren)", d: "#17a693", icon: "🔗" },
+    sprachbausteine: { c: "var(--mod-sprachbausteine)", d: "#c96e00", icon: "🧩" },
+    strategien: { c: "var(--mod-strategien)", d: "#d43333", icon: "🎯" },
+    lesen: { c: "var(--mod-lesen)", d: "#b38f00", icon: "📖" },
+    hoeren: { c: "var(--mod-hoeren)", d: "#d6389f", icon: "🎧" },
+    skills: { c: "var(--mod-skills)", d: "#5a5fd6", icon: "✍️" }
+  };
+  function nodeStyle(routeName) {
+    const m = MODULE_COLORS[routeName] || { c: "var(--blue)", d: "var(--blue-dark)" };
+    return `--node-color:${m.c};--node-dark:${m.d}`;
+  }
+  function tileStyle(routeName) {
+    const m = MODULE_COLORS[routeName] || { c: "var(--blue-light)", d: "var(--blue-dark)" };
+    return `--tile-color:${m.c};--tile-dark:${m.d}`;
+  }
+
+  // ---------- Serie (Streak) & XP ----------
+  function todayStr() { return new Date().toISOString().slice(0, 10); }
+  function registerVisitAndGetStreak() {
+    const visits = store.get("b1_visits", []);
+    const today = todayStr();
+    if (visits[visits.length - 1] !== today) { visits.push(today); store.set("b1_visits", visits); }
+    let streak = 0;
+    let cursor = new Date();
+    for (let i = 0; i < 400; i++) {
+      const d = cursor.toISOString().slice(0, 10);
+      if (visits.includes(d)) { streak++; cursor.setDate(cursor.getDate() - 1); }
+      else if (d === today) { cursor.setDate(cursor.getDate() - 1); } // heute zählt nicht als Bruch
+      else break;
+    }
+    return streak;
+  }
+  function getXP() {
+    const knownWords = Object.values(known).reduce((n, a) => n + a.length, 0);
+    const exXP = Object.values(scores).reduce((n, s) => n + Math.round((s.score / s.total) * 20), 0);
+    return knownWords * 2 + exXP;
+  }
+
+  // ---------- Rozetler / Badges ----------
+  const BADGES = [
+    { id: "start", icon: "🌱", color: "var(--mod-vokabeln)", dark: "var(--mod-vokabeln-dark)", title: "Erste Schritte", titleTr: "İlk Adım", cond: () => Object.values(known).reduce((n, a) => n + a.length, 0) >= 1 },
+    { id: "vok50", icon: "📚", color: "var(--mod-pruefung)", dark: "#0d8fd0", title: "Wort-Sammler", titleTr: "Kelime Avcısı", cond: () => Object.values(known).reduce((n, a) => n + a.length, 0) >= 50 },
+    { id: "vok200", icon: "🏆", color: "var(--gold)", dark: "#b38f00", title: "Wort-Meister", titleTr: "Kelime Ustası", cond: () => Object.values(known).reduce((n, a) => n + a.length, 0) >= 200 },
+    { id: "perfekt", icon: "💯", color: "var(--mod-strategien)", dark: "#d43333", title: "Perfekt!", titleTr: "Mükemmel!", cond: () => Object.values(scores).some(s => s.score === s.total && s.total > 0) },
+    { id: "gram", icon: "📐", color: "var(--mod-grammatik)", dark: "#a95cf0", title: "Grammatik-Profi", titleTr: "Dilbilgisi Ustası", cond: () => window.GRAMMATIK.every(g => scores["gram-" + g.id]) },
+    { id: "lesen", icon: "📖", color: "var(--mod-lesen)", dark: "#b38f00", title: "Lese-Champion", titleTr: "Okuma Şampiyonu", cond: () => allIds("lesen").every(id => scores[id]) },
+    { id: "hoeren", icon: "🎧", color: "var(--mod-hoeren)", dark: "#d6389f", title: "Ohren-Profi", titleTr: "Dinleme Ustası", cond: () => allIds("hoeren").every(id => scores[id]) },
+    { id: "streak3", icon: "🔥", color: "var(--streak-orange)", dark: "#c96e00", title: "3 Tage dabei", titleTr: "3 Gündür Buradasın", cond: () => registerVisitAndGetStreak() >= 3 },
+    { id: "streak7", icon: "🔥", color: "#ff4b4b", dark: "#d43333", title: "7 Tage Serie", titleTr: "7 Günlük Seri", cond: () => registerVisitAndGetStreak() >= 7 }
+  ];
+  function renderBadges() {
+    const wrap = el(`<div class="card"><h3>🏅 Rozetler / Başarılar</h3><div class="badge-grid"></div></div>`);
+    const grid = wrap.querySelector(".badge-grid");
+    BADGES.forEach(b => {
+      const unlocked = b.cond();
+      const item = el(`<div class="badge-item${unlocked ? "" : " locked"}">
+        <div class="badge-circle" style="--badge-color:${b.color};--badge-dark:${b.dark}"><span>${b.icon}</span></div>
+        <div class="badge-label">${esc(b.title)}<br><span style="font-weight:400">${esc(b.titleTr)}</span></div>
+      </div>`);
+      grid.appendChild(item);
+    });
+    return wrap;
+  }
+
   // ---------- Helpers ----------
   function el(html) {
     const t = document.createElement("template");
@@ -72,10 +141,13 @@
   function trBox(text) { return `<div class="tr">${esc(text)}</div>`; }
 
   function updateHeader() {
-    const totalWords = window.VOKABELN.reduce((n, t) => n + t.words.length, 0);
-    const knownWords = Object.values(known).reduce((n, a) => n + a.length, 0);
-    const done = Object.keys(scores).length;
-    document.getElementById("headerProgress").textContent = `📚 ${knownWords}/${totalWords} · ✅ ${done}`;
+    const streak = registerVisitAndGetStreak();
+    const xp = getXP();
+    const box = document.getElementById("headerProgress");
+    box.innerHTML = `
+      <span class="stat-pill${streak > 0 ? " streak-on" : ""}">🔥 ${streak}</span>
+      <span class="stat-pill xp">⚡ ${xp}</span>
+    `;
   }
 
   // ---------- Navigation ----------
@@ -85,7 +157,11 @@
     window.scrollTo(0, 0);
     view.innerHTML = "";
     stopSpeech();
-    if (name !== "home") store.set("b1_last", name);
+    if (name !== "home") {
+      store.set("b1_last", name);
+      const visited = store.get("b1_visited", []);
+      if (!visited.includes(name)) { visited.push(name); store.set("b1_visited", visited); }
+    }
     routes[name]();
   }
   tabs.forEach(t => t.addEventListener("click", () => navigate(t.dataset.view)));
@@ -127,12 +203,19 @@
       ["hoeren", "Hören trainieren (mit Audio)", "8. Adım: Sesli dinleme antrenmanı", stepProgress(allIds("hoeren")), startHoeren.title],
       ["skills", "Schreiben & Sprechen", "9. Adım: Mektup kalıpları ve konuşma", null, null]
     ];
+    const visited = store.get("b1_visited", []);
+    const doneFlags = steps.map(([r, , , prog]) => prog ? (prog.done === prog.total && prog.total > 0) : visited.includes(r));
+    const firstOpenIdx = doneFlags.findIndex(d => !d);
+    const path = el(`<div class="path"></div>`);
     steps.forEach(([r, title, sub, prog, startTitle], i) => {
-      const done = prog && prog.done === prog.total && prog.total > 0;
-      const card = el(`<button class="step-card${done ? " done" : ""}">
-        <span class="step-num">${done ? "✓" : i + 1}</span>
+      const done = doneFlags[i];
+      const isCurrent = i === firstOpenIdx;
+      const m = MODULE_COLORS[r] || { icon: "⭐" };
+      const card = el(`<button class="step-card${done ? " done" : ""}${isCurrent ? " current" : ""}" style="${nodeStyle(r)}">
+        ${isCurrent ? `<span class="start-pill">LOS! · BAŞLA!</span>` : ""}
+        <span class="step-num">${done ? "" : m.icon}${done ? `<span class="step-check">✓</span>` : ""}</span>
         <span class="step-body">
-          <span class="step-title">${esc(title)}</span><br>
+          <span class="step-title">${i + 1}. ${esc(title)}</span><br>
           <span class="step-sub">🇹🇷 ${esc(sub)}</span>
           ${startTitle ? `<span class="step-start">🚀 Zuerst / Önce: ${esc(startTitle)}</span>` : ""}
           ${prog ? `<span class="step-progress">${typeof prog === "string" ? prog : prog.done + "/" + prog.total + " Übungen ✓"}</span>` : ""}
@@ -140,8 +223,10 @@
         <span class="step-arrow">›</span>
       </button>`);
       card.addEventListener("click", () => navigate(r));
-      view.appendChild(card);
+      path.appendChild(card);
     });
+    view.appendChild(path);
+    view.appendChild(renderBadges());
   };
 
   function allIds(kind) {
@@ -206,7 +291,7 @@
       return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
     });
     items.forEach(([label, ex, fn], idx) => {
-      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">📖</span><span class="tile-title">${esc(label)}</span><span class="tile-sub">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}" style="${tileStyle("lesen")}">${idx === 0 ? startBadge() : ""}<span class="icon-circle">📖</span><span class="tile-title">${esc(label)}</span><span class="tile-sub">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("lesen"); fn(); });
       grid.appendChild(tile);
     });
@@ -359,12 +444,12 @@
     view.appendChild(el(`<div class="card"><h2>🧩 Sprachbausteine</h2><p class="subtitle-tr">Dil yapıları – dilbilgisi ve kelime bilgisi</p><p>Teil 1 ist Grammatik (a/b/c). Teil 2 ist Wortschatz. Du hast 15 Wörter und 10 Lücken. 5 Wörter bleiben übrig.</p>${trBox("Teil 1 dilbilgisidir (a/b/c). Teil 2 kelime bilgisidir. 15 kelimen ve 10 boşluğun var. 5 kelime kullanılmadan kalır.")}</div>`));
     const grid = el(`<div class="tile-grid"></div>`);
     window.SPRACHBAUSTEINE.teil1.forEach(ex => {
-      const tile = el(`<button class="tile"><span class="tile-emoji">🧩</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+      const tile = el(`<button class="tile" style="${tileStyle("sprachbausteine")}"><span class="icon-circle">🧩</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("sprachbausteine"); renderSB1(ex); });
       grid.appendChild(tile);
     });
     window.SPRACHBAUSTEINE.teil2.forEach(ex => {
-      const tile = el(`<button class="tile"><span class="tile-emoji">🔤</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+      const tile = el(`<button class="tile" style="${tileStyle("sprachbausteine")}"><span class="icon-circle">🔤</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("sprachbausteine"); renderSB2(ex); });
       grid.appendChild(tile);
     });
@@ -449,7 +534,7 @@
     const grid = el(`<div class="tile-grid"></div>`);
     orderByStart(window.VOKABELN, "id", "vokabeln").forEach((topic, idx) => {
       const k = (known[topic.id] || []).length;
-      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">${topic.emoji}</span><span class="tile-title">${esc(topic.title)}</span><span class="tile-sub">${esc(topic.titleTr)}</span><span class="tile-meta">⭐ ${k}/${topic.words.length}</span></button>`);
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}" style="${tileStyle("vokabeln")}">${idx === 0 ? startBadge() : ""}<span class="icon-circle">${topic.emoji}</span><span class="tile-title">${esc(topic.title)}</span><span class="tile-sub">${esc(topic.titleTr)}</span><span class="tile-meta">⭐ ${k}/${topic.words.length}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("vokabeln"); renderTopic(topic); });
       grid.appendChild(tile);
     });
@@ -686,7 +771,7 @@
     }
     const grid = el(`<div class="tile-grid"></div>`);
     orderByStart(H.uebungen, "id", "hoeren").forEach((ex, idx) => {
-      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">🎧</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-sub">${esc(ex.titleTr)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}" style="${tileStyle("hoeren")}">${idx === 0 ? startBadge() : ""}<span class="icon-circle">🎧</span><span class="tile-title">${esc(ex.title)}</span><span class="tile-sub">${esc(ex.titleTr)}</span><span class="tile-meta">${scoreBadge(ex.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("hoeren"); renderHoeren(ex); });
       grid.appendChild(tile);
     });
@@ -814,7 +899,7 @@
     view.appendChild(el(`<div class="card"><h2>📐 Grammatik-Lernziele B1</h2><p class="subtitle-tr">B1 dilbilgisi öğrenme hedefleri</p><p>Jedes Thema hat: eine einfache Erklärung, eine Tabelle, typische Fehler und ein Mini-Quiz. Diese Themen kommen auch in den Sprachbausteinen!</p>${trBox("Her konuda şunlar var: basit bir açıklama, bir tablo, tipik hatalar ve bir mini test. Bu konular Sprachbausteine'de de çıkar!")}</div>`));
     const grid = el(`<div class="tile-grid"></div>`);
     orderByStart(window.GRAMMATIK, "id", "grammatik").forEach((g, idx) => {
-      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}">${idx === 0 ? startBadge() : ""}<span class="tile-emoji">${g.emoji}</span><span class="tile-title">${esc(g.title)}</span><span class="tile-sub">${esc(g.titleTr)}</span><span class="tile-meta">${scoreBadge("gram-" + g.id)}</span></button>`);
+      const tile = el(`<button class="tile${idx === 0 ? " start-here" : ""}" style="${tileStyle("grammatik")}">${idx === 0 ? startBadge() : ""}<span class="icon-circle">${g.emoji}</span><span class="tile-title">${esc(g.title)}</span><span class="tile-sub">${esc(g.titleTr)}</span><span class="tile-meta">${scoreBadge("gram-" + g.id)}</span></button>`);
       tile.addEventListener("click", () => { view.innerHTML = ""; backLink("grammatik"); renderGrammatik(g); });
       grid.appendChild(tile);
     });

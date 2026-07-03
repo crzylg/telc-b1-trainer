@@ -17,6 +17,20 @@
   --radius: 14px;
   --shadow: 0 1px 3px rgba(20, 30, 50, .08), 0 4px 14px rgba(20, 30, 50, .06);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* ---- Duolingo-Stil: bunte Modul-Farben ---- */
+  --mod-pruefung: #1cb0f6;
+  --mod-vokabeln: #58cc02;
+  --mod-vokabeln-dark: #4aad02;
+  --mod-grammatik: #ce82ff;
+  --mod-konnektoren: #2dd4bf;
+  --mod-sprachbausteine: #ff9600;
+  --mod-strategien: #ff4b4b;
+  --mod-lesen: #ffc800;
+  --mod-hoeren: #ff86d0;
+  --mod-skills: #7c83fd;
+  --gold: #ffc800;
+  --streak-orange: #ff9600;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -64,7 +78,7 @@ body {
 }
 .header-text h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: .2px; }
 .header-text p { font-size: .78rem; opacity: .85; }
-.header-progress { margin-left: auto; font-size: .8rem; font-weight: 600; background: rgba(255,255,255,.15); border-radius: 20px; padding: 4px 12px; white-space: nowrap; }
+.header-progress { margin-left: auto; display: flex; gap: 6px; flex-shrink: 0; }
 
 /* ---------- Tabs ---------- */
 .tabbar {
@@ -97,6 +111,15 @@ body {
 .tab-tr { font-size: .62rem; font-weight: 400; opacity: .75; }
 .tab.active { background: #fff; color: var(--blue-dark); }
 .tab.active .tab-tr { opacity: .7; }
+.tab:nth-child(2).active { color: var(--mod-pruefung); }
+.tab:nth-child(3).active { color: var(--mod-vokabeln-dark); }
+.tab:nth-child(4).active { color: var(--mod-grammatik); }
+.tab:nth-child(5).active { color: var(--mod-konnektoren); }
+.tab:nth-child(6).active { color: var(--mod-sprachbausteine); }
+.tab:nth-child(7).active { color: var(--mod-strategien); }
+.tab:nth-child(8).active { color: #b38f00; }
+.tab:nth-child(9).active { color: #d6389f; }
+.tab:nth-child(10).active { color: var(--mod-skills); }
 
 /* ---------- Layout ---------- */
 main { max-width: 1080px; margin: 0 auto; padding: 18px 14px 40px; }
@@ -194,7 +217,7 @@ th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; ver
 th { background: var(--blue-light); color: var(--blue-dark); }
 tr:nth-child(even) td { background: #fafbfd; }
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons (Duolingo-Stil: dick, 3D, mit Press-Effekt) ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -202,19 +225,24 @@ tr:nth-child(even) td { background: #fafbfd; }
   background: var(--blue);
   color: #fff;
   border: none;
-  border-radius: 24px;
-  padding: 10px 20px;
+  border-radius: 16px;
+  padding: 12px 22px;
   font-size: .95rem;
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: .3px;
   cursor: pointer;
   font-family: inherit;
-  transition: background .15s, transform .1s;
+  box-shadow: 0 4px 0 var(--blue-dark);
+  transition: transform .08s, box-shadow .08s;
 }
-.btn:active { transform: scale(.97); }
-.btn.secondary { background: #fff; color: var(--blue); border: 1.5px solid var(--blue); }
-.btn.green { background: var(--green); }
-.btn.orange { background: var(--accent); }
-.btn.small { padding: 6px 14px; font-size: .85rem; }
+.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--blue-dark); }
+.btn.secondary { background: #fff; color: var(--blue); border: 2px solid var(--line); box-shadow: 0 4px 0 var(--line); }
+.btn.secondary:active { box-shadow: 0 1px 0 var(--line); }
+.btn.green { background: var(--mod-vokabeln); box-shadow: 0 4px 0 var(--mod-vokabeln-dark); }
+.btn.green:active { box-shadow: 0 1px 0 var(--mod-vokabeln-dark); }
+.btn.orange { background: var(--mod-sprachbausteine); box-shadow: 0 4px 0 #c96e00; }
+.btn.orange:active { box-shadow: 0 1px 0 #c96e00; }
+.btn.small { padding: 7px 16px; font-size: .85rem; box-shadow: 0 3px 0 var(--blue-dark); }
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
 
 .back-link {
@@ -360,42 +388,118 @@ select.match-select.wrong { border-color: var(--red); background: var(--red-ligh
 .accordion.open .accordion-body { display: block; }
 
 /* ---------- Lernweg (Startseite) ---------- */
+/* ---------- Lernpfad (Duolingo-Stil: bunter Pfad mit Icon-Kreisen) ---------- */
+.path {
+  position: relative;
+  padding-left: 62px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.path::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 30px;
+  bottom: 30px;
+  width: 4px;
+  border-radius: 4px;
+  background-image: linear-gradient(var(--line) 60%, transparent 40%);
+  background-size: 4px 14px;
+  background-repeat: repeat-y;
+}
 .step-card {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 14px;
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 14px 16px;
+  padding: 12px 16px 12px 14px;
   cursor: pointer;
   border: 1px solid var(--line);
   text-align: left;
   font-family: inherit;
   width: 100%;
-  transition: transform .12s;
+  transition: transform .08s;
 }
-.step-card:active { transform: scale(.98); }
+.step-card:active { transform: scale(.98) translateY(1px); }
 .step-num {
   flex-shrink: 0;
-  width: 42px;
-  height: 42px;
+  position: absolute;
+  left: -62px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  background: var(--blue-light);
-  color: var(--blue-dark);
+  background: var(--node-color, var(--blue));
+  color: #fff;
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 0 var(--node-dark, var(--blue-dark)), var(--shadow);
+  border: 3px solid #fff;
 }
-.step-card.done .step-num { background: var(--green-light); color: var(--green); }
+.step-card.current .step-num {
+  animation: pulseNode 1.8s ease-in-out infinite;
+}
+@keyframes pulseNode {
+  0%, 100% { box-shadow: 0 4px 0 var(--node-dark, var(--blue-dark)), 0 0 0 0 rgba(255,150,0,.45); }
+  50% { box-shadow: 0 4px 0 var(--node-dark, var(--blue-dark)), 0 0 0 8px rgba(255,150,0,0); }
+}
+.step-card.done { border-color: var(--mod-vokabeln); }
+.step-card.done .step-num {
+  background: var(--mod-vokabeln);
+  box-shadow: 0 4px 0 var(--mod-vokabeln-dark), var(--shadow);
+}
+.step-check {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--mod-vokabeln);
+  font-size: .7rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
 .step-body { flex: 1; min-width: 0; }
-.step-title { font-weight: 700; font-size: 1rem; }
+.step-title { font-weight: 800; font-size: 1rem; }
 .step-sub { color: var(--ink-soft); font-size: .82rem; }
-.step-progress { font-size: .75rem; color: var(--blue); font-weight: 700; margin-top: 2px; display: block; }
-.step-start { font-size: .75rem; color: var(--accent); font-weight: 700; margin-top: 2px; display: block; }
-.step-arrow { color: var(--blue); font-size: 1.3rem; flex-shrink: 0; }
+.step-progress { font-size: .75rem; color: var(--mod-vokabeln-dark); font-weight: 700; margin-top: 2px; display: block; }
+.step-start { font-size: .75rem; color: var(--mod-sprachbausteine); font-weight: 700; margin-top: 2px; display: block; }
+.step-arrow { color: var(--ink-soft); font-size: 1.3rem; flex-shrink: 0; }
+.start-pill {
+  position: absolute;
+  left: -62px;
+  width: 54px;
+  text-align: center;
+  top: -14px;
+  background: var(--ink);
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 800;
+  padding: 2px 4px;
+  border-radius: 8px;
+  letter-spacing: .3px;
+  white-space: nowrap;
+}
+.start-pill::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--ink);
+}
 
 .continue-btn {
   display: flex;
@@ -403,16 +507,87 @@ select.match-select.wrong { border-color: var(--red); background: var(--red-ligh
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: linear-gradient(135deg, var(--green), #1e8a58);
+  background: var(--mod-vokabeln);
   color: #fff;
   border: none;
   border-radius: var(--radius);
   padding: 16px;
   font-size: 1.05rem;
   font-weight: 800;
+  letter-spacing: .3px;
   cursor: pointer;
   font-family: inherit;
-  box-shadow: var(--shadow);
+  box-shadow: 0 5px 0 var(--mod-vokabeln-dark);
+  transition: transform .08s, box-shadow .08s;
+}
+.continue-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--mod-vokabeln-dark); }
+
+/* ---------- Header-Statistiken (Streak, XP) ---------- */
+.stat-pills { display: flex; gap: 8px; margin-left: auto; flex-shrink: 0; }
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,.18);
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: .82rem;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+.stat-pill.streak-on { background: var(--streak-orange); }
+.stat-pill.xp { background: var(--gold); color: #4a3800; }
+
+/* ---------- Rozetler (Badges) ---------- */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.badge-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  background: linear-gradient(145deg, var(--badge-color, var(--line)), var(--badge-color, var(--line)));
+  box-shadow: 0 4px 0 var(--badge-dark, #c7cedb), var(--shadow);
+  border: 3px solid #fff;
+}
+.badge-item.locked .badge-circle {
+  background: var(--line);
+  box-shadow: 0 4px 0 #c7cedb;
+  filter: grayscale(1);
+  opacity: .55;
+}
+.badge-item.locked .badge-circle span { opacity: .5; }
+.badge-label { font-size: .68rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+.badge-item.locked .badge-label { color: var(--ink-soft); }
+
+/* ---------- Icon-Kreise für Themen-Kacheln ---------- */
+.icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  background: var(--tile-color, var(--blue-light));
+  box-shadow: 0 3px 0 var(--tile-dark, var(--blue-dark));
+  border: 2px solid #fff;
 }
 
 /* ---------- Audio / Hören ---------- */
